@@ -1,0 +1,2080 @@
+{
+  "database": "vimod",
+  "exportedAt": "2026-10-21T04:21:45.618Z",
+  "collections": {
+    "orders": [
+      {
+        "_id": "6ad293fd99737f7719553570",
+        "ownerId": "6ac956c865579e0ff9244ec0",
+        "projectId": "6ad2917199737f771955356f",
+        "proposalId": "6ad2917cd89b2163ca213fa4",
+        "quoteId": null,
+        "idempotencyKey": "8369c950-7e07-4e8a-afe8-a7be5c2993b5",
+        "amount": 185000,
+        "currency": "MXN",
+        "amountSource": "academic_estimate",
+        "orderStatus": "awaiting_payment_configuration",
+        "paymentStatus": "not_configured",
+        "active": true,
+        "createdAt": "2026-10-16T21:15:41.516Z",
+        "updatedAt": "2026-10-16T21:15:41.516Z",
+        "paymentId": "6ad293fdd89b2163ca213fa6"
+      }
+    ],
+    "projectAnalyses": [
+      {
+        "_id": "6ad13c541e71d7684b136f39",
+        "ownerId": "6ad01f8c6a3b1c95c731ea35",
+        "projectId": "6ad13c346a3b1c95c731ea39",
+        "analyzedAt": "2026-10-15T20:49:25.114Z",
+        "assumptions": {
+          "module": {
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2": 24
+          },
+          "capacities": {
+            "bedroomsPerModule": 2,
+            "bathroomsPerModule": 2
+          },
+          "catalogVersion": "academic-1",
+          "disclaimer": "Estimación académica preliminar; no es presupuesto comercial ni estudio profesional de suelo o diseño estructural.",
+          "soilStudyIncluded": false
+        },
+        "catalogVersion": "academic-1",
+        "inputFingerprint": "df812a735a7fdc6053d71ea5aff57f2965d251c92c39a96b0a44fc91e5f56ba4",
+        "inputs": {
+          "terrainId": "6ad13bc46a3b1c95c731ea38",
+          "widthM": 25,
+          "lengthM": 20,
+          "lotAreaM2": 500,
+          "budgetMxn": 100000000,
+          "bedrooms": 4,
+          "bathrooms": 1.5
+        },
+        "preliminary": {
+          "status": "layout_capacity_available",
+          "requiredModules": 4,
+          "minimumFootprintM2": 96,
+          "maxGridLayout": {
+            "moduleWidthM": 6,
+            "moduleLengthM": 4,
+            "columns": 4,
+            "rows": 1,
+            "unusedCells": 0,
+            "footprintWidthM": 24,
+            "footprintLengthM": 4
+          },
+          "summary": "Las dimensiones admiten una retícula de 4 columnas por 1 filas para el programa requerido."
+        },
+        "updatedAt": "2026-10-15T20:49:25.123Z",
+        "proposalResult": {
+          "viable": true,
+          "regenerated": false,
+          "proposalIds": [
+            "6ad13c551e71d7684b136f3a",
+            "6ad13c551e71d7684b136f3b"
+          ],
+          "message": "Estimaciones académicas persistidas; no son presupuestos comerciales garantizados.",
+          "generatedAt": "2026-10-15T20:49:25.123Z"
+        }
+      },
+      {
+        "_id": "6ad289ccd89b2163ca213fa0",
+        "projectId": "6ad2899a99737f771955356d",
+        "ownerId": "6ac956c865579e0ff9244ec0",
+        "analyzedAt": "2026-10-16T20:32:12.388Z",
+        "assumptions": {
+          "module": {
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2": 24
+          },
+          "capacities": {
+            "bedroomsPerModule": 2,
+            "bathroomsPerModule": 2
+          },
+          "catalogVersion": "academic-1",
+          "disclaimer": "Estimación académica preliminar; no es presupuesto comercial ni estudio profesional de suelo o diseño estructural.",
+          "soilStudyIncluded": false
+        },
+        "catalogVersion": "academic-1",
+        "inputFingerprint": "501ee33598583564b4f5469bdfc25ff1ba64eff57d021df3fb166035792a015f",
+        "inputs": {
+          "terrainId": "6ad2897499737f771955356c",
+          "widthM": 20,
+          "lengthM": 20,
+          "lotAreaM2": 400,
+          "budgetMxn": 7000000,
+          "bedrooms": 2,
+          "bathrooms": 1.5
+        },
+        "preliminary": {
+          "status": "layout_capacity_available",
+          "requiredModules": 3,
+          "minimumFootprintM2": 72,
+          "maxGridLayout": {
+            "moduleWidthM": 6,
+            "moduleLengthM": 4,
+            "columns": 3,
+            "rows": 1,
+            "unusedCells": 0,
+            "footprintWidthM": 18,
+            "footprintLengthM": 4
+          },
+          "summary": "Las dimensiones admiten una retícula de 3 columnas por 1 filas para el programa requerido."
+        },
+        "updatedAt": "2026-10-16T20:32:12.394Z",
+        "proposalResult": {
+          "viable": true,
+          "regenerated": false,
+          "proposalIds": [
+            "6ad289ccd89b2163ca213fa1",
+            "6ad289ccd89b2163ca213fa2"
+          ],
+          "message": "Estimaciones académicas persistidas; no son presupuestos comerciales garantizados.",
+          "generatedAt": "2026-10-16T20:32:12.394Z"
+        }
+      },
+      {
+        "_id": "6ad2917bd89b2163ca213fa3",
+        "ownerId": "6ac956c865579e0ff9244ec0",
+        "projectId": "6ad2917199737f771955356f",
+        "analyzedAt": "2026-10-17T03:22:19.950Z",
+        "assumptions": {
+          "module": {
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2": 24
+          },
+          "capacities": {
+            "bedroomsPerModule": 2,
+            "bathroomsPerModule": 2
+          },
+          "catalogVersion": "academic-1",
+          "disclaimer": "Estimación académica preliminar; no es presupuesto comercial ni estudio profesional de suelo o diseño estructural.",
+          "soilStudyIncluded": false
+        },
+        "catalogVersion": "academic-1",
+        "inputFingerprint": "b91ff0c7bc38a93541d04fa8d7d449c540c2345d3e4b0ff6d2459f6354d5c750",
+        "inputs": {
+          "terrainId": "6ad2912c99737f771955356e",
+          "widthM": 40,
+          "lengthM": 20,
+          "lotAreaM2": 800,
+          "budgetMxn": 1000000000,
+          "bedrooms": 4,
+          "bathrooms": 1.5
+        },
+        "preliminary": {
+          "status": "layout_capacity_available",
+          "requiredModules": 4,
+          "minimumFootprintM2": 96,
+          "maxGridLayout": {
+            "moduleWidthM": 6,
+            "moduleLengthM": 4,
+            "columns": 4,
+            "rows": 1,
+            "unusedCells": 0,
+            "footprintWidthM": 24,
+            "footprintLengthM": 4
+          },
+          "summary": "Las dimensiones admiten una retícula de 4 columnas por 1 filas para el programa requerido."
+        },
+        "updatedAt": "2026-10-17T03:22:19.950Z",
+        "proposalResult": {
+          "viable": true,
+          "regenerated": true,
+          "proposalIds": [
+            "6ad2917cd89b2163ca213fa4",
+            "6ad2917cd89b2163ca213fa5"
+          ],
+          "message": "Estimaciones académicas persistidas; no son presupuestos comerciales garantizados.",
+          "generatedAt": "2026-10-16T21:10:39.437Z"
+        }
+      },
+      {
+        "_id": "6ad3c496d89b2163ca21408f",
+        "ownerId": "6ac956c865579e0ff9244ec0",
+        "projectId": "6ad3c43b99737f7719553576",
+        "analyzedAt": "2026-10-17T18:57:51.378Z",
+        "assumptions": {
+          "module": {
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2": 24
+          },
+          "capacities": {
+            "bedroomsPerModule": 2,
+            "bathroomsPerModule": 2
+          },
+          "catalogVersion": "academic-1",
+          "disclaimer": "Estimación académica preliminar; no es presupuesto comercial ni estudio profesional de suelo o diseño estructural.",
+          "soilStudyIncluded": false
+        },
+        "catalogVersion": "academic-1",
+        "inputFingerprint": "0efd5cf1833c659ca7fbd9dd17ba6c57fcc69983f492d7e0cd0ba2ba168692e3",
+        "inputs": {
+          "terrainId": "6ad3c37699737f7719553575",
+          "widthM": 20,
+          "lengthM": 40,
+          "lotAreaM2": 800,
+          "budgetMxn": 125000000,
+          "bedrooms": 4,
+          "bathrooms": 3
+        },
+        "preliminary": {
+          "status": "layout_capacity_available",
+          "requiredModules": 5,
+          "minimumFootprintM2": 120,
+          "maxGridLayout": {
+            "moduleWidthM": 4,
+            "moduleLengthM": 6,
+            "columns": 5,
+            "rows": 1,
+            "unusedCells": 0,
+            "footprintWidthM": 20,
+            "footprintLengthM": 6
+          },
+          "summary": "Las dimensiones admiten una retícula de 5 columnas por 1 filas para el programa requerido."
+        },
+        "updatedAt": "2026-10-17T18:57:51.382Z",
+        "proposalResult": {
+          "viable": true,
+          "regenerated": true,
+          "proposalIds": [
+            "6ad3c496d89b2163ca214090",
+            "6ad3c496d89b2163ca214091"
+          ],
+          "message": "Estimaciones académicas persistidas; no son presupuestos comerciales garantizados.",
+          "generatedAt": "2026-10-17T18:57:51.382Z"
+        }
+      },
+      {
+        "_id": "6ad44b11bb5a7cc317090720",
+        "projectId": "6ad44adeffc050c81ad77077",
+        "ownerId": "6ac956c865579e0ff9244ec0",
+        "analyzedAt": "2026-10-18T04:29:05.342Z",
+        "assumptions": {
+          "module": {
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2": 24
+          },
+          "capacities": {
+            "bedroomsPerModule": 2,
+            "bathroomsPerModule": 2
+          },
+          "catalogVersion": "academic-co-1",
+          "disclaimer": "Estimación académica preliminar; no es presupuesto comercial ni estudio profesional de suelo o diseño estructural.",
+          "soilStudyIncluded": false
+        },
+        "catalogVersion": "academic-co-1",
+        "inputFingerprint": "6da8f766e797157e8bc30c577553957c3b83770128029c0fd2e3618b5d7d7903",
+        "inputs": {
+          "terrainId": "6ad3c37699737f7719553575",
+          "widthM": 20,
+          "lengthM": 40,
+          "lotAreaM2": 800,
+          "budgetCop": 70000000,
+          "bedrooms": 2,
+          "bathrooms": 2
+        },
+        "preliminary": {
+          "status": "layout_capacity_available",
+          "requiredModules": 3,
+          "minimumFootprintM2": 72,
+          "maxGridLayout": {
+            "moduleWidthM": 6,
+            "moduleLengthM": 4,
+            "columns": 3,
+            "rows": 1,
+            "unusedCells": 0,
+            "footprintWidthM": 18,
+            "footprintLengthM": 4
+          },
+          "summary": "Las dimensiones admiten una retícula de 3 columnas por 1 filas para el programa requerido."
+        },
+        "stale": false,
+        "updatedAt": "2026-10-18T04:29:05.359Z",
+        "proposalResult": {
+          "viable": false,
+          "regenerated": false,
+          "reason": "budget_below_minimum",
+          "message": "No hay combinación dentro del presupuesto. El mínimo calculado para el programa solicitado es 175000000 COP.",
+          "inputFingerprint": "6da8f766e797157e8bc30c577553957c3b83770128029c0fd2e3618b5d7d7903",
+          "generatedAt": "2026-10-18T04:29:05.359Z"
+        }
+      }
+    ],
+    "users": [
+      {
+        "_id": "6ac92e6cb6304e67e8297c15",
+        "nombre": "Mongo Test 1791569515424",
+        "correo": "vimod.mongo.test.1791569515424@example.invalid",
+        "rol": "cliente",
+        "createdAt": "2026-10-09T18:11:56.256Z"
+      },
+      {
+        "_id": "6ac92e6cb6304e67e8297c16",
+        "nombre": "Mongo Test B 1791569515424",
+        "correo": "vimod.mongo.test.other.1791569515424@example.invalid",
+        "rol": "cliente",
+        "createdAt": "2026-10-09T18:11:56.724Z"
+      },
+      {
+        "_id": "6ac94b6e65579e0ff9244ebd",
+        "nombre": "Prueba Frontend ViMod",
+        "correo": "vimod.frontend.1791576941501@example.invalid",
+        "rol": "cliente",
+        "createdAt": "2026-10-09T20:15:42.053Z"
+      },
+      {
+        "_id": "6ac956c865579e0ff9244ec0",
+        "nombre": "ClientePrueba",
+        "correo": "cliente@vimod.cl",
+        "rol": "cliente",
+        "createdAt": "2026-10-09T21:04:08.703Z"
+      },
+      {
+        "_id": "6ad01f8c6a3b1c95c731ea35",
+        "nombre": "Royer Medina",
+        "correo": "royercitomedina@gmail.com",
+        "rol": "cliente",
+        "createdAt": "2026-10-15T00:34:20.441Z"
+      },
+      {
+        "_id": "6ad121ad6a3b1c95c731ea36",
+        "nombre": "ArquitectoPrueba",
+        "correo": "arquitectoprueba@gmail.com",
+        "rol": "cliente",
+        "createdAt": "2026-10-15T18:55:41.437Z"
+      },
+      {
+        "_id": "6ad133496a3b1c95c731ea37",
+        "nombre": "ArquitectoPrueba",
+        "correo": "arquitectoprueba2@gmail.com",
+        "rol": "cliente",
+        "createdAt": "2026-10-15T20:10:49.432Z",
+        "accountStatus": "disabled"
+      },
+      {
+        "_id": "6ad13f1451b8d4f87496ad2f",
+        "nombre": "RoyeryAngel",
+        "correo": "royeryangel",
+        "rol": "admin",
+        "requestedRole": "admin",
+        "accountType": "admin",
+        "accountStatus": "active",
+        "createdAt": "2026-10-15T21:01:08.187Z",
+        "updatedAt": "2026-10-15T21:14:49.124Z"
+      },
+      {
+        "_id": "6ad1b9c399737f7719553565",
+        "nombre": "ConstructoraPrueba",
+        "correo": "constructora@gmail.com",
+        "rol": "constructora",
+        "requestedRole": "constructora",
+        "accountType": "constructora",
+        "accountStatus": "aprobado",
+        "createdAt": "2026-10-16T05:44:35.174Z",
+        "roleDecision": {
+          "decision": "approve",
+          "reason": "",
+          "decidedAt": "2026-10-16T05:45:44.594Z",
+          "adminId": "6ad13f1451b8d4f87496ad2f"
+        }
+      },
+      {
+        "_id": "6ad1bbea99737f771955356a",
+        "nombre": "Freddy Gutiérrez",
+        "correo": "arquitectogutierrez@gmail.com",
+        "rol": "arquitecto",
+        "requestedRole": "arquitecto",
+        "accountType": "arquitecto",
+        "accountStatus": "aprobado",
+        "createdAt": "2026-10-16T05:53:46.108Z",
+        "roleDecision": {
+          "decision": "approve",
+          "reason": "",
+          "decidedAt": "2026-10-16T05:54:15.274Z",
+          "adminId": "6ad13f1451b8d4f87496ad2f"
+        },
+        "architectProfile": {
+          "specialty": "Delineante de Arquitectura",
+          "yearsExperience": 2,
+          "zone": "Rural - El Rosal",
+          "baseFee": 800000
+        },
+        "updatedAt": "2026-10-18T17:44:35.886Z"
+      },
+      {
+        "_id": "6ad3047499737f7719553573",
+        "nombre": "Arquitecto1",
+        "correo": "arquitecto1@gmail.com",
+        "rol": "arquitecto",
+        "requestedRole": "arquitecto",
+        "accountType": "arquitecto",
+        "accountStatus": "aprobado",
+        "createdAt": "2026-10-17T05:15:32.145Z",
+        "roleDecision": {
+          "decision": "approve",
+          "reason": "",
+          "decidedAt": "2026-10-17T05:15:49.405Z",
+          "adminId": "6ad13f1451b8d4f87496ad2f"
+        }
+      },
+      {
+        "_id": "6ad44a88bb5a7cc317090708",
+        "demoSource": "vimod-demo-constructoras-v1",
+        "demo": true,
+        "demoSeedKey": "cimientos",
+        "accountStatus": "aprobado",
+        "accountType": "constructora",
+        "contractorProfile": {
+          "commercialName": "Cimientos del Altiplano",
+          "description": "Demostración académica de cimentaciones y obra civil.",
+          "coverageZone": "Bogotá y Sabana Centro",
+          "contact": "+57 300 000 0001"
+        },
+        "correo": "demo.cimientos@example.invalid",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "nombre": "Cimientos del Altiplano Demo",
+        "requestedRole": "constructora",
+        "rol": "constructora",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      },
+      {
+        "_id": "6ad44a88bb5a7cc31709070c",
+        "demoSource": "vimod-demo-constructoras-v1",
+        "demo": true,
+        "demoSeedKey": "cubiertas",
+        "accountStatus": "aprobado",
+        "accountType": "constructora",
+        "contractorProfile": {
+          "commercialName": "Cubiertas Andinas",
+          "description": "Demostración académica de soluciones para cubiertas y techos.",
+          "coverageZone": "Medellín y Valle de Aburrá",
+          "contact": "+57 300 000 0002"
+        },
+        "correo": "demo.cubiertas@example.invalid",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "nombre": "Cubiertas Andinas Demo",
+        "requestedRole": "constructora",
+        "rol": "constructora",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      },
+      {
+        "_id": "6ad44a88bb5a7cc317090710",
+        "demoSeedKey": "agregados",
+        "demo": true,
+        "demoSource": "vimod-demo-constructoras-v1",
+        "accountStatus": "aprobado",
+        "accountType": "constructora",
+        "contractorProfile": {
+          "commercialName": "Agregados del Valle",
+          "description": "Demostración académica de agregados y materiales de construcción.",
+          "coverageZone": "Cali y municipios del Valle del Cauca",
+          "contact": "+57 300 000 0003"
+        },
+        "correo": "demo.agregados@example.invalid",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "nombre": "Agregados del Valle Demo",
+        "requestedRole": "constructora",
+        "rol": "constructora",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      },
+      {
+        "_id": "6ad44a88bb5a7cc317090714",
+        "demoSeedKey": "metalicas",
+        "demo": true,
+        "demoSource": "vimod-demo-constructoras-v1",
+        "accountStatus": "aprobado",
+        "accountType": "constructora",
+        "contractorProfile": {
+          "commercialName": "Estructuras Metálicas",
+          "description": "Demostración académica de estructuras metálicas y tornillería.",
+          "coverageZone": "Barranquilla y área metropolitana",
+          "contact": "+57 300 000 0004"
+        },
+        "correo": "demo.metalicas@example.invalid",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "nombre": "Estructuras Metálicas Demo",
+        "requestedRole": "constructora",
+        "rol": "constructora",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      },
+      {
+        "_id": "6ad44a88bb5a7cc317090718",
+        "demoSource": "vimod-demo-constructoras-v1",
+        "demo": true,
+        "demoSeedKey": "carpinteria",
+        "accountStatus": "aprobado",
+        "accountType": "constructora",
+        "contractorProfile": {
+          "commercialName": "Carpintería y Acabados",
+          "description": "Demostración académica de carpintería arquitectónica y acabados.",
+          "coverageZone": "Bucaramanga y área metropolitana",
+          "contact": "+57 300 000 0005"
+        },
+        "correo": "demo.carpinteria@example.invalid",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "nombre": "Carpintería y Acabados Demo",
+        "requestedRole": "constructora",
+        "rol": "constructora",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      },
+      {
+        "_id": "6ad44a88bb5a7cc31709071c",
+        "demoSource": "vimod-demo-constructoras-v1",
+        "demo": true,
+        "demoSeedKey": "instalaciones",
+        "accountStatus": "aprobado",
+        "accountType": "constructora",
+        "contractorProfile": {
+          "commercialName": "Instalaciones Integrales",
+          "description": "Demostración académica de instalaciones eléctricas e hidrosanitarias.",
+          "coverageZone": "Pereira y Eje Cafetero",
+          "contact": "+57 300 000 0006"
+        },
+        "correo": "demo.instalaciones@example.invalid",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "nombre": "Instalaciones Integrales Demo",
+        "requestedRole": "constructora",
+        "rol": "constructora",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      }
+    ],
+    "reviewRequests": [
+      {
+        "_id": "6ad29b2999737f7719553572",
+        "projectId": "6ad2917199737f771955356f",
+        "ownerId": "6ac956c865579e0ff9244ec0",
+        "proposalId": "6ad2917cd89b2163ca213fa4",
+        "architectId": "6ad1bbea99737f771955356a",
+        "status": "pending",
+        "active": true,
+        "createdAt": "2026-10-16T21:46:17.805Z",
+        "updatedAt": "2026-10-16T21:46:17.805Z"
+      }
+    ],
+    "services": [
+      {
+        "_id": "6ad2988399737f7719553571",
+        "ownerId": "6ad1b9c399737f7719553565",
+        "name": "Montaje de Cerca electrica",
+        "description": "Se trabajara en su terreno instalando cercas eléctricas con cimentación completa, análisis de áreas y zonas eléctricas permitidas en el segmento",
+        "category": "cimentacion",
+        "estimatedTime": "15 Días",
+        "price": 15000000,
+        "currency": "MXN",
+        "status": "active",
+        "createdAt": "2026-10-16T21:34:59.962Z",
+        "updatedAt": "2026-10-16T21:34:59.962Z"
+      },
+      {
+        "_id": "6ad3c80e99737f7719553577",
+        "ownerId": "6ad1b9c399737f7719553565",
+        "name": "Instalación de cimentación en seco con micropilotes helicoidales",
+        "description": "Sistema de cimentación rápida en seco mediante micropilotes helicoidales de acero galvanizado y perfiles metálicos estructurales. Ideal para terrenos irregulares o de baja capacidad portante. Incluye estudio técnico de suelo básico, nivelación láser, anclajes de alta resistencia e integración directa con estructura de bastidor o paneles modulares. Sin tiempos de curado, permitiendo montaje inmediato de la superestructura. Garantía de estabilidad estructural de 10 años",
+        "category": "cimentacion",
+        "estimatedTime": "5",
+        "price": 1799999.99,
+        "currency": "MXN",
+        "status": "active",
+        "createdAt": "2026-10-17T19:10:06.324Z",
+        "updatedAt": "2026-10-17T19:10:06.324Z"
+      },
+      {
+        "_id": "6ad44a88bb5a7cc317090709",
+        "demoSeedKey": "cimientos-service-1",
+        "demo": true,
+        "ownerId": "6ad44a88bb5a7cc317090708",
+        "availability": "disponible",
+        "category": "Cimentaciones",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "currency": "COP",
+        "demoSource": "vimod-demo-constructoras-v1",
+        "description": "Retiro manual de material para zapatas y vigas de amarre.",
+        "estimatedTime": "Valor de demostración, sujeto a cotización",
+        "name": "Excavación para cimentación",
+        "price": 95000,
+        "status": "active",
+        "type": "servicio",
+        "unit": "m³",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      },
+      {
+        "_id": "6ad44a88bb5a7cc31709070a",
+        "ownerId": "6ad44a88bb5a7cc317090708",
+        "demo": true,
+        "demoSeedKey": "cimientos-service-2",
+        "availability": "disponible",
+        "category": "Obra civil",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "currency": "COP",
+        "demoSource": "vimod-demo-constructoras-v1",
+        "description": "Suministro y colocación de concreto como valor académico de referencia.",
+        "estimatedTime": "Valor de demostración, sujeto a cotización",
+        "name": "Concreto para elemento de cimentación",
+        "price": 620000,
+        "status": "active",
+        "type": "servicio",
+        "unit": "m³",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      },
+      {
+        "_id": "6ad44a88bb5a7cc31709070b",
+        "demoSeedKey": "cimientos-service-3",
+        "demo": true,
+        "ownerId": "6ad44a88bb5a7cc317090708",
+        "availability": "disponible",
+        "category": "Cimentaciones",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "currency": "COP",
+        "demoSource": "vimod-demo-constructoras-v1",
+        "description": "Corte y figurado de acero de refuerzo.",
+        "estimatedTime": "Valor de demostración, sujeto a cotización",
+        "name": "Acero de refuerzo figurado",
+        "price": 9200,
+        "status": "active",
+        "type": "material",
+        "unit": "kg",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      },
+      {
+        "_id": "6ad44a88bb5a7cc31709070d",
+        "demoSeedKey": "cubiertas-service-1",
+        "demo": true,
+        "ownerId": "6ad44a88bb5a7cc31709070c",
+        "availability": "disponible",
+        "category": "Cubiertas y techos",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "currency": "COP",
+        "demoSource": "vimod-demo-constructoras-v1",
+        "description": "Suministro de cubierta liviana, sin cálculo estructural.",
+        "estimatedTime": "Valor de demostración, sujeto a cotización",
+        "name": "Cubierta metálica liviana",
+        "price": 185000,
+        "status": "active",
+        "type": "material",
+        "unit": "m²",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      },
+      {
+        "_id": "6ad44a88bb5a7cc31709070e",
+        "ownerId": "6ad44a88bb5a7cc31709070c",
+        "demo": true,
+        "demoSeedKey": "cubiertas-service-2",
+        "availability": "disponible",
+        "category": "Cubiertas y techos",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "currency": "COP",
+        "demoSource": "vimod-demo-constructoras-v1",
+        "description": "Montaje referencial de cubierta sobre estructura existente.",
+        "estimatedTime": "Valor de demostración, sujeto a cotización",
+        "name": "Instalación de cubierta",
+        "price": 98000,
+        "status": "active",
+        "type": "servicio",
+        "unit": "m²",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      },
+      {
+        "_id": "6ad44a88bb5a7cc31709070f",
+        "demoSeedKey": "cubiertas-service-3",
+        "demo": true,
+        "ownerId": "6ad44a88bb5a7cc31709070c",
+        "availability": "disponible",
+        "category": "Impermeabilización",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "currency": "COP",
+        "demoSource": "vimod-demo-constructoras-v1",
+        "description": "Aplicación de sistema impermeabilizante de mantenimiento.",
+        "estimatedTime": "Valor de demostración, sujeto a cotización",
+        "name": "Impermeabilización de cubierta",
+        "price": 72000,
+        "status": "active",
+        "type": "servicio",
+        "unit": "m²",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      },
+      {
+        "_id": "6ad44a88bb5a7cc317090711",
+        "ownerId": "6ad44a88bb5a7cc317090710",
+        "demo": true,
+        "demoSeedKey": "agregados-service-1",
+        "availability": "disponible",
+        "category": "Agregados",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "currency": "COP",
+        "demoSource": "vimod-demo-constructoras-v1",
+        "description": "Precio indicativo por volumen; transporte no incluido.",
+        "estimatedTime": "Valor de demostración, sujeto a cotización",
+        "name": "Arena lavada",
+        "price": 145000,
+        "status": "active",
+        "type": "material",
+        "unit": "m³",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      },
+      {
+        "_id": "6ad44a88bb5a7cc317090712",
+        "demoSeedKey": "agregados-service-2",
+        "demo": true,
+        "ownerId": "6ad44a88bb5a7cc317090710",
+        "availability": "disponible",
+        "category": "Cementantes",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "currency": "COP",
+        "demoSource": "vimod-demo-constructoras-v1",
+        "description": "Bulto de 50 kg para fines de demostración.",
+        "estimatedTime": "Valor de demostración, sujeto a cotización",
+        "name": "Cemento gris",
+        "price": 38000,
+        "status": "active",
+        "type": "material",
+        "unit": "bulto",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      },
+      {
+        "_id": "6ad44a88bb5a7cc317090713",
+        "ownerId": "6ad44a88bb5a7cc317090710",
+        "demo": true,
+        "demoSeedKey": "agregados-service-3",
+        "availability": "disponible",
+        "category": "Agregados",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "currency": "COP",
+        "demoSource": "vimod-demo-constructoras-v1",
+        "description": "Agregado grueso para mezclas de concreto.",
+        "estimatedTime": "Valor de demostración, sujeto a cotización",
+        "name": "Gravilla triturada",
+        "price": 168000,
+        "status": "active",
+        "type": "material",
+        "unit": "m³",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      },
+      {
+        "_id": "6ad44a88bb5a7cc317090715",
+        "ownerId": "6ad44a88bb5a7cc317090714",
+        "demo": true,
+        "demoSeedKey": "metalicas-service-1",
+        "availability": "disponible",
+        "category": "Estructuras metálicas",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "currency": "COP",
+        "demoSource": "vimod-demo-constructoras-v1",
+        "description": "Suministro referencial de perfil metálico para sistemas livianos.",
+        "estimatedTime": "Valor de demostración, sujeto a cotización",
+        "name": "Perfil estructural liviano",
+        "price": 18500,
+        "status": "active",
+        "type": "material",
+        "unit": "kg",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      },
+      {
+        "_id": "6ad44a88bb5a7cc317090716",
+        "demoSeedKey": "metalicas-service-2",
+        "demo": true,
+        "ownerId": "6ad44a88bb5a7cc317090714",
+        "availability": "disponible",
+        "category": "Tornillería",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "currency": "COP",
+        "demoSource": "vimod-demo-constructoras-v1",
+        "description": "Tornillería galvanizada para fijaciones livianas.",
+        "estimatedTime": "Valor de demostración, sujeto a cotización",
+        "name": "Tornillo autoperforante",
+        "price": 1800,
+        "status": "active",
+        "type": "material",
+        "unit": "unidad",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      },
+      {
+        "_id": "6ad44a88bb5a7cc317090717",
+        "demoSeedKey": "metalicas-service-3",
+        "demo": true,
+        "ownerId": "6ad44a88bb5a7cc317090714",
+        "availability": "disponible",
+        "category": "Estructuras metálicas",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "currency": "COP",
+        "demoSource": "vimod-demo-constructoras-v1",
+        "description": "Servicio referencial de ensamble; requiere diseño profesional.",
+        "estimatedTime": "Valor de demostración, sujeto a cotización",
+        "name": "Armado de estructura liviana",
+        "price": 210000,
+        "status": "active",
+        "type": "servicio",
+        "unit": "m²",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      },
+      {
+        "_id": "6ad44a88bb5a7cc317090719",
+        "demoSeedKey": "carpinteria-service-1",
+        "demo": true,
+        "ownerId": "6ad44a88bb5a7cc317090718",
+        "availability": "disponible",
+        "category": "Carpintería",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "currency": "COP",
+        "demoSource": "vimod-demo-constructoras-v1",
+        "description": "Puerta de dimensiones estándar como valor indicativo.",
+        "estimatedTime": "Valor de demostración, sujeto a cotización",
+        "name": "Puerta interior en madera",
+        "price": 780000,
+        "status": "active",
+        "type": "material",
+        "unit": "unidad",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      },
+      {
+        "_id": "6ad44a88bb5a7cc31709071a",
+        "demoSeedKey": "carpinteria-service-2",
+        "demo": true,
+        "ownerId": "6ad44a88bb5a7cc317090718",
+        "availability": "disponible",
+        "category": "Carpintería",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "currency": "COP",
+        "demoSource": "vimod-demo-constructoras-v1",
+        "description": "Módulo de carpintería con acabado básico.",
+        "estimatedTime": "Valor de demostración, sujeto a cotización",
+        "name": "Mueble bajo de cocina",
+        "price": 690000,
+        "status": "active",
+        "type": "servicio",
+        "unit": "m²",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      },
+      {
+        "_id": "6ad44a88bb5a7cc31709071b",
+        "demoSeedKey": "carpinteria-service-3",
+        "demo": true,
+        "ownerId": "6ad44a88bb5a7cc317090718",
+        "availability": "disponible",
+        "category": "Acabados",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "currency": "COP",
+        "demoSource": "vimod-demo-constructoras-v1",
+        "description": "Aplicación de pintura en superficie preparada.",
+        "estimatedTime": "Valor de demostración, sujeto a cotización",
+        "name": "Pintura interior",
+        "price": 32000,
+        "status": "active",
+        "type": "servicio",
+        "unit": "m²",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      },
+      {
+        "_id": "6ad44a88bb5a7cc31709071d",
+        "demoSeedKey": "instalaciones-service-1",
+        "demo": true,
+        "ownerId": "6ad44a88bb5a7cc31709071c",
+        "availability": "disponible",
+        "category": "Instalaciones eléctricas",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "currency": "COP",
+        "demoSource": "vimod-demo-constructoras-v1",
+        "description": "Instalación referencial de punto; requiere validación de diseño.",
+        "estimatedTime": "Valor de demostración, sujeto a cotización",
+        "name": "Punto eléctrico residencial",
+        "price": 125000,
+        "status": "active",
+        "type": "servicio",
+        "unit": "unidad",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      },
+      {
+        "_id": "6ad44a88bb5a7cc31709071e",
+        "ownerId": "6ad44a88bb5a7cc31709071c",
+        "demo": true,
+        "demoSeedKey": "instalaciones-service-2",
+        "availability": "disponible",
+        "category": "Instalaciones hidrosanitarias",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "currency": "COP",
+        "demoSource": "vimod-demo-constructoras-v1",
+        "description": "Tubería para redes internas, sin accesorios especiales.",
+        "estimatedTime": "Valor de demostración, sujeto a cotización",
+        "name": "Tubería hidrosanitaria",
+        "price": 28000,
+        "status": "active",
+        "type": "material",
+        "unit": "m",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      },
+      {
+        "_id": "6ad44a88bb5a7cc31709071f",
+        "demoSeedKey": "instalaciones-service-3",
+        "demo": true,
+        "ownerId": "6ad44a88bb5a7cc31709071c",
+        "availability": "disponible",
+        "category": "Instalaciones hidrosanitarias",
+        "createdAt": "2026-10-18T04:26:48.395Z",
+        "currency": "COP",
+        "demoSource": "vimod-demo-constructoras-v1",
+        "description": "Instalación referencial de aparato con punto existente.",
+        "estimatedTime": "Valor de demostración, sujeto a cotización",
+        "name": "Montaje de aparato sanitario",
+        "price": 165000,
+        "status": "active",
+        "type": "servicio",
+        "unit": "unidad",
+        "updatedAt": "2026-10-18T04:26:48.395Z"
+      }
+    ],
+    "quoteRequests": [],
+    "proposals": [
+      {
+        "_id": "6ad13c551e71d7684b136f3a",
+        "projectId": "6ad13c346a3b1c95c731ea39",
+        "inputFingerprint": "df812a735a7fdc6053d71ea5aff57f2965d251c92c39a96b0a44fc91e5f56ba4",
+        "code": "A",
+        "ownerId": "6ad01f8c6a3b1c95c731ea35",
+        "bathrooms": 1.5,
+        "bedrooms": 4,
+        "createdAt": "2026-10-15T20:49:25.120Z",
+        "description": "4 módulos de 6×4 m; capacidad estimada para 4 habitaciones y 1.5 baños. La retícula cabe en el terreno y el costo calculado no excede el presupuesto.",
+        "estimate": {
+          "catalogVersion": "academic-1",
+          "areaM2": 96,
+          "costMxn": 185000,
+          "currency": "MXN",
+          "executionDays": 26,
+          "energyKwhPerYear": 2100,
+          "energyUnit": "kWh/año",
+          "parameters": {
+            "bedrooms": 4,
+            "bathrooms": 1.5,
+            "terrainWidthM": 25,
+            "terrainLengthM": 20,
+            "terrainAreaM2": 500,
+            "budgetMxn": 100000000,
+            "moduleCount": 4,
+            "moduleDimensionsM": "6x4",
+            "moduleCounts": {
+              "common": 1,
+              "bedroom": 2,
+              "wetCore": 1
+            },
+            "unitCostsMxn": {
+              "common": 60000,
+              "bedroom": 45000,
+              "wetCore": 35000
+            },
+            "annualEnergyKwhByModule": {
+              "common": 900,
+              "bedroom": 450,
+              "wetCore": 300
+            },
+            "executionDaysRule": "10 + 4 × 4",
+            "layout": {
+              "moduleWidthM": 6,
+              "moduleLengthM": 4,
+              "columns": 4,
+              "rows": 1,
+              "unusedCells": 0,
+              "footprintWidthM": 24,
+              "footprintLengthM": 4
+            }
+          },
+          "assumptions": "Estimación académica preliminar; no es presupuesto comercial ni estudio profesional de suelo o diseño estructural."
+        },
+        "imageCaption": "Esquema modular académico; representación ilustrativa",
+        "index": 1,
+        "label": "Programa solicitado",
+        "layout": {
+          "moduleWidthM": 6,
+          "moduleLengthM": 4,
+          "columns": 4,
+          "rows": 1,
+          "unusedCells": 0,
+          "footprintWidthM": 24,
+          "footprintLengthM": 4
+        },
+        "modules": [
+          {
+            "type": "common",
+            "count": 1,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          },
+          {
+            "type": "bedroom",
+            "count": 2,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          },
+          {
+            "type": "wetCore",
+            "count": 1,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          }
+        ],
+        "name": "Configuración compacta estándar",
+        "recommended": true,
+        "technicalDetails": [
+          [
+            "Disposición",
+            "4 columnas × 1 filas"
+          ],
+          [
+            "Huella",
+            "24 × 4 m"
+          ],
+          [
+            "Capacidad por módulo dormitorio",
+            "2 habitaciones"
+          ],
+          [
+            "Capacidad por módulo húmedo",
+            "2 baños"
+          ]
+        ],
+        "terrainId": "6ad13bc46a3b1c95c731ea38"
+      },
+      {
+        "_id": "6ad13c551e71d7684b136f3b",
+        "ownerId": "6ad01f8c6a3b1c95c731ea35",
+        "code": "B",
+        "inputFingerprint": "df812a735a7fdc6053d71ea5aff57f2965d251c92c39a96b0a44fc91e5f56ba4",
+        "projectId": "6ad13c346a3b1c95c731ea39",
+        "bathrooms": 1.5,
+        "bedrooms": 6,
+        "createdAt": "2026-10-15T20:49:25.121Z",
+        "description": "5 módulos de 6×4 m; capacidad estimada para 6 habitaciones y 1.5 baños. La retícula cabe en el terreno y el costo calculado no excede el presupuesto.",
+        "estimate": {
+          "catalogVersion": "academic-1",
+          "areaM2": 120,
+          "costMxn": 230000,
+          "currency": "MXN",
+          "executionDays": 30,
+          "energyKwhPerYear": 2550,
+          "energyUnit": "kWh/año",
+          "parameters": {
+            "bedrooms": 6,
+            "bathrooms": 1.5,
+            "terrainWidthM": 25,
+            "terrainLengthM": 20,
+            "terrainAreaM2": 500,
+            "budgetMxn": 100000000,
+            "moduleCount": 5,
+            "moduleDimensionsM": "6x4",
+            "moduleCounts": {
+              "common": 1,
+              "bedroom": 3,
+              "wetCore": 1
+            },
+            "unitCostsMxn": {
+              "common": 60000,
+              "bedroom": 45000,
+              "wetCore": 35000
+            },
+            "annualEnergyKwhByModule": {
+              "common": 900,
+              "bedroom": 450,
+              "wetCore": 300
+            },
+            "executionDaysRule": "10 + 5 × 4",
+            "layout": {
+              "moduleWidthM": 4,
+              "moduleLengthM": 6,
+              "columns": 5,
+              "rows": 1,
+              "unusedCells": 0,
+              "footprintWidthM": 20,
+              "footprintLengthM": 6
+            }
+          },
+          "assumptions": "Estimación académica preliminar; no es presupuesto comercial ni estudio profesional de suelo o diseño estructural."
+        },
+        "imageCaption": "Esquema modular académico; representación ilustrativa",
+        "index": 2,
+        "label": "Un módulo dormitorio adicional",
+        "layout": {
+          "moduleWidthM": 4,
+          "moduleLengthM": 6,
+          "columns": 5,
+          "rows": 1,
+          "unusedCells": 0,
+          "footprintWidthM": 20,
+          "footprintLengthM": 6
+        },
+        "modules": [
+          {
+            "type": "common",
+            "count": 1,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          },
+          {
+            "type": "bedroom",
+            "count": 3,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          },
+          {
+            "type": "wetCore",
+            "count": 1,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          }
+        ],
+        "name": "Configuración ampliable",
+        "recommended": false,
+        "technicalDetails": [
+          [
+            "Disposición",
+            "5 columnas × 1 filas"
+          ],
+          [
+            "Huella",
+            "20 × 6 m"
+          ],
+          [
+            "Capacidad por módulo dormitorio",
+            "2 habitaciones"
+          ],
+          [
+            "Capacidad por módulo húmedo",
+            "2 baños"
+          ]
+        ],
+        "terrainId": "6ad13bc46a3b1c95c731ea38"
+      },
+      {
+        "_id": "6ad289ccd89b2163ca213fa1",
+        "projectId": "6ad2899a99737f771955356d",
+        "ownerId": "6ac956c865579e0ff9244ec0",
+        "code": "A",
+        "inputFingerprint": "501ee33598583564b4f5469bdfc25ff1ba64eff57d021df3fb166035792a015f",
+        "bathrooms": 1.5,
+        "bedrooms": 2,
+        "createdAt": "2026-10-16T20:32:12.391Z",
+        "description": "3 módulos de 6×4 m; capacidad estimada para 2 habitaciones y 1.5 baños. La retícula cabe en el terreno y el costo calculado no excede el presupuesto.",
+        "estimate": {
+          "catalogVersion": "academic-1",
+          "areaM2": 72,
+          "costMxn": 140000,
+          "currency": "MXN",
+          "executionDays": 22,
+          "energyKwhPerYear": 1650,
+          "energyUnit": "kWh/año",
+          "parameters": {
+            "bedrooms": 2,
+            "bathrooms": 1.5,
+            "terrainWidthM": 20,
+            "terrainLengthM": 20,
+            "terrainAreaM2": 400,
+            "budgetMxn": 7000000,
+            "moduleCount": 3,
+            "moduleDimensionsM": "6x4",
+            "moduleCounts": {
+              "common": 1,
+              "bedroom": 1,
+              "wetCore": 1
+            },
+            "unitCostsMxn": {
+              "common": 60000,
+              "bedroom": 45000,
+              "wetCore": 35000
+            },
+            "annualEnergyKwhByModule": {
+              "common": 900,
+              "bedroom": 450,
+              "wetCore": 300
+            },
+            "executionDaysRule": "10 + 3 × 4",
+            "layout": {
+              "moduleWidthM": 6,
+              "moduleLengthM": 4,
+              "columns": 3,
+              "rows": 1,
+              "unusedCells": 0,
+              "footprintWidthM": 18,
+              "footprintLengthM": 4
+            }
+          },
+          "assumptions": "Estimación académica preliminar; no es presupuesto comercial ni estudio profesional de suelo o diseño estructural."
+        },
+        "imageCaption": "Esquema modular académico; representación ilustrativa",
+        "index": 1,
+        "label": "Programa solicitado",
+        "layout": {
+          "moduleWidthM": 6,
+          "moduleLengthM": 4,
+          "columns": 3,
+          "rows": 1,
+          "unusedCells": 0,
+          "footprintWidthM": 18,
+          "footprintLengthM": 4
+        },
+        "modules": [
+          {
+            "type": "common",
+            "count": 1,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          },
+          {
+            "type": "bedroom",
+            "count": 1,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          },
+          {
+            "type": "wetCore",
+            "count": 1,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          }
+        ],
+        "name": "Configuración compacta estándar",
+        "recommended": true,
+        "technicalDetails": [
+          [
+            "Disposición",
+            "3 columnas × 1 filas"
+          ],
+          [
+            "Huella",
+            "18 × 4 m"
+          ],
+          [
+            "Capacidad por módulo dormitorio",
+            "2 habitaciones"
+          ],
+          [
+            "Capacidad por módulo húmedo",
+            "2 baños"
+          ]
+        ],
+        "terrainId": "6ad2897499737f771955356c"
+      },
+      {
+        "_id": "6ad289ccd89b2163ca213fa2",
+        "inputFingerprint": "501ee33598583564b4f5469bdfc25ff1ba64eff57d021df3fb166035792a015f",
+        "code": "B",
+        "ownerId": "6ac956c865579e0ff9244ec0",
+        "projectId": "6ad2899a99737f771955356d",
+        "bathrooms": 1.5,
+        "bedrooms": 4,
+        "createdAt": "2026-10-16T20:32:12.392Z",
+        "description": "4 módulos de 6×4 m; capacidad estimada para 4 habitaciones y 1.5 baños. La retícula cabe en el terreno y el costo calculado no excede el presupuesto.",
+        "estimate": {
+          "catalogVersion": "academic-1",
+          "areaM2": 96,
+          "costMxn": 185000,
+          "currency": "MXN",
+          "executionDays": 26,
+          "energyKwhPerYear": 2100,
+          "energyUnit": "kWh/año",
+          "parameters": {
+            "bedrooms": 4,
+            "bathrooms": 1.5,
+            "terrainWidthM": 20,
+            "terrainLengthM": 20,
+            "terrainAreaM2": 400,
+            "budgetMxn": 7000000,
+            "moduleCount": 4,
+            "moduleDimensionsM": "6x4",
+            "moduleCounts": {
+              "common": 1,
+              "bedroom": 2,
+              "wetCore": 1
+            },
+            "unitCostsMxn": {
+              "common": 60000,
+              "bedroom": 45000,
+              "wetCore": 35000
+            },
+            "annualEnergyKwhByModule": {
+              "common": 900,
+              "bedroom": 450,
+              "wetCore": 300
+            },
+            "executionDaysRule": "10 + 4 × 4",
+            "layout": {
+              "moduleWidthM": 4,
+              "moduleLengthM": 6,
+              "columns": 4,
+              "rows": 1,
+              "unusedCells": 0,
+              "footprintWidthM": 16,
+              "footprintLengthM": 6
+            }
+          },
+          "assumptions": "Estimación académica preliminar; no es presupuesto comercial ni estudio profesional de suelo o diseño estructural."
+        },
+        "imageCaption": "Esquema modular académico; representación ilustrativa",
+        "index": 2,
+        "label": "Un módulo dormitorio adicional",
+        "layout": {
+          "moduleWidthM": 4,
+          "moduleLengthM": 6,
+          "columns": 4,
+          "rows": 1,
+          "unusedCells": 0,
+          "footprintWidthM": 16,
+          "footprintLengthM": 6
+        },
+        "modules": [
+          {
+            "type": "common",
+            "count": 1,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          },
+          {
+            "type": "bedroom",
+            "count": 2,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          },
+          {
+            "type": "wetCore",
+            "count": 1,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          }
+        ],
+        "name": "Configuración ampliable",
+        "recommended": false,
+        "technicalDetails": [
+          [
+            "Disposición",
+            "4 columnas × 1 filas"
+          ],
+          [
+            "Huella",
+            "16 × 6 m"
+          ],
+          [
+            "Capacidad por módulo dormitorio",
+            "2 habitaciones"
+          ],
+          [
+            "Capacidad por módulo húmedo",
+            "2 baños"
+          ]
+        ],
+        "terrainId": "6ad2897499737f771955356c"
+      },
+      {
+        "_id": "6ad2917cd89b2163ca213fa4",
+        "inputFingerprint": "b91ff0c7bc38a93541d04fa8d7d449c540c2345d3e4b0ff6d2459f6354d5c750",
+        "code": "A",
+        "ownerId": "6ac956c865579e0ff9244ec0",
+        "projectId": "6ad2917199737f771955356f",
+        "bathrooms": 1.5,
+        "bedrooms": 4,
+        "createdAt": "2026-10-16T21:05:00.427Z",
+        "description": "4 módulos de 6×4 m; capacidad estimada para 4 habitaciones y 1.5 baños. La retícula cabe en el terreno y el costo calculado no excede el presupuesto.",
+        "estimate": {
+          "catalogVersion": "academic-1",
+          "areaM2": 96,
+          "costMxn": 185000,
+          "currency": "MXN",
+          "executionDays": 26,
+          "energyKwhPerYear": 2100,
+          "energyUnit": "kWh/año",
+          "parameters": {
+            "bedrooms": 4,
+            "bathrooms": 1.5,
+            "terrainWidthM": 40,
+            "terrainLengthM": 20,
+            "terrainAreaM2": 800,
+            "budgetMxn": 1000000000,
+            "moduleCount": 4,
+            "moduleDimensionsM": "6x4",
+            "moduleCounts": {
+              "common": 1,
+              "bedroom": 2,
+              "wetCore": 1
+            },
+            "unitCostsMxn": {
+              "common": 60000,
+              "bedroom": 45000,
+              "wetCore": 35000
+            },
+            "annualEnergyKwhByModule": {
+              "common": 900,
+              "bedroom": 450,
+              "wetCore": 300
+            },
+            "executionDaysRule": "10 + 4 × 4",
+            "layout": {
+              "moduleWidthM": 6,
+              "moduleLengthM": 4,
+              "columns": 4,
+              "rows": 1,
+              "unusedCells": 0,
+              "footprintWidthM": 24,
+              "footprintLengthM": 4
+            }
+          },
+          "assumptions": "Estimación académica preliminar; no es presupuesto comercial ni estudio profesional de suelo o diseño estructural."
+        },
+        "imageCaption": "Esquema modular académico; representación ilustrativa",
+        "index": 1,
+        "label": "Programa solicitado",
+        "layout": {
+          "moduleWidthM": 6,
+          "moduleLengthM": 4,
+          "columns": 4,
+          "rows": 1,
+          "unusedCells": 0,
+          "footprintWidthM": 24,
+          "footprintLengthM": 4
+        },
+        "modules": [
+          {
+            "type": "common",
+            "count": 1,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          },
+          {
+            "type": "bedroom",
+            "count": 2,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          },
+          {
+            "type": "wetCore",
+            "count": 1,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          }
+        ],
+        "name": "Configuración compacta estándar",
+        "recommended": true,
+        "technicalDetails": [
+          [
+            "Disposición",
+            "4 columnas × 1 filas"
+          ],
+          [
+            "Huella",
+            "24 × 4 m"
+          ],
+          [
+            "Capacidad por módulo dormitorio",
+            "2 habitaciones"
+          ],
+          [
+            "Capacidad por módulo húmedo",
+            "2 baños"
+          ]
+        ],
+        "terrainId": "6ad2912c99737f771955356e"
+      },
+      {
+        "_id": "6ad2917cd89b2163ca213fa5",
+        "projectId": "6ad2917199737f771955356f",
+        "ownerId": "6ac956c865579e0ff9244ec0",
+        "code": "B",
+        "inputFingerprint": "b91ff0c7bc38a93541d04fa8d7d449c540c2345d3e4b0ff6d2459f6354d5c750",
+        "bathrooms": 1.5,
+        "bedrooms": 6,
+        "createdAt": "2026-10-16T21:05:00.428Z",
+        "description": "5 módulos de 6×4 m; capacidad estimada para 6 habitaciones y 1.5 baños. La retícula cabe en el terreno y el costo calculado no excede el presupuesto.",
+        "estimate": {
+          "catalogVersion": "academic-1",
+          "areaM2": 120,
+          "costMxn": 230000,
+          "currency": "MXN",
+          "executionDays": 30,
+          "energyKwhPerYear": 2550,
+          "energyUnit": "kWh/año",
+          "parameters": {
+            "bedrooms": 6,
+            "bathrooms": 1.5,
+            "terrainWidthM": 40,
+            "terrainLengthM": 20,
+            "terrainAreaM2": 800,
+            "budgetMxn": 1000000000,
+            "moduleCount": 5,
+            "moduleDimensionsM": "6x4",
+            "moduleCounts": {
+              "common": 1,
+              "bedroom": 3,
+              "wetCore": 1
+            },
+            "unitCostsMxn": {
+              "common": 60000,
+              "bedroom": 45000,
+              "wetCore": 35000
+            },
+            "annualEnergyKwhByModule": {
+              "common": 900,
+              "bedroom": 450,
+              "wetCore": 300
+            },
+            "executionDaysRule": "10 + 5 × 4",
+            "layout": {
+              "moduleWidthM": 6,
+              "moduleLengthM": 4,
+              "columns": 5,
+              "rows": 1,
+              "unusedCells": 0,
+              "footprintWidthM": 30,
+              "footprintLengthM": 4
+            }
+          },
+          "assumptions": "Estimación académica preliminar; no es presupuesto comercial ni estudio profesional de suelo o diseño estructural."
+        },
+        "imageCaption": "Esquema modular académico; representación ilustrativa",
+        "index": 2,
+        "label": "Un módulo dormitorio adicional",
+        "layout": {
+          "moduleWidthM": 6,
+          "moduleLengthM": 4,
+          "columns": 5,
+          "rows": 1,
+          "unusedCells": 0,
+          "footprintWidthM": 30,
+          "footprintLengthM": 4
+        },
+        "modules": [
+          {
+            "type": "common",
+            "count": 1,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          },
+          {
+            "type": "bedroom",
+            "count": 3,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          },
+          {
+            "type": "wetCore",
+            "count": 1,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          }
+        ],
+        "name": "Configuración ampliable",
+        "recommended": false,
+        "technicalDetails": [
+          [
+            "Disposición",
+            "5 columnas × 1 filas"
+          ],
+          [
+            "Huella",
+            "30 × 4 m"
+          ],
+          [
+            "Capacidad por módulo dormitorio",
+            "2 habitaciones"
+          ],
+          [
+            "Capacidad por módulo húmedo",
+            "2 baños"
+          ]
+        ],
+        "terrainId": "6ad2912c99737f771955356e"
+      },
+      {
+        "_id": "6ad3c496d89b2163ca214090",
+        "inputFingerprint": "0efd5cf1833c659ca7fbd9dd17ba6c57fcc69983f492d7e0cd0ba2ba168692e3",
+        "code": "A",
+        "ownerId": "6ac956c865579e0ff9244ec0",
+        "projectId": "6ad3c43b99737f7719553576",
+        "bathrooms": 3,
+        "bedrooms": 4,
+        "createdAt": "2026-10-17T18:55:18.619Z",
+        "description": "5 módulos de 6×4 m; capacidad estimada para 4 habitaciones y 3 baños. La retícula cabe en el terreno y el costo calculado no excede el presupuesto.",
+        "estimate": {
+          "catalogVersion": "academic-1",
+          "areaM2": 120,
+          "costMxn": 220000,
+          "currency": "MXN",
+          "executionDays": 30,
+          "energyKwhPerYear": 2400,
+          "energyUnit": "kWh/año",
+          "parameters": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "terrainWidthM": 20,
+            "terrainLengthM": 40,
+            "terrainAreaM2": 800,
+            "budgetMxn": 125000000,
+            "moduleCount": 5,
+            "moduleDimensionsM": "6x4",
+            "moduleCounts": {
+              "common": 1,
+              "bedroom": 2,
+              "wetCore": 2
+            },
+            "unitCostsMxn": {
+              "common": 60000,
+              "bedroom": 45000,
+              "wetCore": 35000
+            },
+            "annualEnergyKwhByModule": {
+              "common": 900,
+              "bedroom": 450,
+              "wetCore": 300
+            },
+            "executionDaysRule": "10 + 5 × 4",
+            "layout": {
+              "moduleWidthM": 4,
+              "moduleLengthM": 6,
+              "columns": 5,
+              "rows": 1,
+              "unusedCells": 0,
+              "footprintWidthM": 20,
+              "footprintLengthM": 6
+            }
+          },
+          "assumptions": "Estimación académica preliminar; no es presupuesto comercial ni estudio profesional de suelo o diseño estructural."
+        },
+        "imageCaption": "Esquema modular académico; representación ilustrativa",
+        "index": 1,
+        "label": "Programa solicitado",
+        "layout": {
+          "moduleWidthM": 4,
+          "moduleLengthM": 6,
+          "columns": 5,
+          "rows": 1,
+          "unusedCells": 0,
+          "footprintWidthM": 20,
+          "footprintLengthM": 6
+        },
+        "modules": [
+          {
+            "type": "common",
+            "count": 1,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          },
+          {
+            "type": "bedroom",
+            "count": 2,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          },
+          {
+            "type": "wetCore",
+            "count": 2,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          }
+        ],
+        "name": "Configuración compacta estándar",
+        "recommended": true,
+        "technicalDetails": [
+          [
+            "Disposición",
+            "5 columnas × 1 filas"
+          ],
+          [
+            "Huella",
+            "20 × 6 m"
+          ],
+          [
+            "Capacidad por módulo dormitorio",
+            "2 habitaciones"
+          ],
+          [
+            "Capacidad por módulo húmedo",
+            "2 baños"
+          ]
+        ],
+        "terrainId": "6ad3c37699737f7719553575"
+      },
+      {
+        "_id": "6ad3c496d89b2163ca214091",
+        "projectId": "6ad3c43b99737f7719553576",
+        "ownerId": "6ac956c865579e0ff9244ec0",
+        "code": "B",
+        "inputFingerprint": "0efd5cf1833c659ca7fbd9dd17ba6c57fcc69983f492d7e0cd0ba2ba168692e3",
+        "bathrooms": 3,
+        "bedrooms": 6,
+        "createdAt": "2026-10-17T18:55:18.620Z",
+        "description": "6 módulos de 6×4 m; capacidad estimada para 6 habitaciones y 3 baños. La retícula cabe en el terreno y el costo calculado no excede el presupuesto.",
+        "estimate": {
+          "catalogVersion": "academic-1",
+          "areaM2": 144,
+          "costMxn": 265000,
+          "currency": "MXN",
+          "executionDays": 34,
+          "energyKwhPerYear": 2850,
+          "energyUnit": "kWh/año",
+          "parameters": {
+            "bedrooms": 6,
+            "bathrooms": 3,
+            "terrainWidthM": 20,
+            "terrainLengthM": 40,
+            "terrainAreaM2": 800,
+            "budgetMxn": 125000000,
+            "moduleCount": 6,
+            "moduleDimensionsM": "6x4",
+            "moduleCounts": {
+              "common": 1,
+              "bedroom": 3,
+              "wetCore": 2
+            },
+            "unitCostsMxn": {
+              "common": 60000,
+              "bedroom": 45000,
+              "wetCore": 35000
+            },
+            "annualEnergyKwhByModule": {
+              "common": 900,
+              "bedroom": 450,
+              "wetCore": 300
+            },
+            "executionDaysRule": "10 + 6 × 4",
+            "layout": {
+              "moduleWidthM": 6,
+              "moduleLengthM": 4,
+              "columns": 3,
+              "rows": 2,
+              "unusedCells": 0,
+              "footprintWidthM": 18,
+              "footprintLengthM": 8
+            }
+          },
+          "assumptions": "Estimación académica preliminar; no es presupuesto comercial ni estudio profesional de suelo o diseño estructural."
+        },
+        "imageCaption": "Esquema modular académico; representación ilustrativa",
+        "index": 2,
+        "label": "Un módulo dormitorio adicional",
+        "layout": {
+          "moduleWidthM": 6,
+          "moduleLengthM": 4,
+          "columns": 3,
+          "rows": 2,
+          "unusedCells": 0,
+          "footprintWidthM": 18,
+          "footprintLengthM": 8
+        },
+        "modules": [
+          {
+            "type": "common",
+            "count": 1,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          },
+          {
+            "type": "bedroom",
+            "count": 3,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          },
+          {
+            "type": "wetCore",
+            "count": 2,
+            "widthM": 6,
+            "lengthM": 4,
+            "areaM2PerModule": 24
+          }
+        ],
+        "name": "Configuración ampliable",
+        "recommended": false,
+        "technicalDetails": [
+          [
+            "Disposición",
+            "3 columnas × 2 filas"
+          ],
+          [
+            "Huella",
+            "18 × 8 m"
+          ],
+          [
+            "Capacidad por módulo dormitorio",
+            "2 habitaciones"
+          ],
+          [
+            "Capacidad por módulo húmedo",
+            "2 baños"
+          ]
+        ],
+        "terrainId": "6ad3c37699737f7719553575"
+      }
+    ],
+    "projects": [
+      {
+        "_id": "6ac92e6db6304e67e8297c19",
+        "ownerId": "6ac92e6cb6304e67e8297c15",
+        "terrainId": "6ac92e6db6304e67e8297c17",
+        "nombre": "TEST-Proyecto-1791569515424",
+        "presupuesto": 250000,
+        "estado": "Borrador",
+        "createdAt": "2026-10-09T18:11:57.674Z",
+        "updatedAt": "2026-10-09T18:11:57.674Z"
+      },
+      {
+        "_id": "6ac94e8465579e0ff9244ebf",
+        "ownerId": "6ac94b6e65579e0ff9244ebd",
+        "terrainId": "6ac94e1865579e0ff9244ebe",
+        "nombre": "Frontend project 1791577732117",
+        "presupuesto": 350000,
+        "estado": "Borrador",
+        "createdAt": "2026-10-09T20:28:52.128Z",
+        "updatedAt": "2026-10-09T20:28:52.128Z"
+      },
+      {
+        "_id": "6ac9579465579e0ff9244ec3",
+        "ownerId": "6ac956c865579e0ff9244ec0",
+        "terrainId": "6ac9576465579e0ff9244ec2",
+        "nombre": "Nuestra Casa Modular",
+        "presupuesto": 120000000,
+        "estado": "Cerrado",
+        "createdAt": "2026-10-09T21:07:32.739Z",
+        "updatedAt": "2026-10-16T21:55:18.829Z",
+        "fechaCierre": "2026-10-16T21:55:18.829Z"
+      },
+      {
+        "_id": "6ad13c346a3b1c95c731ea39",
+        "ownerId": "6ad01f8c6a3b1c95c731ea35",
+        "terrainId": "6ad13bc46a3b1c95c731ea38",
+        "nombre": "Casa Cajete Prueba 1",
+        "presupuesto": 100000000,
+        "habitaciones": 4,
+        "banos": 1.5,
+        "estado": "Borrador",
+        "createdAt": "2026-10-15T20:48:52.340Z",
+        "updatedAt": "2026-10-15T20:48:52.340Z"
+      },
+      {
+        "_id": "6ad2899a99737f771955356d",
+        "ownerId": "6ac956c865579e0ff9244ec0",
+        "terrainId": "6ad2897499737f771955356c",
+        "nombre": "naranjitas",
+        "presupuesto": 7000000,
+        "habitaciones": 2,
+        "banos": 1.5,
+        "estado": "Borrador",
+        "createdAt": "2026-10-16T20:31:22.564Z",
+        "updatedAt": "2026-10-16T20:31:22.564Z"
+      },
+      {
+        "_id": "6ad2917199737f771955356f",
+        "ownerId": "6ac956c865579e0ff9244ec0",
+        "terrainId": "6ad2912c99737f771955356e",
+        "nombre": "PruebaArq",
+        "presupuesto": 1000000000,
+        "habitaciones": 4,
+        "banos": 1.5,
+        "estado": "En revisión",
+        "createdAt": "2026-10-16T21:04:49.406Z",
+        "updatedAt": "2026-10-16T21:46:17.805Z",
+        "selectedProposalId": "6ad2917cd89b2163ca213fa4"
+      },
+      {
+        "_id": "6ad3c43b99737f7719553576",
+        "ownerId": "6ac956c865579e0ff9244ec0",
+        "terrainId": "6ad3c37699737f7719553575",
+        "nombre": "Casa Valle",
+        "presupuesto": 125000000,
+        "habitaciones": 4,
+        "banos": 3,
+        "estado": "Borrador",
+        "createdAt": "2026-10-17T18:53:47.941Z",
+        "updatedAt": "2026-10-17T18:53:47.941Z"
+      },
+      {
+        "_id": "6ad44adeffc050c81ad77077",
+        "ownerId": "6ac956c865579e0ff9244ec0",
+        "terrainId": "6ad3c37699737f7719553575",
+        "nombre": "Nuestra Casa Modular",
+        "presupuesto": 70000000,
+        "habitaciones": 2,
+        "banos": 2,
+        "estado": "Borrador",
+        "createdAt": "2026-10-18T04:28:14.261Z",
+        "updatedAt": "2026-10-18T04:28:14.261Z"
+      }
+    ],
+    "payments": [
+      {
+        "_id": "6ad293fdd89b2163ca213fa6",
+        "orderId": "6ad293fd99737f7719553570",
+        "amount": 185000,
+        "createdAt": "2026-10-16T21:15:41.520Z",
+        "currency": "MXN",
+        "ownerId": "6ac956c865579e0ff9244ec0",
+        "provider": null,
+        "status": "not_configured",
+        "updatedAt": "2026-10-16T21:15:41.520Z"
+      }
+    ],
+    "adminAudit": [
+      {
+        "_id": "6ad13f1451b8d4f87496ad30",
+        "adminId": "6ad13f1451b8d4f87496ad2f",
+        "action": "configuredAdminCreated",
+        "entityType": "user",
+        "entityId": "6ad13f1451b8d4f87496ad2f",
+        "details": {},
+        "createdAt": "2026-10-15T21:01:08.187Z"
+      },
+      {
+        "_id": "6ad1ba0899737f7719553566",
+        "adminId": "6ad13f1451b8d4f87496ad2f",
+        "action": "approve",
+        "entityType": "roleRequest",
+        "entityId": "6ad1b9c399737f7719553565",
+        "details": {
+          "role": "constructora"
+        },
+        "createdAt": "2026-10-16T05:45:44.603Z"
+      },
+      {
+        "_id": "6ad1ba2b99737f7719553567",
+        "adminId": "6ad13f1451b8d4f87496ad2f",
+        "action": "accountStatusChanged",
+        "entityType": "user",
+        "entityId": "6ad133496a3b1c95c731ea37",
+        "details": {
+          "status": "disabled"
+        },
+        "createdAt": "2026-10-16T05:46:19.911Z"
+      },
+      {
+        "_id": "6ad1ba2c99737f7719553568",
+        "adminId": "6ad13f1451b8d4f87496ad2f",
+        "action": "accountStatusChanged",
+        "entityType": "user",
+        "entityId": "6ad133496a3b1c95c731ea37",
+        "details": {
+          "status": "active"
+        },
+        "createdAt": "2026-10-16T05:46:20.890Z"
+      },
+      {
+        "_id": "6ad1ba3099737f7719553569",
+        "adminId": "6ad13f1451b8d4f87496ad2f",
+        "action": "accountStatusChanged",
+        "entityType": "user",
+        "entityId": "6ad133496a3b1c95c731ea37",
+        "details": {
+          "status": "disabled"
+        },
+        "createdAt": "2026-10-16T05:46:24.689Z"
+      },
+      {
+        "_id": "6ad1bc0799737f771955356b",
+        "adminId": "6ad13f1451b8d4f87496ad2f",
+        "action": "approve",
+        "entityType": "roleRequest",
+        "entityId": "6ad1bbea99737f771955356a",
+        "details": {
+          "role": "arquitecto"
+        },
+        "createdAt": "2026-10-16T05:54:15.275Z"
+      },
+      {
+        "_id": "6ad3048599737f7719553574",
+        "adminId": "6ad13f1451b8d4f87496ad2f",
+        "action": "approve",
+        "entityType": "roleRequest",
+        "entityId": "6ad3047499737f7719553573",
+        "details": {
+          "role": "arquitecto"
+        },
+        "createdAt": "2026-10-17T05:15:49.407Z"
+      }
+    ],
+    "terrains": [
+      {
+        "_id": "6ac92e6db6304e67e8297c17",
+        "ownerId": "6ac92e6cb6304e67e8297c15",
+        "ubicacion": "TEST-MONGO-A-1791569515424",
+        "ancho": 12.5,
+        "largo": 20,
+        "area": 250,
+        "createdAt": "2026-10-09T18:11:57.476Z"
+      },
+      {
+        "_id": "6ac92e6db6304e67e8297c18",
+        "ownerId": "6ac92e6cb6304e67e8297c16",
+        "ubicacion": "TEST-MONGO-B-1791569515424",
+        "ancho": 10,
+        "largo": 18,
+        "area": 180,
+        "createdAt": "2026-10-09T18:11:57.509Z"
+      },
+      {
+        "_id": "6ac94e1865579e0ff9244ebe",
+        "ownerId": "6ac94b6e65579e0ff9244ebd",
+        "ubicacion": "Frontend terrain 1791577624642",
+        "ancho": 10,
+        "largo": 20,
+        "area": 200,
+        "createdAt": "2026-10-09T20:27:04.675Z"
+      },
+      {
+        "_id": "6ad13bc46a3b1c95c731ea38",
+        "ownerId": "6ad01f8c6a3b1c95c731ea35",
+        "ubicacion": "Popayan, cauca, Cajete",
+        "ancho": 25,
+        "largo": 20,
+        "area": 500,
+        "createdAt": "2026-10-15T20:47:00.195Z"
+      },
+      {
+        "_id": "6ad2897499737f771955356c",
+        "ownerId": "6ac956c865579e0ff9244ec0",
+        "ubicacion": "los naranjos",
+        "ancho": 20,
+        "largo": 20,
+        "area": 400,
+        "createdAt": "2026-10-16T20:30:44.653Z"
+      },
+      {
+        "_id": "6ad2912c99737f771955356e",
+        "ownerId": "6ac956c865579e0ff9244ec0",
+        "ubicacion": "prebaArq",
+        "ancho": 40,
+        "largo": 20,
+        "area": 800,
+        "createdAt": "2026-10-16T21:03:40.661Z"
+      },
+      {
+        "_id": "6ad3c37699737f7719553575",
+        "ownerId": "6ac956c865579e0ff9244ec0",
+        "ubicacion": "Valle del Cauca",
+        "ancho": 20,
+        "largo": 40,
+        "area": 800,
+        "createdAt": "2026-10-17T18:50:30.460Z"
+      }
+    ]
+  }
+}

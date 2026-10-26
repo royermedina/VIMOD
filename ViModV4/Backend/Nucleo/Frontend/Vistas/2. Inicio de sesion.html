@@ -1,0 +1,219 @@
+<!doctype html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,400&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,400&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="/Backend/Nucleo/Frontend/Scripts/resource-loader.js?v=9"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+  </head>
+  <body
+    class="bg-background font-body text-on-surface min-h-screen flex items-center justify-center antialiased"
+  >
+    <main class="w-full max-w-[640px] mx-auto px-space-16 py-space-32">
+      <div class="flex flex-col w-full">
+        <div
+          class="relative w-full overflow-hidden rounded-2xl bg-surface-container-lowest p-space-24 md:p-space-32 shadow-xl border border-outline-variant/30"
+        >
+          <div
+            class="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-primary/10 blur-3xl pointer-events-none"
+          ></div>
+          <div
+            class="absolute -left-12 bottom-12 w-48 h-48 rounded-full bg-tertiary/10 blur-2xl pointer-events-none"
+          ></div>
+          <div class="relative flex flex-col w-full">
+            <div class="flex items-center justify-between pb-space-20">
+              <div class="flex items-center gap-space-8">
+                <span
+                  class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary text-on-primary font-headline font-bold text-lg shadow-sm"
+                >
+                  V
+                </span>
+                <span
+                  class="font-headline font-bold text-2xl tracking-tight text-on-surface"
+                  >ViMod</span
+                >
+              </div>
+              <div
+                class="flex items-center gap-space-4 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-semibold uppercase tracking-wider"
+              >
+                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                <span>Acceso seguro</span>
+              </div>
+            </div>
+            <div class="pt-space-12 pb-space-24">
+              <span
+                class="text-xs font-bold text-primary uppercase tracking-widest block mb-space-4"
+              >
+                Plataforma de Hábitat Modular
+              </span>
+              <h1
+                class="font-headline text-3xl md:text-4xl font-bold text-on-surface tracking-tight"
+              >
+                Iniciar sesión en ViMod
+              </h1>
+              <p class="font-body text-base text-on-surface-variant mt-space-4">
+                Accede a tus terrenos, proyectos modulares y cotizaciones
+              </p>
+            </div>
+            <div
+              class="hidden flex items-start gap-space-12 p-space-16 rounded-xl bg-surface-container-high text-on-surface mb-space-24 border border-outline-variant/40 shadow-sm transition-all duration-200"
+              id="credential-alert"
+            >
+              <div
+                class="flex-shrink-0 w-8 h-8 rounded-full bg-error/10 flex items-center justify-center text-error"
+              >
+                <span
+                  class="material-symbols-outlined text-[20px] vimod-icon-filled"
+                  >warning</span
+                >
+              </div>
+              <div class="flex flex-col min-w-0 flex-1">
+                <div class="flex items-center justify-between">
+                  <span class="font-label text-sm text-error font-bold"
+                    >Credenciales no reconocidas</span
+                  >
+                  <button
+                    class="text-on-surface-variant hover:text-on-surface p-1 -mr-1 rounded-lg transition-colors"
+                    data-vimod-action="dismiss"
+                    data-vimod-target="credential-alert"
+                    type="button"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >close</span
+                    >
+                  </button>
+                </div>
+                <p
+                  class="font-body text-xs md:text-sm text-on-surface-variant mt-space-2"
+                >
+                  El correo electrónico o la contraseña ingresados son
+                  incorrectos. Por favor, verifica tus datos e inténtalo
+                  nuevamente.
+                </p>
+              </div>
+            </div>
+            <form
+              class="flex flex-col gap-space-20"
+              id="login-form"
+              data-vimod-submit="login"
+            >
+              <div class="flex flex-col gap-space-4">
+                <div class="flex justify-between items-baseline">
+                  <label
+                    class="font-label text-sm font-semibold text-on-surface"
+                    for="email"
+                  >
+                    Correo electrónico
+                  </label>
+                  <span class="font-label text-xs text-on-surface-variant"
+                    >Requerido</span
+                  >
+                </div>
+                <div class="relative flex items-center">
+                  <span
+                    class="absolute left-space-12 text-on-surface-variant/70 material-symbols-outlined text-[20px] pointer-events-none"
+                  >
+                    mail
+                  </span>
+                  <input
+                    class="w-full h-11 pl-11 pr-space-12 rounded-xl bg-surface-container-low text-on-surface font-body text-sm placeholder:text-on-surface-variant/50 border border-outline-variant/40 focus:outline-none focus:bg-surface-container-lowest focus:border-primary focus:ring-2 focus:ring-primary/20 shadow-sm transition-all"
+                    id="email"
+                    name="email"
+                    placeholder="ejemplo@correo.com"
+                    required=""
+                    type="email"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div class="flex flex-col gap-space-4">
+                <div class="flex justify-between items-baseline">
+                  <label
+                    class="font-label text-sm font-semibold text-on-surface"
+                    for="password"
+                  >
+                    Contraseña
+                  </label>
+                  <span class="font-label text-xs text-on-surface-variant"
+                    >Mínimo 8 caracteres</span
+                  >
+                </div>
+                <div class="relative flex items-center">
+                  <span
+                    class="absolute left-space-12 text-on-surface-variant/70 material-symbols-outlined text-[20px] pointer-events-none"
+                  >
+                    lock
+                  </span>
+                  <input
+                    class="w-full h-11 pl-11 pr-11 rounded-xl bg-surface-container-low text-on-surface font-body text-sm placeholder:text-on-surface-variant/50 border border-outline-variant/40 focus:outline-none focus:bg-surface-container-lowest focus:border-primary focus:ring-2 focus:ring-primary/20 shadow-sm transition-all"
+                    id="password"
+                    name="password"
+                    placeholder="••••••••••••"
+                    required=""
+                    type="password"
+                    value=""
+                  />
+                  <button
+                    aria-label="Mostrar contraseña"
+                    class="absolute right-space-12 text-on-surface-variant hover:text-on-surface flex items-center justify-center p-1 rounded-lg transition-colors"
+                    id="toggle-password"
+                    data-vimod-action="toggle-password"
+                    data-vimod-target="password"
+                    type="button"
+                  >
+                    <span class="material-symbols-outlined text-[20px]"
+                      >visibility</span
+                    >
+                  </button>
+                </div>
+              </div>
+              <button
+                class="w-full h-12 mt-space-8 rounded-xl bg-primary hover:bg-primary/90 active:bg-primary text-on-primary font-label font-bold text-sm flex items-center justify-center gap-space-8 shadow-sm hover:shadow-md active:scale-[0.99] transition-all duration-150 cursor-pointer"
+                type="submit"
+              >
+                <span>Iniciar sesión</span>
+                <span class="material-symbols-outlined text-[18px]"
+                  >arrow_forward</span
+                >
+              </button>
+            </form>
+            <div
+              class="mt-space-24 pt-space-20 flex items-center justify-center text-center bg-surface-container-low/70 border border-outline-variant/20 rounded-xl p-space-12"
+            >
+              <p class="font-body text-sm text-on-surface-variant">
+                ¿Aún no tienes una cuenta?
+                <a
+                  class="font-label text-sm text-primary font-bold hover:underline hover:text-primary/80 ml-space-4 inline-flex items-center transition-colors"
+                  href="1._registro_de_usuario.html"
+                >
+                  Regístrate aquí
+                </a>
+              </p>
+            </div>
+            <p class="mt-space-16 text-center text-xs text-on-surface-variant">
+              <a class="hover:text-primary hover:underline" href="/Backend/Paquetes/Presentacion/PanelAdmin/Vistas/14.%20Acceso%20administrativo.html">Acceso de administración</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <script src="/Backend/Nucleo/Frontend/Scripts/page-Inicio-de-sesion.js?v=3"></script>
+  </body>
+</html>

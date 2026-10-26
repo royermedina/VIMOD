@@ -1,0 +1,665 @@
+<!doctype html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,300..800;1,6..12,300..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="/Backend/Nucleo/Frontend/Scripts/resource-loader.js?v=9"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+  </head>
+  <body class="bg-background font-body text-on-surface">
+    <aside
+      class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-6 shadow-[0_1px_8px_rgba(46,50,48,0.04)]"
+    >
+      <div class="flex flex-col gap-6 px-5">
+        <div class="flex items-center gap-3 px-2">
+          <img
+            alt="ViMod Logo"
+            class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFYc8oVliLjKP9104c_UcPcFl2Ja7N53zyJ4yfiCu7_Ai_tjdwySVd4X1udtM8vW82qiv0IRJ6yk_foA0oo5xlagKuRF2oGaug4YyrXJFxsTMLMBZLF_L6IDo3AUNRFj5O3yeBhwGnaI0KSQ6lbbdy3VajTlSmaCS16tpI7eKoU9htIc2lkxEyQsvpZCIju6s7ptfGrldthfAzqD9uHAP1LkH7nCQ5Q0v3qsIsHh6rg5AzVYUSnE7v5A"
+          />
+          <div class="flex flex-col">
+            <span
+              class="font-headline text-lg text-on-surface font-bold leading-tight"
+              >ViMod</span
+            ><span
+              class="font-label text-xs text-primary uppercase font-bold tracking-wider"
+              >Ecosistema Modular</span
+            >
+          </div>
+        </div>
+        <div
+          class="bg-surface-container p-3 rounded-xl border border-outline-variant/40"
+        >
+          <span
+            class="font-label text-[11px] text-on-surface-variant uppercase tracking-wider block mb-1 font-semibold"
+            >Rol en Sesión</span
+          >
+          <div class="flex items-center justify-between text-on-surface">
+            <span
+              class="font-label text-sm font-semibold flex items-center gap-2"
+              ><span class="w-2 h-2 rounded-full bg-primary"></span>Espacio
+              Unificado</span
+            ><span class="material-symbols-outlined text-secondary text-sm"
+              >tune</span
+            >
+          </div>
+        </div>
+        <nav
+          class="flex flex-col gap-1"
+          data-active-classes="bg-primary/10 text-primary font-semibold rounded-lg"
+        >
+          <div class="px-2 pt-2 pb-1">
+            <span
+              class="font-label text-xs uppercase tracking-wider text-secondary font-bold"
+              >Espacio Cliente</span
+            >
+          </div>
+          <a
+            class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all"
+            data-path="mis-terrenos"
+            href="#"
+            ><span class="material-symbols-outlined text-xl">terrain</span
+            ><span class="font-body text-sm">Mis Terrenos</span></a
+          ><a
+            class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all"
+            data-path="mis-proyectos"
+            href="#"
+            ><span class="material-symbols-outlined text-xl">cottage</span
+            ><span class="font-body text-sm">Mis Proyectos</span></a
+          ><a
+            class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all"
+            data-path="constructoras"
+            href="#"
+            ><span class="material-symbols-outlined text-xl">engineering</span
+            ><span class="font-body text-sm">Constructoras</span></a
+          ><a
+            class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all"
+            data-path="propuestas"
+            href="#"
+            ><span class="material-symbols-outlined text-xl">request_quote</span
+            ><span class="font-body text-sm">Propuestas Recibidas</span></a
+          >
+          <div class="px-2 pt-4 pb-1">
+            <span
+              class="font-label text-xs uppercase tracking-wider text-tertiary font-bold"
+              >Estudio Arquitectura</span
+            >
+          </div>
+          <a
+            class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all"
+            data-path="proyectos-asignados"
+            href="#"
+            ><span class="material-symbols-outlined text-xl">architecture</span
+            ><span class="font-body text-sm">Proyectos Asignados</span></a
+          ><a
+            class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary font-semibold transition-all"
+            data-path="revisiones-tecnicas"
+            href="#"
+            ><span class="material-symbols-outlined text-xl">verified</span
+            ><span class="font-body text-sm">Revisiones Técnicas</span></a
+          >
+          <div class="px-2 pt-4 pb-1">
+            <span
+              class="font-label text-xs uppercase tracking-wider text-primary font-bold"
+              >Fábrica y Constructora</span
+            >
+          </div>
+          <a
+            class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all"
+            data-path="mis-servicios"
+            href="#"
+            ><span class="material-symbols-outlined text-xl"
+              >precision_manufacturing</span
+            ><span class="font-body text-sm">Mis Servicios</span></a
+          ><a
+            class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all"
+            data-path="solicitudes-recibidas"
+            href="#"
+            ><span class="material-symbols-outlined text-xl">inbox</span
+            ><span class="font-body text-sm">Solicitudes Recibidas</span></a
+          >
+        </nav>
+      </div>
+      <div class="px-5 pt-4">
+        <div
+          class="bg-surface-container p-3 rounded-xl border border-outline-variant/40 flex items-center gap-3"
+        >
+          <img
+            alt="Profile"
+            class="w-8 h-8 rounded-full object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx92Gwh8KiR5UncFJBA2sdeICczrLDgU08KFr9Ai0woqtegeLIKNNaxcsnqfwkQwN7OK7RdVs39OowrFYpddYm9TB6Q9MD0d35gUO14j7IjwXD4mF7_cqWtUpTdWjnoNT34tlZpFC6cJ72Ck02WePaANXdYW2RsPYhpJ9-EinDfJaa0xMnaqskMcGPlYzRHYI-GvtONoWnhnRHARbeWG_I51nbdlw-Y4mQU9sJZ_ZLNDfz4FdUYp-jGg"
+          />
+          <div class="flex flex-col min-w-0 flex-1">
+            <span
+              class="font-label text-sm text-on-surface truncate font-semibold"
+              >Martín Soler</span
+            ><span
+              class="font-label text-[11px] text-primary uppercase font-bold tracking-wider"
+              >Cliente Verificado</span
+            >
+          </div>
+          <span
+            class="material-symbols-outlined text-on-surface-variant text-base"
+            >more_vert</span
+          >
+        </div>
+      </div>
+    </aside>
+    <div class="pl-72">
+      <header
+        class="fixed top-0 left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/30 z-40 flex items-center justify-between px-8"
+      >
+        <div class="flex items-center gap-4">
+          <div
+            class="flex items-center bg-surface-container px-3 py-2 rounded-xl text-on-surface-variant text-sm w-96 border border-outline-variant/30"
+          >
+            <span class="material-symbols-outlined text-base mr-2 text-outline"
+              >search</span
+            ><span class="font-body text-sm text-outline"
+              >Búsqueda global no disponible en esta sección</span
+            >
+          </div>
+          <div
+            class="hidden xl:flex items-center gap-2 bg-surface-container-high/60 px-3 py-1.5 rounded-full border border-outline-variant/40"
+          >
+            <span class="w-2 h-2 rounded-full bg-primary"></span
+            ><span
+              class="font-label text-xs text-on-surface-variant font-semibold"
+              >Catálogo de servicios ViMod</span
+            >
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div
+            class="flex items-center bg-surface-container-low px-3 py-2 rounded-xl gap-2 border border-outline-variant/40"
+          >
+            <span
+              class="font-label text-[11px] uppercase font-bold text-on-surface-variant"
+              >Vista Activa</span
+            ><span class="font-label text-sm font-bold text-primary"
+              >Mi espacio</span
+            >
+          </div>
+          <button
+            class="relative p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-full transition-colors"
+          >
+            <span class="material-symbols-outlined">notifications</span
+            ><span
+              class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary"
+            ></span></button
+          ><button
+            class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-full transition-colors"
+          >
+            <span class="material-symbols-outlined">help_outline</span>
+          </button>
+          <div class="flex items-center gap-2 pl-2">
+            <img
+              alt="Profile"
+              class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx92Gwh8KiR5UncFJBA2sdeICczrLDgU08KFr9Ai0woqtegeLIKNNaxcsnqfwkQwN7OK7RdVs39OowrFYpddYm9TB6Q9MD0d35gUO14j7IjwXD4mF7_cqWtUpTdWjnoNT34tlZpFC6cJ72Ck02WePaANXdYW2RsPYhpJ9-EinDfJaa0xMnaqskMcGPlYzRHYI-GvtONoWnhnRHARbeWG_I51nbdlw-Y4mQU9sJZ_ZLNDfz4FdUYp-jGg"
+            />
+          </div>
+        </div>
+      </header>
+      <main class="w-full pt-28 px-8 pb-12 bg-background">
+        <section class="mx-auto flex w-full max-w-7xl flex-col gap-6">
+          <header class="rounded-xl border border-outline-variant/30 bg-surface-container-lowest p-6">
+            <p class="text-xs font-bold uppercase tracking-wider text-primary">Revisión técnica</p>
+            <h1 id="project-name" class="mt-2 font-headline text-3xl font-bold text-on-surface">Cargando proyecto...</h1>
+            <p id="project-area" class="mt-2 text-sm text-on-surface-variant"></p>
+            <p id="review-current-status" class="mt-3 text-sm font-semibold text-primary" role="status" aria-live="polite">Cargando estado de la revisión...</p>
+            <div id="review-load-error" class="mt-3 hidden" aria-live="polite"></div>
+            <a id="review-next-step" href="#" class="client-primary-action mt-4 inline-flex px-5 py-3 text-sm">Siguiente paso</a>
+          </header>
+          <section class="rounded-xl border border-outline-variant/30 bg-surface-container-lowest p-6">
+            <h2 class="font-headline text-xl font-bold text-on-surface">Arquitectos aprobados</h2>
+            <p class="mt-1 text-sm text-on-surface-variant">Los perfiles provienen de cuentas aprobadas; los campos vacíos aparecen como “No indicado”.</p>
+            <div id="architect-options" class="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3"></div>
+          </section>
+          <section class="rounded-xl border border-outline-variant/30 bg-surface-container-lowest p-6">
+            <h2 class="font-headline text-xl font-bold text-on-surface">Solicitar revisión</h2>
+            <form id="review-request-form" class="mt-4 grid gap-4 md:grid-cols-2">
+              <label class="flex flex-col gap-2 text-sm font-semibold">Modalidad
+                <select id="review-mode" class="rounded-lg border-outline-variant">
+                  <option value="open">Abierta: recibir postulaciones</option>
+                  <option value="directed">Dirigida a un arquitecto</option>
+                </select>
+              </label>
+              <label id="architect-picker-wrap" class="hidden flex-col gap-2 text-sm font-semibold">Arquitecto aprobado
+                <select id="architect-picker" class="rounded-lg border-outline-variant"></select>
+              </label>
+              <button id="btn-request-review" class="client-primary-action px-5 py-3 text-sm md:col-span-2" type="submit">Crear solicitud</button>
+            </form>
+          </section>
+          <section class="rounded-xl border border-outline-variant/30 bg-surface-container-lowest p-6">
+            <h2 class="font-headline text-xl font-bold text-on-surface">Solicitudes y postulaciones</h2>
+            <div id="review-history-items" class="mt-4 flex flex-col gap-4"></div>
+          </section>
+        </section>
+        <div class="hidden flex flex-col w-full max-w-7xl mx-auto">
+          <section
+            class="relative w-full overflow-hidden bg-surface-container-low border border-outline-variant/40 rounded-xl p-8 mb-8 shadow-sm"
+          >
+            <div
+              class="absolute -right-16 -bottom-16 w-80 h-80 rounded-full bg-primary/10 blur-3xl pointer-events-none"
+            ></div>
+            <div
+              class="relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-6"
+            >
+              <div class="flex flex-col gap-2 max-w-2xl">
+                <div class="flex items-center gap-2">
+                  <span
+                    id="status-chip"
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label text-xs font-bold"
+                    ><span class="w-2 h-2 rounded-full bg-outline"></span
+                    ><span id="status-chip-text"
+                      >Sin solicitud activa</span
+                    ></span
+                  ><span class="font-label text-xs text-outline font-medium"
+                    >#VIM-2024-884</span
+                  >
+                </div>
+                <h1
+                  class="font-headline text-3xl md:text-4xl text-on-surface font-bold tracking-tight"
+                >
+                  Revisión técnica por arquitecto
+                </h1>
+                <div
+                  class="flex items-center gap-2 text-on-surface-variant font-body text-base"
+                >
+                  <span class="material-symbols-outlined text-primary text-xl"
+                    >home_work</span
+                  ><span
+                    >Proyecto:
+                    <strong class="text-on-surface font-bold" id="legacy-project-name"
+                      >—</strong
+                    >
+                    <span id="legacy-project-area"></span
+                  ></span>
+                </div>
+              </div>
+              <div
+                class="flex items-center gap-3 bg-surface-container-lowest px-5 py-3 rounded-xl shadow-sm border border-outline-variant/30"
+              >
+                <span class="material-symbols-outlined text-primary text-2xl"
+                  >calendar_month</span
+                >
+                <div class="flex flex-col">
+                  <span
+                    class="font-label text-[11px] text-outline uppercase font-bold tracking-wider"
+                    >Respuesta estimada</span
+                  ><span
+                    class="font-headline text-base font-bold text-on-surface"
+                    >26 Octubre, 18:00 hrs</span
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+          <div
+            id="success-banner"
+            class="relative w-full bg-primary/10 border border-primary/20 rounded-xl p-5 mb-8 shadow-sm flex-col md:flex-row items-start md:items-center justify-between gap-4 vimod-hidden"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm"
+              >
+                <span class="material-symbols-outlined text-xl">check</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-headline text-base text-on-surface font-bold"
+                  >¡Solicitud enviada con éxito!</span
+                ><span class="font-body text-sm text-on-surface-variant"
+                  >Tu expediente está en proceso de validación estructural y
+                  normativa territorial.</span
+                >
+              </div>
+            </div>
+            <span
+              class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-lowest border border-primary/30 font-label text-primary font-bold text-xs"
+              ><span class="material-symbols-outlined text-sm text-primary"
+                >verified_user</span
+              >Protección ViMod</span
+            >
+          </div>
+          <section id="review-history" class="mb-8 hidden rounded-xl border border-outline-variant/30 bg-surface-container-lowest p-5">
+            <h2 class="font-headline text-lg font-bold text-on-surface">Historial de revisión</h2>
+            <div id="legacy-review-history-items" class="mt-4 flex flex-col gap-3"></div>
+          </section>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div class="lg:col-span-7 flex flex-col gap-8">
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div
+                  class="bg-surface-container-lowest p-5 rounded-xl shadow-sm border border-outline-variant/30 flex flex-col justify-between"
+                >
+                  <span
+                    class="font-label text-[11px] text-outline uppercase tracking-wider font-bold"
+                    >Plazo de Respuesta</span
+                  >
+                  <div class="mt-3 mb-1">
+                    <span
+                      class="font-headline text-4xl text-primary font-bold tracking-tight block"
+                      >48h</span
+                    >
+                  </div>
+                  <span
+                    class="font-label text-xs text-primary font-bold flex items-center gap-1.5"
+                    ><span
+                      class="w-2 h-2 rounded-full bg-primary animate-pulse"
+                    ></span
+                    >Cuenta activa</span
+                  >
+                </div>
+                <div
+                  class="bg-surface-container-lowest p-5 rounded-xl shadow-sm border border-outline-variant/30 flex flex-col justify-between"
+                >
+                  <span
+                    class="font-label text-[11px] text-outline uppercase tracking-wider font-bold"
+                    >Arquitecta Asignada</span
+                  >
+                  <div class="mt-2 mb-1">
+                    <span
+                      class="font-headline text-lg text-on-surface font-bold block truncate"
+                      >Elena Morales</span
+                    ><span
+                      class="font-label text-sm font-bold text-tertiary flex items-center gap-1 mt-0.5"
+                      ><span
+                        class="material-symbols-outlined text-base"
+                        class="vimod-icon-filled"
+                        >star</span
+                      >4.96
+                      <span
+                        class="text-outline font-body text-xs font-normal"
+                      ></span
+                    ></span>
+                  </div>
+                  <span class="font-label text-xs text-primary font-semibold"
+                    >100% respuestas a tiempo</span
+                  >
+                </div>
+                <div
+                  class="bg-surface-container-lowest p-5 rounded-xl shadow-sm border border-outline-variant/30 flex flex-col justify-between"
+                >
+                  <span
+                    class="font-label text-[11px] text-outline uppercase tracking-wider font-bold"
+                    >Estado Actual</span
+                  >
+                  <div class="mt-2 mb-1">
+                    <span
+                      class="font-headline text-base text-primary font-bold leading-tight block"
+                      id="estado-actual"
+                      >Sin solicitud</span
+                    ><span
+                      class="font-body text-xs text-on-surface-variant block mt-0.5"
+                      >Matrícula profesional pendiente de validación</span
+                    >
+                  </div>
+                  <span
+                    class="font-label text-xs text-primary font-semibold flex items-center gap-1"
+                    ><span class="material-symbols-outlined text-sm"
+                      >check_circle</span
+                    >Fase de análisis</span
+                  >
+                </div>
+              </div>
+              <div
+                class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-outline-variant/30 flex flex-col gap-4"
+              >
+                <div class="flex items-center gap-4">
+                  <span
+                    class="w-14 h-14 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold shrink-0 ring-2 ring-primary/20"
+                    role="img"
+                    aria-label="Avatar de profesional asignado"
+                    >PA</span
+                  >
+                  <div class="flex flex-col">
+                    <span
+                      class="font-headline text-lg font-bold text-on-surface"
+                      >Profesional asignado</span
+                    ><span class="font-body text-sm text-on-surface-variant"
+                      >Matrícula profesional pendiente de validación</span
+                    >
+                  </div>
+                </div>
+                <details class="group border-t border-outline-variant/30 pt-4">
+                  <summary
+                    class="flex items-center justify-between cursor-pointer list-none text-on-surface font-label text-sm font-semibold select-none hover:text-primary transition-colors"
+                  >
+                    <span class="flex items-center gap-2"
+                      ><span
+                        class="material-symbols-outlined text-primary text-xl"
+                        >folder_open</span
+                      >Ver detalles técnicos y documentos expedidos (4)</span
+                    ><span
+                      class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform"
+                      >expand_more</span
+                    >
+                  </summary>
+                  <div class="flex flex-col gap-3 pt-4">
+                    <div
+                      class="flex items-center justify-between p-3 bg-surface-container-low rounded-xl border border-outline-variant/20"
+                    >
+                      <div class="flex items-center gap-3">
+                        <span
+                          class="material-symbols-outlined text-primary text-xl"
+                          >description</span
+                        >
+                        <div class="flex flex-col">
+                          <span
+                            class="font-body text-sm font-bold text-on-surface"
+                            >Plano_Modular_Propuesta_B_v2.dwg.pdf</span
+                          ><span class="font-label text-xs text-outline"
+                            >Planta arquitectónica acotada • 78 m²</span
+                          >
+                        </div>
+                      </div>
+                      <span
+                        class="font-label text-xs px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-medium"
+                        >24.8 MB</span
+                      >
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-3 bg-surface-container-low rounded-xl border border-outline-variant/20"
+                    >
+                      <div class="flex items-center gap-3">
+                        <span
+                          class="material-symbols-outlined text-secondary text-xl"
+                          >map</span
+                        >
+                        <div class="flex flex-col">
+                          <span
+                            class="font-body text-sm font-bold text-on-surface"
+                            >Certificado_Informes_Previos_CIP.pdf</span
+                          ><span class="font-label text-xs text-outline"
+                            >Validar normativa colombiana aplicable • NSR-10 y curaduría urbana</span
+                          >
+                        </div>
+                      </div>
+                      <span
+                        class="font-label text-xs px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-medium"
+                        >3.1 MB</span
+                      >
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-3 bg-surface-container-low rounded-xl border border-outline-variant/20"
+                    >
+                      <div class="flex items-center gap-3">
+                        <span
+                          class="material-symbols-outlined text-tertiary text-xl"
+                          >assignment_turned_in</span
+                        >
+                        <div class="flex flex-col">
+                          <span
+                            class="font-body text-sm font-bold text-on-surface"
+                            >Alcance del informe: cargas y normativa aplicable</span
+                          ><span class="font-label text-xs text-outline"
+                            >Verificación de habitabilidad y rasantes</span
+                          >
+                        </div>
+                      </div>
+                      <span
+                        class="font-label text-xs px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-medium"
+                        >NSR-10 y normativa urbanística local</span
+                      >
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-3 bg-surface-container-low rounded-xl border border-outline-variant/20"
+                    >
+                      <div class="flex items-center gap-3">
+                        <span
+                          class="material-symbols-outlined text-primary text-xl"
+                          >verified</span
+                        >
+                        <div class="flex flex-col">
+                          <span
+                            class="font-body text-sm font-bold text-on-surface"
+                            >Firma electrónica avanzada pericial</span
+                          ><span class="font-label text-xs text-outline"
+                            >Validez pendiente de verificación</span
+                          >
+                        </div>
+                      </div>
+                      <span
+                        class="font-label text-xs px-2.5 py-1 rounded-full bg-primary/15 text-primary font-bold"
+                        >Activa</span
+                      >
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+            <div class="lg:col-span-5 flex flex-col gap-6">
+              <div
+                class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-outline-variant/30 flex flex-col gap-5"
+              >
+                <div class="flex items-center justify-between">
+                  <h3 class="font-headline text-xl text-on-surface font-bold">
+                    Acción de Solicitud
+                  </h3>
+                  <span
+                    id="active-count"
+                    class="px-2.5 py-1 rounded-full bg-surface-container text-outline font-label text-xs font-bold"
+                    >0 activas</span
+                  >
+                </div>
+                <div class="flex flex-col gap-3">
+                  <button
+                    id="legacy-btn-request-review"
+                    class="client-primary-action w-full h-12 rounded-xl bg-primary text-on-primary font-label text-sm font-bold flex items-center justify-center gap-2 shadow-sm transition-all"
+                    type="button"
+                  >
+                    <span class="material-symbols-outlined text-xl">send</span
+                    >Solicitar revisión técnica
+                  </button>
+                  <div
+                    id="active-notice"
+                    class="bg-surface-container-low p-3.5 rounded-xl border border-outline-variant/30 items-center gap-3 vimod-hidden"
+                  >
+                    <span
+                      class="material-symbols-outlined text-primary text-xl shrink-0"
+                      >info</span
+                    >
+                    <p class="font-body text-xs text-on-surface-variant">
+                      Ya cuentas con una revisión en curso. Podrás solicitar
+                      otra al recibir las observaciones del arquitecto.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-3 pt-2 border-t border-outline-variant/30"
+                >
+                  <span
+                    class="font-label text-[11px] uppercase tracking-wider text-outline font-bold"
+                    >Progreso actual</span
+                  >
+                  <div class="flex flex-col gap-3">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm"
+                      >
+                        <span class="material-symbols-outlined text-xs"
+                          >check</span
+                        >
+                      </div>
+                      <span
+                        class="font-body text-sm text-on-surface font-medium"
+                        >Chequeo de admisibilidad completado</span
+                      >
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0 ring-4 ring-primary/20 animate-pulse"
+                      >
+                        <span class="material-symbols-outlined text-xs"
+                          >architecture</span
+                        >
+                      </div>
+                      <span class="font-body text-sm text-primary font-bold"
+                        >Análisis estructural en curso</span
+                      >
+                    </div>
+                    <div class="flex items-center gap-3 opacity-50">
+                      <div
+                        class="w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-outline shrink-0"
+                      >
+                        <span class="material-symbols-outlined text-xs"
+                          >draw</span
+                        >
+                      </div>
+                      <span class="font-body text-sm text-outline"
+                        >Emisión de dictamen y sello digital</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="pt-2">
+                  <a
+                    class="inline-flex items-center gap-2 text-primary font-label text-sm font-bold hover:underline transition-colors"
+                    href="#"
+                    ><span class="material-symbols-outlined text-base"
+                      >chat</span
+                    >Contactar a la arquitecta</a
+                  >
+                </div>
+              </div>
+              <div
+                class="bg-surface-container-low border border-outline-variant/40 rounded-xl p-4 flex items-center justify-between"
+              >
+                <div class="flex items-center gap-3">
+                  <img
+                    class="w-12 h-12 rounded-xl object-cover shadow-sm border border-outline-variant/30"
+                    data-alt="Vista isométrica de casa modular"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb83UNmwu2Px6xhDfhyVtgCgkRY_-_jxNlBC-nHxjmW4K1hQGwJ7gNNwW1CoXK9KdSq1Z1rl9tCcg29M0Zsoae-bqxJCq1UGerB9dVnOw722PoEZVVBOxarA40tRGjPhR--nNM2o38mSo4Dz2yypawgztqC4gvVpFIkKWGsPBqbACkOh8XoED8S65FWX9Zc4AD90XywvFBXOrwPz6A6EUvvBZt0bS6PaWjWvVQH7bth2yirmUF5FKTlg"
+                  />
+                  <div class="flex flex-col">
+                    <span class="font-label text-sm text-on-surface font-bold"
+                      >Módulos M-3 • 3D</span
+                    ><span class="font-label text-xs text-outline font-medium"
+                      >Kit térmico reforzado R-100</span
+                    >
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-outline text-base"
+                  >tune</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="/Backend/Paquetes/Presentacion/PortalCliente/Scripts/page-Revision-por-arquitecto.js?v=3"></script>
+  </body>
+</html>

@@ -1,0 +1,1090 @@
+<!doctype html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Literata:wght@400;500;600;700&amp;family=Nunito+Sans:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="/Backend/Nucleo/Frontend/Scripts/resource-loader.js?v=9"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+  </head>
+  <body
+    class="bg-background font-body text-on-surface selection:bg-primary/20 selection:text-primary"
+  >
+    <aside
+      class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-6 shadow-[0_1px_8px_rgba(97,92,86,0.04)] border-r border-outline-variant/30"
+    >
+      <div class="flex flex-col gap-6 px-5">
+        <div class="flex items-center gap-3 px-2">
+          <img
+            alt="ViMod Logo"
+            class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFYc8oVliLjKP9104c_UcPcFl2Ja7N53zyJ4yfiCu7_Ai_tjdwySVd4X1udtM8vW82qiv0IRJ6yk_foA0oo5xlagKuRF2oGaug4YyrXJFxsTMLMBZLF_L6IDo3AUNRFj5O3yeBhwGnaI0KSQ6lbbdy3VajTlSmaCS16tpI7eKoU9htIc2lkxEyQsvpZCIju6s7ptfGrldthfAzqD9uHAP1LkH7nCQ5Q0v3qsIsHh6rg5AzVYUSnE7v5A"
+          />
+          <div class="flex flex-col">
+            <span
+              class="font-headline text-lg text-on-surface font-bold leading-tight"
+              >ViMod</span
+            ><span
+              class="text-xs text-primary uppercase font-bold tracking-wider"
+              >Ecosistema Modular</span
+            >
+          </div>
+        </div>
+        <div
+          class="bg-surface-container p-3.5 rounded-xl border border-outline-variant/20"
+        >
+          <span
+            class="text-xs text-on-surface-variant uppercase tracking-wider block mb-1 font-semibold"
+            >Tipo de cuenta</span
+          >
+          <div class="flex items-center justify-between text-on-surface">
+            <span class="text-sm font-bold flex items-center gap-2"
+              ><span class="w-2.5 h-2.5 rounded-full bg-primary"></span><span data-user-role>Cuenta ViMod</span></span
+            ><span class="material-symbols-outlined text-primary text-base"
+              >tune</span
+            >
+          </div>
+        </div>
+        <nav class="flex flex-col gap-1">
+          <div class="px-2 pt-2 pb-1">
+            <span
+              class="text-xs uppercase tracking-wider text-primary font-bold"
+              >Espacio Cliente</span
+            >
+          </div>
+          <a
+            class="flex items-center gap-3 px-3 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-medium text-sm"
+            data-path="mis-terrenos"
+            href="#"
+            ><span class="material-symbols-outlined text-xl">terrain</span
+            ><span>Mis Terrenos</span></a
+          ><a
+            class="flex items-center gap-3 px-3 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-medium text-sm"
+            data-path="mis-proyectos"
+            href="#"
+            ><span class="material-symbols-outlined text-xl">cottage</span
+            ><span>Mis Proyectos</span></a
+          ><a
+            class="flex items-center gap-3 px-3 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-medium text-sm"
+            data-path="constructoras"
+            href="#"
+            ><span class="material-symbols-outlined text-xl">engineering</span
+            ><span>Constructoras</span></a
+          ><a
+            aria-current="page"
+            class="flex items-center gap-3 px-3 py-2 rounded-xl transition-all bg-primary text-on-primary font-semibold shadow-sm"
+            data-path="propuestas"
+            href="#"
+            ><span class="material-symbols-outlined text-xl">request_quote</span
+            ><span>Propuestas Recibidas</span></a
+          >
+          <div class="px-2 pt-4 pb-1">
+            <span
+              class="text-xs uppercase tracking-wider text-secondary font-bold"
+              >Estudio Arquitectura</span
+            >
+          </div>
+          <a
+            class="flex items-center gap-3 px-3 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-medium text-sm"
+            data-path="proyectos-asignados"
+            href="#"
+            ><span class="material-symbols-outlined text-xl">architecture</span
+            ><span>Proyectos Asignados</span></a
+          ><a
+            class="flex items-center gap-3 px-3 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-medium text-sm"
+            data-path="revisiones-tecnicas"
+            href="#"
+            ><span class="material-symbols-outlined text-xl">verified</span
+            ><span>Revisiones Técnicas</span></a
+          >
+          <div class="px-2 pt-4 pb-1">
+            <span
+              class="text-xs uppercase tracking-wider text-tertiary font-bold"
+              >Fábrica y Constructora</span
+            >
+          </div>
+          <a
+            class="flex items-center gap-3 px-3 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-medium text-sm"
+            data-path="mis-servicios"
+            href="#"
+            ><span class="material-symbols-outlined text-xl"
+              >precision_manufacturing</span
+            ><span>Mis Servicios</span></a
+          ><a
+            class="flex items-center gap-3 px-3 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-medium text-sm"
+            data-path="solicitudes-recibidas"
+            href="#"
+            ><span class="material-symbols-outlined text-xl">inbox</span
+            ><span>Solicitudes Recibidas</span></a
+          >
+        </nav>
+      </div>
+      <div class="px-5 pt-4">
+        <div
+          class="bg-surface-container p-3 rounded-xl flex items-center gap-3 border border-outline-variant/30"
+        >
+          <img
+            alt="Profile"
+            class="w-8 h-8 rounded-full object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx92Gwh8KiR5UncFJBA2sdeICczrLDgU08KFr9Ai0woqtegeLIKNNaxcsnqfwkQwN7OK7RdVs39OowrFYpddYm9TB6Q9MD0d35gUO14j7IjwXD4mF7_cqWtUpTdWjnoNT34tlZpFC6cJ72Ck02WePaANXdYW2RsPYhpJ9-EinDfJaa0xMnaqskMcGPlYzRHYI-GvtONoWnhnRHARbeWG_I51nbdlw-Y4mQU9sJZ_ZLNDfz4FdUYp-jGg"
+          />
+          <div class="flex flex-col min-w-0 flex-1">
+            <span class="text-sm text-on-surface truncate font-bold"
+              >Martín Soler</span
+            ><span class="text-xs text-primary uppercase font-semibold"
+              >Cliente Verificado</span
+            >
+          </div>
+          <span
+            class="material-symbols-outlined text-on-surface-variant text-base"
+            >more_vert</span
+          >
+        </div>
+      </div>
+    </aside>
+    <div class="pl-72">
+      <header
+        class="fixed top-0 left-72 right-0 h-20 bg-background/90 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_1px_8px_rgba(97,92,86,0.03)] z-40 flex items-center justify-between px-8"
+      >
+        <div class="flex items-center gap-4">
+          <div
+            class="flex items-center bg-surface-container px-3.5 py-2 rounded-xl text-on-surface-variant text-sm w-96"
+          >
+            <span class="material-symbols-outlined text-base mr-2 text-outline"
+              >search</span
+            ><span class="text-xs text-outline"
+              >Búsqueda global no disponible en esta sección</span
+            >
+          </div>
+          <div
+            class="hidden xl:flex items-center gap-2 bg-surface-container px-3 py-1.5 rounded-full"
+          >
+            <span class="w-2 h-2 rounded-full bg-primary"></span
+            ><span class="text-xs text-on-surface-variant font-semibold"
+              >Catálogo de servicios ViMod</span
+            >
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div
+            class="flex items-center bg-surface-container-low px-3.5 py-2 rounded-xl gap-2 border border-outline-variant/30"
+          >
+            <span class="text-xs uppercase font-bold text-on-surface-variant"
+              >Vista Activa</span
+            ><span class="text-sm font-bold text-primary">Mi espacio</span>
+          </div>
+          <button
+            class="relative p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-full transition-colors"
+          >
+            <span class="material-symbols-outlined">notifications</span
+            ><span
+              class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary"
+            ></span></button
+          ><button
+            class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-full transition-colors"
+          >
+            <span class="material-symbols-outlined">help_outline</span>
+          </button>
+          <div class="flex items-center gap-2 pl-2">
+            <img
+              alt="Profile"
+              class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx92Gwh8KiR5UncFJBA2sdeICczrLDgU08KFr9Ai0woqtegeLIKNNaxcsnqfwkQwN7OK7RdVs39OowrFYpddYm9TB6Q9MD0d35gUO14j7IjwXD4mF7_cqWtUpTdWjnoNT34tlZpFC6cJ72Ck02WePaANXdYW2RsPYhpJ9-EinDfJaa0xMnaqskMcGPlYzRHYI-GvtONoWnhnRHARbeWG_I51nbdlw-Y4mQU9sJZ_ZLNDfz4FdUYp-jGg"
+            />
+          </div>
+        </div>
+      </header>
+      <main class="w-full pt-24 px-8 pb-12 bg-background">
+        <div class="flex flex-col w-full">
+          <div class="flex flex-col gap-6 mb-8">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+              <button
+                id="btn-back-proposals"
+                type="button"
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-semibold text-sm transition-colors border border-outline-variant/30"
+              >
+                <span class="material-symbols-outlined text-lg"
+                  >arrow_back</span
+                >
+                <span>Volver a todas las propuestas</span>
+              </button>
+              <div class="flex flex-wrap items-center gap-3">
+                <button
+                  id="btn-select-proposal"
+                  type="button"
+                  class="client-primary-action inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary text-on-primary font-semibold text-sm transition-colors shadow-sm"
+                >
+                  <span class="material-symbols-outlined text-base"
+                    >check_circle</span
+                  >
+                  <span>Seleccionar esta propuesta</span>
+                </button>
+                <div
+                  id="badge-selected"
+                  class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 text-primary border border-primary/25 shadow-sm vimod-hidden"
+                >
+                  <span class="material-symbols-outlined text-base font-bold"
+                    >check_circle</span
+                  >
+                  <span class="text-xs uppercase tracking-wider font-bold"
+                    >Propuesta seleccionada para el proyecto</span
+                  >
+                </div>
+                <a
+                  id="btn-work-project"
+                  href="#"
+                  class="client-primary-action hidden items-center gap-2 px-4 py-2 rounded-xl font-semibold text-sm"
+                >
+                  <span>Continuar a trabajar el proyecto</span>
+                  <span class="material-symbols-outlined text-base">arrow_forward</span>
+                </a>
+                <button
+                  id="btn-create-order"
+                  type="button"
+                  class="client-primary-action inline-flex items-center gap-2 rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-on-primary transition-colors hover:bg-primary-container"
+                  disabled
+                >
+                  Crear pedido y continuar al pago
+                </button>
+              </div>
+            </div>
+            <section id="contracted-project-summary" class="hidden rounded-xl border border-primary/30 bg-primary/10 p-5 text-on-surface" aria-live="polite">
+              <h2 class="font-headline text-lg font-bold text-primary">Propuesta contratada y pagada</h2>
+              <p id="contracted-project-details" class="mt-2 text-sm"></p>
+            </section>
+            <p id="proposal-selection-status" class="hidden rounded-lg bg-secondary-container p-4 text-sm text-on-secondary-container" role="status" aria-live="polite"></p>
+            <p id="payment-order-status" class="hidden rounded-lg bg-surface-container-low p-4 text-sm text-on-surface-variant" role="status"></p>
+            <section id="payment-history-section" class="hidden rounded-xl border border-outline-variant/30 bg-surface-container-lowest p-5">
+              <h2 class="font-headline text-lg font-bold text-on-surface">Historial de pagos</h2>
+              <ul id="payment-history-list" class="mt-3 space-y-2"></ul>
+            </section>
+            <section id="stripe-checkout-panel" class="hidden rounded-xl border border-primary/30 bg-surface-container-low p-4" aria-live="polite">
+              <p class="text-sm font-bold text-on-surface">Total y conversión aproximada</p>
+              <p id="stripe-checkout-amount" class="mt-1 text-sm text-on-surface-variant"></p>
+              <p class="mt-2 text-xs text-on-surface-variant">Modo de prueba de Stripe: 4242 4242 4242 4242 para aprobar; 4000 0000 0000 0002 para rechazar. Usa cualquier fecha futura y CVC de prueba.</p>
+              <a id="stripe-checkout-button" href="#" class="mt-3 inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-bold text-on-primary">Pagar con Stripe (modo prueba)</a>
+            </section>
+            <dialog id="payment-simulation-dialog" class="w-[min(92vw,34rem)] rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-0 text-on-surface shadow-xl">
+              <form id="payment-simulation-form" method="dialog" class="space-y-5 p-6">
+                <div>
+                  <p class="text-xs font-bold uppercase tracking-widest text-primary">Simulación académica</p>
+                  <h2 class="mt-1 font-headline text-2xl font-bold">Procesar pago interno</h2>
+                  <p class="mt-2 text-sm text-on-surface-variant">No se realiza ningún cobro real ni se solicitan datos financieros sensibles.</p>
+                  <p class="mt-1 text-xs font-semibold text-primary">Proveedor: Simulación interna de ViMod</p>
+                </div>
+                <dl class="grid grid-cols-2 gap-3 rounded-xl bg-surface-container-low p-4 text-sm">
+                  <div><dt class="text-on-surface-variant">Orden</dt><dd id="simulation-order-id" class="font-semibold"></dd></div>
+                  <div><dt class="text-on-surface-variant">Total</dt><dd id="simulation-order-amount" class="font-semibold"></dd></div>
+                  <div class="col-span-2"><dt class="text-on-surface-variant">Referencia</dt><dd id="simulation-payment-reference" class="break-all font-mono text-xs"></dd></div>
+                </dl>
+                <label class="block text-sm font-semibold">Método simulado
+                  <select id="simulation-payment-method" class="mt-1 w-full rounded-lg border-outline-variant"></select>
+                </label>
+                <label class="block text-sm font-semibold">Resultado a simular
+                  <select id="simulation-payment-result" class="mt-1 w-full rounded-lg border-outline-variant"></select>
+                </label>
+                <label class="block text-sm font-semibold">Motivo opcional
+                  <textarea id="simulation-payment-reason" maxlength="500" rows="2" class="mt-1 w-full rounded-lg border-outline-variant" placeholder="Motivo de rechazo o cancelación"></textarea>
+                </label>
+                <p id="simulation-payment-feedback" class="rounded-lg bg-primary-fixed p-3 text-sm text-on-primary-fixed-variant" role="status"></p>
+                <div class="flex justify-end gap-3">
+                  <button id="close-payment-simulation" type="button" class="rounded-lg border border-outline-variant px-4 py-2 text-sm font-semibold">Cerrar</button>
+                  <button id="confirm-payment-simulation" type="submit" class="rounded-lg bg-primary px-4 py-2 text-sm font-bold text-on-primary">Guardar resultado</button>
+                </div>
+              </form>
+            </dialog>
+            <div
+              class="flex flex-col lg:flex-row lg:items-end justify-between gap-4"
+            >
+              <div class="flex flex-col gap-2">
+                <div class="flex items-center gap-2">
+                  <span
+                    class="text-xs uppercase text-primary font-bold tracking-widest"
+                    id="proposal-iteration"
+                    >Iteración de Diseño</span
+                  >
+                  <span
+                    class="w-1.5 h-1.5 rounded-full bg-outline-variant"
+                  ></span>
+                  <span class="text-xs text-on-surface-variant font-semibold"
+                    >Kit Modular ViMod 3.2</span
+                  >
+                </div>
+                <h1
+                  class="font-headline text-3xl lg:text-4xl text-on-surface font-bold tracking-tight"
+                  id="proposal-title"
+                >
+                  Propuesta
+                </h1>
+                <div id="proposal-detail-error" class="mt-3 hidden" aria-live="polite"></div>
+              </div>
+              <div class="flex items-center gap-3">
+                <button
+                  type="button"
+                  disabled
+                  title="La exportación PDF aún no está disponible"
+                  class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-bold text-sm transition-all border border-outline-variant/40 shadow-sm"
+                >
+                  <span class="material-symbols-outlined text-lg text-primary"
+                    >download</span
+                  >
+                  <span>Memoria Técnica (PDF) — próximamente</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 mb-10"
+          >
+            <div
+              class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/30 flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow"
+            >
+              <div
+                class="absolute top-0 right-0 w-24 h-24 bg-primary/10 rounded-bl-full pointer-events-none"
+              ></div>
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-xs text-on-surface-variant uppercase font-bold tracking-wider"
+                  >Costo Estimado Total</span
+                >
+                <div
+                  class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary"
+                >
+                  <span class="material-symbols-outlined text-xl"
+                    >payments</span
+                  >
+                </div>
+              </div>
+              <div>
+                <div
+                  class="font-headline text-2xl lg:text-3xl text-on-surface font-bold tracking-tight mb-1"
+                >
+                  <span id="proposal-cost">—</span>
+                </div>
+                <p class="text-xs text-on-surface-variant leading-relaxed" id="proposal-cost-assumption">
+                  Estimación académica de módulos; no es cotización comercial.
+                </p>
+              </div>
+              <div
+                class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center justify-between text-xs text-primary font-medium"
+              >
+                <span>Base de costos</span>
+                <span class="font-bold">Catálogo académico</span>
+              </div>
+            </div>
+            <div
+              class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/30 flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow"
+            >
+              <div
+                class="absolute top-0 right-0 w-24 h-24 bg-secondary/10 rounded-bl-full pointer-events-none"
+              ></div>
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-xs text-on-surface-variant uppercase font-bold tracking-wider"
+                  >Área Construida Estimada</span
+                >
+                <div
+                  class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-secondary"
+                >
+                  <span class="material-symbols-outlined text-xl"
+                    >square_foot</span
+                  >
+                </div>
+              </div>
+              <div>
+                <div
+                  class="font-headline text-2xl lg:text-3xl text-on-surface font-bold tracking-tight mb-1"
+                >
+                  <span id="proposal-area">0 m²</span>
+                  <span class="text-lg font-semibold text-on-surface-variant"
+                    >útiles</span
+                  >
+                </div>
+                <p class="text-xs text-on-surface-variant leading-relaxed">
+                  Área de los módulos guardados en esta propuesta.
+                </p>
+              </div>
+              <div
+                class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center justify-between text-xs text-on-surface-variant"
+              >
+                <span>Huella de desplante</span>
+                <span class="font-bold text-on-surface" id="proposal-footprint">—</span>
+              </div>
+            </div>
+            <div
+              class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/30 flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow"
+            >
+              <div
+                class="absolute top-0 right-0 w-24 h-24 bg-tertiary/10 rounded-bl-full pointer-events-none"
+              ></div>
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-xs text-on-surface-variant uppercase font-bold tracking-wider"
+                  >Tiempo Estimado</span
+                >
+                <div
+                  class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-tertiary"
+                >
+                  <span class="material-symbols-outlined text-xl"
+                    >timelapse</span
+                  >
+                </div>
+              </div>
+              <div>
+                <div
+                  class="font-headline text-2xl lg:text-3xl text-on-surface font-bold tracking-tight mb-1"
+                >
+                  <span id="proposal-time">—</span>
+                  <span class="text-lg font-semibold text-on-surface-variant"
+                    >llave en mano</span
+                  >
+                </div>
+                <p class="text-xs text-on-surface-variant leading-relaxed" id="proposal-time-assumption">
+                  Duración académica estimada según la cantidad de módulos.
+                </p>
+              </div>
+              <div
+                class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center justify-between text-xs text-tertiary font-semibold"
+              >
+                <span>Eficiencia sobre obra húmeda</span>
+                <span class="font-bold">-62% días</span>
+              </div>
+            </div>
+            <div
+              class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/30 flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow"
+            >
+              <div
+                class="absolute top-0 right-0 w-24 h-24 bg-primary/10 rounded-bl-full pointer-events-none"
+              ></div>
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-xs text-on-surface-variant uppercase font-bold tracking-wider"
+                  >Consumo Energético</span
+                >
+                <div
+                  class="w-10 h-10 rounded-xl bg-primary/15 text-primary flex items-center justify-center font-bold text-base"
+                >
+                  A
+                </div>
+              </div>
+              <div>
+                <div
+                  class="font-headline text-2xl lg:text-3xl text-on-surface font-bold tracking-tight mb-1"
+                >
+                  <span id="proposal-energy">— kWh/año</span>
+                </div>
+                <p class="text-xs text-on-surface-variant leading-relaxed" id="proposal-energy-assumption">
+                  Consumo anual estimado según los módulos considerados.
+                </p>
+                <p class="text-xs text-on-surface-variant leading-relaxed mt-2" id="proposal-estimate-assumptions">
+                  Estimación académica preliminar; no constituye estudio profesional.
+                </p>
+              </div>
+              <div
+                class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center justify-between text-xs text-primary font-semibold"
+              >
+                <span>Supuestos</span>
+                <span class="font-bold">Académicos</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-8 mb-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+              <div
+                class="lg:col-span-6 bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-outline-variant/30 flex flex-col gap-4"
+              >
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary">eco</span
+                  ><span
+                    class="text-xs uppercase tracking-wider text-primary font-bold"
+                    >Resumen de Comportamiento Bioclimático</span
+                  >
+                </div>
+                <div
+                  class="relative w-full h-48 rounded-xl overflow-hidden bg-surface-container-low"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="Warm modern modular house exterior"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAICWY-mYMg6u7FYPluRw2FIPRrypm-sVONKCdtz2TQi86BP_V3rFa_y6vxQl45YvwjmgsHX2_7OawAUhEO3vKMQyPdxDrG8lCulCOeK7loox4WTLhxPWAnMmCv1xPSJ6nluhKOOazu2d1nueA1nLdHHFJne6rtbMxrbCyVE3iYGgicxT6THi-tZkRrv2dnF-eHHIYnmE7KP6wY9wbV3tjrT-3x1SNB8Lp2E8GiyDU8OyD0hlw7irm-hg"
+                  />
+                  <div
+                    class="absolute bottom-3 left-3 bg-inverse-surface/85 backdrop-blur-md px-3 py-1 rounded-lg"
+                  >
+                    <span class="text-xs font-semibold text-inverse-on-surface"
+                      >Simulación Térmica Verificada</span
+                    >
+                  </div>
+                </div>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  La orientación en escuadra crea una barrera natural contra
+                  vientos dominantes del suroeste, acumulando calor pasivo
+                  durante el invierno en el patio solar central.
+                </p>
+                <div class="flex flex-col gap-2 pt-2">
+                  <div
+                    class="flex items-center justify-between text-xs font-semibold"
+                  >
+                    <span class="text-on-surface-variant"
+                      >Captación Solar Activa</span
+                    ><span class="text-primary font-bold">88% Eficaz</span>
+                  </div>
+                  <div
+                    class="w-full bg-surface-container rounded-full h-2.5 overflow-hidden"
+                  >
+                    <div
+                      class="bg-primary h-2.5 rounded-full transition-all vimod-progress-88"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="lg:col-span-6 bg-surface-container-low rounded-xl p-6 flex flex-col gap-5 shadow-sm border border-outline-variant/30"
+              >
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary"
+                    >flag</span
+                  >
+                  <h3 class="font-headline text-xl text-on-surface font-bold">
+                    Próximos Pasos Recomendados
+                  </h3>
+                </div>
+                <div class="flex flex-col gap-4">
+                  <div
+                    class="flex items-start gap-3 p-4 rounded-xl bg-surface-container-lowest shadow-sm border border-outline-variant/20"
+                  >
+                    <div
+                      class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm font-bold flex-shrink-0"
+                    >
+                      1
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <span class="text-sm text-on-surface font-bold"
+                        >Revisión Técnica con Arquitecto</span
+                      >
+                      <p
+                        class="text-xs text-on-surface-variant leading-relaxed"
+                      >
+                        Asigna el anteproyecto al Estudio ViMod para
+                        compatibilizar cotas con la topografía exacta de tu
+                        terreno y el trámite municipal.
+                      </p>
+                      <button
+                        class="inline-flex items-center gap-1.5 text-primary hover:text-primary/80 font-bold text-xs mt-1 transition-colors"
+                      >
+                        <span class="">Solicitar revisión profesional</span
+                        ><span class="material-symbols-outlined text-base"
+                          >arrow_forward</span
+                        >
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-start gap-3 p-4 rounded-xl bg-surface-container-lowest shadow-sm border border-outline-variant/20"
+                  >
+                    <div
+                      class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm font-bold flex-shrink-0"
+                    >
+                      2
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <span class="text-sm text-on-surface font-bold"
+                        >Licitación a Constructoras Aliadas</span
+                      >
+                      <p
+                        class="text-xs text-on-surface-variant leading-relaxed"
+                      >
+                        Emite el pliego modular a los 48 fabricantes verificados
+                        para recibir cotizaciones comparadas de transporte y
+                        ensamblaje.
+                      </p>
+                      <button
+                        class="inline-flex items-center gap-1.5 text-primary hover:text-primary/80 font-bold text-xs mt-1 transition-colors"
+                      >
+                        <span class="">Pedir cotizaciones formales</span
+                        ><span class="material-symbols-outlined text-base"
+                          >arrow_forward</span
+                        >
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="p-3.5 rounded-xl bg-surface-container flex items-center gap-3 border border-outline-variant/20"
+                >
+                  <span class="material-symbols-outlined text-primary"
+                    >verified_user</span
+                  ><span class="text-xs text-on-surface-variant leading-relaxed"
+                    >Garantía Estructural ViMod: Certificación de 10 años en
+                    kits modulares ensayados contra sismo y viento.</span
+                  >
+                </div>
+              </div>
+            </div>
+            <details
+              class="group bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/30 overflow-hidden"
+            >
+              <summary
+                class="flex items-center justify-between p-6 cursor-pointer hover:bg-surface-container-low transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary text-2xl"
+                    >architecture</span
+                  >
+                  <div class="flex flex-col">
+                    <span
+                      class="font-headline text-base font-bold text-on-surface"
+                      >Ver detalles técnicos y constructivos</span
+                    ><span class="text-xs text-on-surface-variant"
+                      >Planta arquitectónica, modulación GL24, intersticio solar
+                      y transmitancia U</span
+                    >
+                  </div>
+                </div>
+                <span
+                  class="material-symbols-outlined text-on-surface-variant transition-transform group-open:rotate-180"
+                  >expand_more</span
+                >
+              </summary>
+              <div
+                class="p-6 pt-0 border-t border-outline-variant/20 flex flex-col gap-6"
+              >
+                <div
+                  class="flex flex-wrap items-center justify-between gap-3 mt-4"
+                >
+                  <div class="flex flex-col">
+                    <span
+                      class="text-xs uppercase tracking-wider text-primary font-bold"
+                      >Planta Arquitectónica Técnica</span
+                    >
+                    <h4 class="font-headline text-lg text-on-surface font-bold">
+                      Modulación Estructural e Intersticio Solar
+                    </h4>
+                  </div>
+                  <div
+                    class="flex items-center gap-2 bg-surface-container-low px-3 py-1.5 rounded-lg border border-outline-variant/30"
+                  >
+                    <span class="material-symbols-outlined text-sm text-primary"
+                      >straighten</span
+                    ><span class="text-xs text-on-surface font-semibold"
+                      >Cota Base: Módulo 3.00 × 6.00 m</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="relative bg-surface-container-low rounded-xl p-4 overflow-hidden flex items-center justify-center border border-outline-variant/30"
+                >
+                  <svg
+                    class="w-full h-auto max-h-[460px] text-on-surface"
+                    fill="none"
+                    viewbox="0 0 760 480"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <defs>
+                      <pattern
+                        height="20"
+                        id="grid_details"
+                        patternunits="userSpaceOnUse"
+                        width="20"
+                      >
+                        <path
+                          d="M 20 0 L 0 0 0 20"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-opacity="0.04"
+                          stroke-width="1"
+                        ></path>
+                      </pattern>
+                    </defs>
+                    <rect
+                      fill="url(#grid_details)"
+                      height="480"
+                      width="760"
+                    ></rect>
+                    <g
+                      stroke="currentColor"
+                      stroke-dasharray="3 3"
+                      stroke-opacity="0.25"
+                    >
+                      <line x1="80" x2="680" y1="50" y2="50"></line>
+                      <line x1="80" x2="680" y1="430" y2="430"></line>
+                      <line x1="80" x2="80" y1="50" y2="430"></line>
+                      <line x1="680" x2="680" y1="50" y2="430"></line>
+                    </g>
+                    <text
+                      fill="currentColor"
+                      font-family="Nunito Sans"
+                      font-size="11"
+                      font-weight="600"
+                      opacity="0.6"
+                      text-anchor="middle"
+                      x="380"
+                      y="40"
+                    >
+                      12.00 m (FACHADA NORTE BIOCLIMÁTICA)
+                    </text>
+                    <text
+                      fill="currentColor"
+                      font-family="Nunito Sans"
+                      font-size="11"
+                      font-weight="600"
+                      opacity="0.6"
+                      text-anchor="middle"
+                      transform="rotate(-90 65 240)"
+                      x="65"
+                      y="240"
+                    >
+                      9.00 m EJE TRANSPORTE
+                    </text>
+                    <g>
+                      <rect
+                        fill="#f0ece4"
+                        height="150"
+                        rx="10"
+                        stroke="#4a7c59"
+                        stroke-width="2"
+                        width="320"
+                        x="110"
+                        y="80"
+                      ></rect>
+                      <rect
+                        fill="#78a886"
+                        height="12"
+                        opacity="0.25"
+                        rx="4"
+                        width="320"
+                        x="110"
+                        y="80"
+                      ></rect>
+                      <text
+                        fill="#2e3230"
+                        font-family="Literata"
+                        font-size="14"
+                        font-weight="700"
+                        x="130"
+                        y="115"
+                      >
+                        Módulo 01: Social Integrado
+                      </text>
+                      <text
+                        fill="#4a4e4a"
+                        font-family="Nunito Sans"
+                        font-size="12"
+                        x="130"
+                        y="135"
+                      >
+                        32.40 m² • Estar, Comedor &amp; Ventanal Captación
+                      </text>
+                      <line
+                        stroke="#74796e"
+                        stroke-dasharray="4 4"
+                        stroke-opacity="0.3"
+                        stroke-width="1"
+                        x1="130"
+                        x2="410"
+                        y1="160"
+                        y2="160"
+                      ></line>
+                      <circle
+                        cx="150"
+                        cy="185"
+                        fill="#4a7c59"
+                        opacity="0.15"
+                        r="14"
+                      ></circle>
+                      <text
+                        fill="#4a7c59"
+                        font-family="Nunito Sans"
+                        font-size="10"
+                        font-weight="bold"
+                        text-anchor="middle"
+                        x="150"
+                        y="189"
+                      >
+                        M1
+                      </text>
+                      <text
+                        fill="#4a4e4a"
+                        font-family="Nunito Sans"
+                        font-size="11"
+                        x="180"
+                        y="189"
+                      >
+                        Carga en fábrica: 100% terminación seca
+                      </text>
+                    </g>
+                    <g>
+                      <rect
+                        fill="#eae6de"
+                        height="150"
+                        rx="10"
+                        stroke="#705c30"
+                        stroke-width="2"
+                        width="200"
+                        x="440"
+                        y="80"
+                      ></rect>
+                      <text
+                        fill="#2e3230"
+                        font-family="Literata"
+                        font-size="14"
+                        font-weight="700"
+                        x="455"
+                        y="115"
+                      >
+                        Módulo 02: Núcleo Húmedo
+                      </text>
+                      <text
+                        fill="#4a4e4a"
+                        font-family="Nunito Sans"
+                        font-size="12"
+                        x="455"
+                        y="135"
+                      >
+                        18.10 m² • Cocina, Baño Técnico &amp; Tableros
+                      </text>
+                      <rect
+                        fill="#705c30"
+                        height="50"
+                        opacity="0.12"
+                        rx="4"
+                        width="80"
+                        x="455"
+                        y="160"
+                      ></rect>
+                      <text
+                        fill="#705c30"
+                        font-family="Nunito Sans"
+                        font-size="10"
+                        font-weight="bold"
+                        text-anchor="middle"
+                        x="495"
+                        y="190"
+                      >
+                        ISLA TÉCNICA
+                      </text>
+                      <circle
+                        cx="590"
+                        cy="185"
+                        fill="#705c30"
+                        opacity="0.15"
+                        r="14"
+                      ></circle>
+                      <text
+                        fill="#705c30"
+                        font-family="Nunito Sans"
+                        font-size="10"
+                        font-weight="bold"
+                        text-anchor="middle"
+                        x="590"
+                        y="189"
+                      >
+                        M2
+                      </text>
+                    </g>
+                    <g>
+                      <rect
+                        fill="#faf6f0"
+                        height="150"
+                        rx="10"
+                        stroke="#4a7c59"
+                        stroke-dasharray="6 4"
+                        stroke-width="1.5"
+                        width="200"
+                        x="110"
+                        y="240"
+                      ></rect>
+                      <text
+                        fill="#4a7c59"
+                        font-family="Literata"
+                        font-size="13"
+                        font-weight="700"
+                        text-anchor="middle"
+                        x="210"
+                        y="300"
+                      >
+                        Patio Solar &amp; Deck Climatizador
+                      </text>
+                      <text
+                        fill="#4a4e4a"
+                        font-family="Nunito Sans"
+                        font-size="11"
+                        text-anchor="middle"
+                        x="210"
+                        y="320"
+                      >
+                        Ventilación cruzada e inercia térmica
+                      </text>
+                      <path
+                        d="M 210 260 L 210 280 M 200 270 L 210 260 L 220 270"
+                        stroke="#4a7c59"
+                        stroke-linecap="round"
+                        stroke-width="1.5"
+                      ></path>
+                    </g>
+                    <g>
+                      <rect
+                        fill="#f0ece4"
+                        height="150"
+                        rx="10"
+                        stroke="#4a7c59"
+                        stroke-width="2"
+                        width="320"
+                        x="320"
+                        y="240"
+                      ></rect>
+                      <text
+                        fill="#2e3230"
+                        font-family="Literata"
+                        font-size="14"
+                        font-weight="700"
+                        x="340"
+                        y="275"
+                      >
+                        Módulo 03: Privado / Dormitorios
+                      </text>
+                      <text
+                        fill="#4a4e4a"
+                        font-family="Nunito Sans"
+                        font-size="12"
+                        x="340"
+                        y="295"
+                      >
+                        28.00 m² • Suite Principal + Dormitorio Flexible
+                      </text>
+                      <line
+                        stroke="#74796e"
+                        stroke-dasharray="4 4"
+                        stroke-opacity="0.3"
+                        stroke-width="1"
+                        x1="480"
+                        x2="480"
+                        y1="240"
+                        y2="390"
+                      ></line>
+                      <text
+                        fill="#4a4e4a"
+                        font-family="Nunito Sans"
+                        font-size="11"
+                        text-anchor="middle"
+                        x="400"
+                        y="340"
+                      >
+                        Habitación 01
+                      </text>
+                      <text
+                        fill="#4a4e4a"
+                        font-family="Nunito Sans"
+                        font-size="11"
+                        text-anchor="middle"
+                        x="560"
+                        y="340"
+                      >
+                        Habitación 02 / Home Office
+                      </text>
+                      <circle
+                        cx="615"
+                        cy="365"
+                        fill="#4a7c59"
+                        opacity="0.15"
+                        r="14"
+                      ></circle>
+                      <text
+                        fill="#4a7c59"
+                        font-family="Nunito Sans"
+                        font-size="10"
+                        font-weight="bold"
+                        text-anchor="middle"
+                        x="615"
+                        y="369"
+                      >
+                        M3
+                      </text>
+                    </g>
+                    <g transform="translate(680, 20)">
+                      <circle
+                        cx="20"
+                        cy="20"
+                        fill="#4a7c59"
+                        opacity="0.12"
+                        r="18"
+                      ></circle>
+                      <text
+                        fill="#4a7c59"
+                        font-family="Nunito Sans"
+                        font-size="11"
+                        font-weight="bold"
+                        text-anchor="middle"
+                        x="20"
+                        y="24"
+                      >
+                        N
+                      </text>
+                      <path d="M 20 4 L 23 11 L 17 11 Z" fill="#4a7c59"></path>
+                    </g>
+                  </svg>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+                  <div
+                    class="flex items-start gap-3 p-3 rounded-xl bg-surface-container-low border border-outline-variant/30"
+                  >
+                    <span
+                      class="w-3 h-3 rounded-full bg-primary mt-1 flex-shrink-0"
+                    ></span>
+                    <div class="flex flex-col">
+                      <span class="text-sm font-bold text-on-surface"
+                        >Módulo 01: Social</span
+                      ><span class="text-xs text-on-surface-variant"
+                        >Estructura madera laminada GL24</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-start gap-3 p-3 rounded-xl bg-surface-container-low border border-outline-variant/30"
+                  >
+                    <span
+                      class="w-3 h-3 rounded-full bg-tertiary mt-1 flex-shrink-0"
+                    ></span>
+                    <div class="flex flex-col">
+                      <span class="text-sm font-bold text-on-surface"
+                        >Módulo 02: Húmedo</span
+                      ><span class="text-xs text-on-surface-variant"
+                        >Conexiones hidrosanitarias plug &amp; play</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-start gap-3 p-3 rounded-xl bg-surface-container-low border border-outline-variant/30"
+                  >
+                    <span
+                      class="w-3 h-3 rounded-full bg-primary mt-1 flex-shrink-0"
+                    ></span>
+                    <div class="flex flex-col">
+                      <span class="text-sm font-bold text-on-surface"
+                        >Módulo 03: Privado</span
+                      ><span class="text-xs text-on-surface-variant"
+                        >Aislamiento celulosa densificada • U = 0.28 W/m²K</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="/Backend/Paquetes/Presentacion/PortalCliente/Scripts/page-Detalles-propuestas.js?v=3"></script>
+  </body>
+</html>

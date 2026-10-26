@@ -1,0 +1,361 @@
+<!doctype html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,300..800;1,6..12,300..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="/Backend/Nucleo/Frontend/Scripts/resource-loader.js?v=9"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+  </head>
+  <body
+    class="bg-surface font-body text-on-surface min-h-screen flex items-center justify-center selection:bg-primary-fixed selection:text-on-primary-fixed"
+  >
+    <main class="w-full max-w-[640px] mx-auto px-4 py-8 sm:py-12">
+      <div class="flex flex-col w-full">
+        <div
+          class="relative w-full overflow-hidden rounded-xl bg-surface-container-low border border-outline-variant/40 shadow-xl shadow-surface-variant/30 p-6 sm:p-10 flex flex-col gap-8"
+        >
+          <div class="flex flex-col gap-3 text-center items-center">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container border border-outline-variant/50"
+            >
+              <span class="material-symbols-outlined text-[18px] text-primary"
+                >domain</span
+              >
+              <span
+                class="font-label text-xs uppercase tracking-wider font-semibold"
+                >Arquitectura Modular Coordinada</span
+              >
+            </div>
+            <h1
+              class="font-display text-3xl sm:text-4xl text-on-surface font-bold tracking-tight"
+            >
+              Crear tu cuenta en ViMod
+            </h1>
+            <p
+              class="font-body text-base text-on-surface-variant max-w-[480px]"
+            >
+              Comienza a planificar tu vivienda modular personalizada y
+              asequible con control total de tu presupuesto y tiempos de
+              montaje.
+            </p>
+          </div>
+          <!-- Notificación Global de Validación (Interactiva) -->
+          <div
+            class="hidden rounded-lg p-4 items-start gap-3 shadow-sm transition-all duration-300 border"
+            id="banner-notificacion"
+          >
+            <span
+              class="material-symbols-outlined text-[20px] mt-0.5"
+              id="banner-icono"
+            ></span>
+            <div class="flex flex-col flex-1">
+              <p
+                class="font-body text-base font-semibold"
+                id="banner-titulo"
+              ></p>
+              <p
+                class="font-body text-sm opacity-90"
+                id="banner-descripcion"
+              ></p>
+            </div>
+          </div>
+          <!-- Formulario de Registro -->
+          <form class="flex flex-col gap-5" id="registro-form" novalidate="">
+            <!-- Nombre Completo -->
+            <div class="flex flex-col gap-2">
+              <label
+                class="font-headline text-base text-on-surface font-medium flex justify-between items-center"
+                for="nombre-completo"
+              >
+                <span>Nombre y apellidos</span>
+                <span
+                  class="font-label text-xs tracking-wider text-on-surface-variant font-medium"
+                  >Obligatorio</span
+                >
+              </label>
+              <div class="relative flex items-center">
+                <span
+                  class="material-symbols-outlined absolute left-3 text-outline pointer-events-none text-[20px]"
+                  >person</span
+                >
+                <input
+                  class="w-full h-11 pl-10 pr-3 rounded bg-surface text-on-surface placeholder:text-outline/70 border border-outline-variant/60 font-body shadow-sm outline-none focus:bg-surface-container-lowest focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-150"
+                  id="nombre-completo"
+                  placeholder="Ej. Mateo Valenzuela Herrera"
+                  required=""
+                  type="text"
+                />
+              </div>
+              <p
+                class="hidden font-body text-sm text-error flex items-center gap-1.5"
+                id="error-nombre"
+              >
+                <span class="material-symbols-outlined text-[16px]">info</span>
+                Por favor, escribe tu nombre completo para la ficha técnica del
+                proyecto.
+              </p>
+            </div>
+            <!-- Correo Electrónico -->
+            <div class="flex flex-col gap-2">
+              <label
+                class="font-headline text-base text-on-surface font-medium flex justify-between items-center"
+                for="correo-usuario"
+              >
+                <span>Correo electrónico</span>
+                <span
+                  class="font-label text-xs tracking-wider text-on-surface-variant font-medium"
+                  >Canal oficial</span
+                >
+              </label>
+              <div class="relative flex items-center">
+                <span
+                  class="material-symbols-outlined absolute left-3 text-outline pointer-events-none text-[20px]"
+                  >mail</span
+                >
+                <input
+                  class="w-full h-11 pl-10 pr-10 rounded bg-surface text-on-surface placeholder:text-outline/70 border border-outline-variant/60 font-body shadow-sm outline-none focus:bg-surface-container-lowest focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-150"
+                  id="correo-usuario"
+                  placeholder="ejemplo@terreno.cl"
+                  required=""
+                  type="email"
+                />
+                <span
+                  class="material-symbols-outlined absolute right-3 hidden text-[20px]"
+                  id="icono-validacion-correo"
+                ></span>
+              </div>
+              <!-- Mensajes contextuales de correo -->
+              <p
+                class="hidden font-body text-sm text-error flex items-center gap-1.5"
+                id="error-correo-invalido"
+              >
+                <span class="material-symbols-outlined text-[16px]">error</span>
+                Formato de correo no válido. Debe incluir un formato legible
+                (ej. usuario@dominio.com).
+              </p>
+              <p
+                class="hidden font-body text-sm text-error flex items-center gap-1.5"
+                id="error-correo-duplicado"
+              >
+                <span class="material-symbols-outlined text-[16px]"
+                  >warning</span
+                >
+                El correo electrónico ya se encuentra registrado en nuestra base
+                de datos modular.
+              </p>
+            </div>
+            <!-- Tipo de cuenta -->
+            <div class="flex flex-col gap-2">
+              <label
+                class="font-headline text-base text-on-surface font-medium flex justify-between items-center"
+                for="tipo-cuenta"
+              >
+                <span>Tipo de cuenta</span>
+                <span
+                  class="font-label text-xs tracking-wider text-on-surface-variant font-medium"
+                  >Cuenta pública</span
+                >
+              </label>
+              <div class="relative flex items-center">
+                <span
+                  class="material-symbols-outlined absolute left-3 text-outline pointer-events-none text-[20px]"
+                  >badge</span
+                >
+                <select
+                  class="w-full h-11 pl-10 pr-10 rounded bg-surface text-on-surface border border-outline-variant/60 font-body shadow-sm outline-none focus:bg-surface-container-lowest focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-150 appearance-none"
+                  id="tipo-cuenta"
+                  name="tipoCuenta"
+                >
+                  <option value="cliente">Cliente</option>
+                  <option value="arquitecto">Arquitecto</option>
+                  <option value="constructora">Constructora o empresa</option>
+                </select>
+                <span
+                  class="material-symbols-outlined absolute right-3 text-on-surface-variant text-[20px] pointer-events-none"
+                  >expand_more</span
+                >
+              </div>
+              <p
+                class="font-body text-xs text-on-surface-variant flex items-start gap-1.5"
+              >
+                <span
+                  class="material-symbols-outlined text-[16px] mt-0.5 text-primary"
+                  >info</span
+                >
+                Las solicitudes de arquitectos y constructoras quedan pendientes de aprobación por el administrador.
+              </p>
+            </div>
+            <!-- Contraseña -->
+            <div class="flex flex-col gap-2">
+              <label
+                class="font-headline text-base text-on-surface font-medium flex justify-between items-center"
+                for="contrasena"
+              >
+                <span>Contraseña de seguridad</span>
+                <span
+                  class="font-label text-xs tracking-wider text-on-surface-variant font-medium"
+                  >Protección de planos</span
+                >
+              </label>
+              <div class="relative flex items-center">
+                <span
+                  class="material-symbols-outlined absolute left-3 text-outline pointer-events-none text-[20px]"
+                  >lock</span
+                >
+                <input
+                  class="w-full h-11 pl-10 pr-10 rounded bg-surface text-on-surface placeholder:text-outline/70 border border-outline-variant/60 font-body shadow-sm outline-none focus:bg-surface-container-lowest focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-150"
+                  id="contrasena"
+                  placeholder="Introduce al menos 8 caracteres"
+                  required=""
+                  type="password"
+                />
+                <button
+                  aria-label="Mostrar u ocultar contraseña"
+                  class="absolute right-3 text-on-surface-variant hover:text-primary flex items-center justify-center cursor-pointer transition-colors"
+                  id="alternar-contrasena"
+                  type="button"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >visibility</span
+                  >
+                </button>
+              </div>
+              <!-- Indicador de Robustez -->
+              <div class="flex flex-col gap-1.5 mt-1">
+                <div
+                  class="grid grid-cols-3 gap-1.5 w-full h-1.5 rounded-full bg-surface-container overflow-hidden"
+                >
+                  <div
+                    class="h-full bg-surface-dim transition-colors duration-200"
+                    id="barra-nivel-1"
+                  ></div>
+                  <div
+                    class="h-full bg-surface-dim transition-colors duration-200"
+                    id="barra-nivel-2"
+                  ></div>
+                  <div
+                    class="h-full bg-surface-dim transition-colors duration-200"
+                    id="barra-nivel-3"
+                  ></div>
+                </div>
+                <div class="flex justify-between items-center text-xs">
+                  <span
+                    class="font-body text-on-surface-variant font-medium"
+                    id="texto-seguridad"
+                    >Nivel de seguridad: Sin evaluar</span
+                  >
+                  <span class="font-label text-on-surface-variant font-medium"
+                    >Criterio ISO/IEC</span
+                  >
+                </div>
+              </div>
+              <p
+                class="font-body text-xs text-on-surface-variant flex items-start gap-1.5"
+              >
+                <span
+                  class="material-symbols-outlined text-[16px] mt-0.5 text-primary"
+                  >shield</span
+                >
+                Mínimo 8 caracteres, incluye una mayúscula y un número.
+              </p>
+            </div>
+            <!-- Confirmar Contraseña -->
+            <div class="flex flex-col gap-2">
+              <label
+                class="font-headline text-base text-on-surface font-medium"
+                for="confirmar-contrasena"
+              >
+                Confirmar contraseña
+              </label>
+              <div class="relative flex items-center">
+                <span
+                  class="material-symbols-outlined absolute left-3 text-outline pointer-events-none text-[20px]"
+                  >lock_reset</span
+                >
+                <input
+                  class="w-full h-11 pl-10 pr-3 rounded bg-surface text-on-surface placeholder:text-outline/70 border border-outline-variant/60 font-body shadow-sm outline-none focus:bg-surface-container-lowest focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-150"
+                  id="confirmar-contrasena"
+                  placeholder="Repite la contraseña ingresada"
+                  required=""
+                  type="password"
+                />
+              </div>
+              <p
+                class="hidden font-body text-sm text-error flex items-center gap-1.5"
+                id="error-confirmacion"
+              >
+                <span class="material-symbols-outlined text-[16px]"
+                  >cancel</span
+                >
+                Las contraseñas no coinciden. Verifica que ambos campos sean
+                idénticos.
+              </p>
+              <p
+                class="hidden font-body text-sm text-primary flex items-center gap-1.5"
+                id="exito-confirmacion"
+              >
+                <span class="material-symbols-outlined text-[16px]"
+                  >check_circle</span
+                >
+                Las contraseñas coinciden de forma óptima.
+              </p>
+            </div>
+            <!-- Términos y Condiciones -->
+            <div class="flex items-start gap-3 pt-1">
+              <input
+                class="w-5 h-5 mt-0.5 rounded border-outline text-primary accent-primary cursor-pointer focus:ring-primary focus:ring-offset-background"
+                id="terminos"
+                required=""
+                type="checkbox"
+              />
+              <label
+                class="font-body text-sm text-on-surface-variant select-none cursor-pointer leading-relaxed"
+                for="terminos"
+              >
+                Acepto las condiciones generales de uso de la plataforma, el
+                resguardo digital de planos y la política de estimación de
+                costos en terreno.
+              </label>
+            </div>
+            <!-- Botón Primario de Registro -->
+            <button
+              class="w-full h-12 mt-2 rounded bg-primary text-on-primary hover:bg-surface-tint focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-150 font-body text-base font-semibold flex items-center justify-center gap-2 shadow-md hover:shadow-lg active:scale-[0.99]"
+              type="submit"
+            >
+              <span class="material-symbols-outlined text-[20px]"
+                >add_home</span
+              >
+              <span>Registrarme</span>
+            </button>
+            <!-- Enlace para Iniciar Sesión -->
+            <div class="text-center pt-2">
+              <p class="font-body text-sm sm:text-base text-on-surface-variant">
+                ¿Ya tienes una cuenta?
+                <a
+                  class="text-primary font-semibold hover:text-on-primary-fixed-variant hover:underline transition-all"
+                  href="2. Inicio de sesion.html"
+                >
+                  Iniciar sesión
+                </a>
+              </p>
+            </div>
+          </form>
+          <!-- Tarjeta de Beneficios: Arquitectura Modular Asequible -->
+        </div>
+      </div>
+      <script src="/Backend/Nucleo/Frontend/Scripts/page-Registro_de_usuario.js?v=2"></script>
+    </main>
+  </body>
+</html>

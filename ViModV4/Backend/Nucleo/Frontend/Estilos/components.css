@@ -1,0 +1,89 @@
+/* Shared ViMod component primitives. Tailwind remains responsible for page-specific layout. */
+.vimod-card {
+  border: 1px solid rgb(var(--vimod-outline-rgb) / 30%);
+  border-radius: var(--vimod-radius-card);
+  background: var(--vimod-surface-container-lowest);
+  box-shadow: var(--vimod-shadow-subtle);
+}
+
+.vimod-surface {
+  background: var(--vimod-surface-low);
+  border: 1px solid rgb(var(--vimod-outline-rgb) / 30%);
+}
+
+.vimod-action {
+  cursor: pointer;
+  transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+}
+
+.vimod-action:hover {
+  box-shadow: 0 4px 14px rgb(46 50 48 / 10%);
+}
+
+.vimod-action:active {
+  transform: scale(0.99);
+}
+
+.vimod-focusable:focus-visible {
+  outline: 2px solid var(--vimod-primary);
+  outline-offset: 2px;
+}
+
+.client-primary-action {
+  display: inline-flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background: var(--vimod-primary);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 3px 10px rgb(46 50 48 / 12%);
+  transition: background-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.client-primary-action:hover {
+  background: #3f6b4d;
+  box-shadow: 0 5px 14px rgb(46 50 48 / 16%);
+}
+
+.client-primary-action:disabled,
+.client-secondary-action:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  box-shadow: none;
+}
+
+.client-secondary-action {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(var(--vimod-outline-rgb) / 30%);
+  border-radius: 0.75rem;
+  background: var(--vimod-surface-low);
+  color: var(--vimod-on-surface);
+  font-weight: 600;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.client-secondary-action:hover {
+  background: var(--vimod-surface-high);
+}
+
+.vimod-scroll-list {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+@media (max-width: 1023px) {
+  .vimod-shell {
+    padding-left: 0;
+  }
+
+  .vimod-sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+}

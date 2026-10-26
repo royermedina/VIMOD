@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Acceso administrativo | ViMod</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Literata:wght@400;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-900 font-['Nunito_Sans']">
+    <main class="mx-auto flex min-h-screen max-w-5xl items-center px-4 py-10">
+      <div class="mx-auto w-full max-w-xl">
+        <section class="rounded-2xl bg-white p-7 shadow-xl ring-1 ring-slate-200 sm:p-10">
+          <a class="text-sm font-bold text-emerald-800" href="/Backend/Nucleo/Frontend/Vistas/2.%20Inicio%20de%20sesion.html">ViMod</a>
+          <p class="mt-8 text-xs font-bold uppercase tracking-[.2em] text-emerald-800">Área restringida</p>
+          <h1 class="mt-2 font-['Literata'] text-3xl font-bold">Acceso administrativo</h1>
+          <p class="mt-3 text-slate-600">Inicia sesión con la cuenta administrativa. La contraseña y el rol se validan en el servidor.</p>
+          <div id="admin-message" class="mt-5 hidden rounded-lg p-3 text-sm" role="status"></div>
+          <form id="admin-login" class="mt-6 space-y-4">
+            <label class="block text-sm font-semibold">Usuario
+              <input id="admin-username" type="text" autocomplete="username" required class="mt-1 w-full rounded-lg border-slate-300" />
+            </label>
+            <label class="block text-sm font-semibold">Contraseña
+              <input id="admin-password" type="password" autocomplete="current-password" required class="mt-1 w-full rounded-lg border-slate-300" />
+            </label>
+            <button class="w-full rounded-lg bg-emerald-800 px-4 py-3 font-bold text-white hover:bg-emerald-900" type="submit">Iniciar sesión</button>
+          </form>
+        </section>
+      </div>
+    </main>
+    <script src="/Backend/Nucleo/Frontend/Scripts/api-client.js"></script>
+    <script src="/Backend/Nucleo/Frontend/Scripts/rutas.js"></script><script src="/Backend/Paquetes/Presentacion/PanelAdmin/Scripts/page-admin-access.js?v=2"></script>
+  </body>
+</html>

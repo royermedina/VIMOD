@@ -1,0 +1,4 @@
+/* Page-specific CSS for 13. Constructora solicitudes.html. */
+html[data-vimod-page="13. constructora solicitudes.html"] .rounded-xl {
+	border-radius: 1.5rem;
+}
