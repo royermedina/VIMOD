@@ -1,17 +1,17 @@
 # ViMod Backend
 
-For local frontend testing, serve the workspace root with Live Server on port 5500 and open the shared sign-in page: `http://localhost:5500/Backend/Nucleo/Frontend/Vistas/2.%20Inicio%20de%20sesion.html`. `FRONTEND_URL` remains the origin only (`http://localhost:5500`).
+Para probar el frontend localmente, sirve la raíz del espacio de trabajo con Live Server en el puerto 5500 y abre la página compartida de inicio de sesión: `[http://localhost:5500/Backend/Nucleo/Frontend/Vistas/2.%20Inicio%20de%20sesion.html](http://localhost:5500/Backend/Nucleo/Frontend/Vistas/2.%20Inicio%20de%20sesion.html)`. `FRONTEND_URL` debe contener únicamente el origen (`[http://localhost:5500](http://localhost:5500)`).
 
-## Accounts and administration
+## Cuentas y administración
 
-Public registration supports `cliente`, `arquitecto`, and `constructora`. The selected type is persisted in MongoDB as `rol`, `requestedRole`, and `accountType`. For architects and contractors the account remains `pendiente`, so the server resolves its effective role as `cliente` and denies professional routes until an administrator approves it. `admin` is never accepted as a public role. Private routes always authenticate the JWT and resolve the effective role from the MongoDB user document or trusted server configuration.
+El registro público admite los roles `cliente`, `arquitecto` y `constructora`. El tipo seleccionado se almacena en MongoDB como `rol`, `requestedRole` y `accountType`. En el caso de arquitectos y constructoras, la cuenta permanece en estado `pendiente`, por lo que el servidor resuelve su rol efectivo como `cliente` y deniega el acceso a las rutas profesionales hasta que un administrador la apruebe. El rol `admin` nunca se acepta como rol público. Las rutas privadas siempre autentican el JWT y determinan el rol efectivo a partir del documento del usuario en MongoDB o de la configuración confiable del servidor.
 
-### Administrative sign-in
+### Inicio de sesión administrativo
 
-The administrative username is `RoyeryAngel`. The backend provisions this account at startup when `ADMIN_PASSWORD` is present in its process environment. It stores only a bcrypt hash in MongoDB; when the configured account already exists as an active administrator, startup updates its hash to match the configured password without creating a duplicate account. Do not add an actual password to `.env`, source control, frontend files, command-line arguments, or logs. For local use, enter the password at a hidden PowerShell prompt, put it into the environment for the backend process, and start the server in that same shell:
+El nombre de usuario administrativo es `RoyeryAngel`. El backend crea esta cuenta al iniciarse cuando `ADMIN_PASSWORD` está presente en el entorno de su proceso. En MongoDB únicamente se almacena un hash bcrypt; cuando la cuenta configurada ya existe como administrador activo, el inicio actualiza su hash para que coincida con la contraseña configurada, sin crear una cuenta duplicada. No agregues una contraseña real a `.env`, al control de versiones, a los archivos del frontend, a los argumentos de la línea de comandos ni a los registros de ejecución. Para uso local, introduce la contraseña mediante un indicador oculto de PowerShell, almacénala en el entorno del proceso del backend e inicia el servidor en esa misma terminal:
 
 ```powershell
-$secure = Read-Host "Enter the administrative password" -AsSecureString
+$secure = Read-Host "Introduce la contraseña administrativa" -AsSecureString
 $pointer = [Runtime.InteropServices.Marshal]::SecureStringToBSTR($secure)
 $env:ADMIN_PASSWORD = [Runtime.InteropServices.Marshal]::PtrToStringBSTR($pointer)
 [Runtime.InteropServices.Marshal]::ZeroFreeBSTR($pointer)
@@ -19,89 +19,89 @@ Set-Location "C:\Users\Royer Medina\Desktop\ViModV4\Backend"
 node src\server.js
 ```
 
-The account is provisioned idempotently by the backend; no setup page, one-time secret, or setup endpoint is involved. If the configured username already belongs to a non-admin account, startup fails rather than elevating it. To remove the secret from the process after shutting down, run:
+La cuenta se crea de manera idempotente por el backend; no se utiliza ninguna página de configuración, secreto de un solo uso ni endpoint de configuración inicial. Si el nombre de usuario configurado ya pertenece a una cuenta que no es administradora, el inicio falla en lugar de elevar sus privilegios. Para eliminar el secreto del proceso después de apagar el servidor, ejecuta:
 
 ```powershell
 Remove-Variable secure
 $env:ADMIN_PASSWORD = $null
 ```
 
-Serve the project using the existing frontend setup and open `Backend/Paquetes/Presentacion/PanelAdmin/Vistas/14. Acceso administrativo.html` (for example, `http://localhost:5500/Backend/Paquetes/Presentacion/PanelAdmin/Vistas/14.%20Acceso%20administrativo.html`). Enter username `RoyeryAngel` and the configured password. The form uses the shared `POST /api/auth/login`; the frontend redirects only if the response reports `rol: admin`. Backend middleware independently reloads the user from MongoDB for `/api/admin/*`, and direct console visits validate `/api/auth/me` before revealing the page. Ordinary client, architect, and contractor credentials cannot access administrative routes.
+Sirve el proyecto mediante la configuración existente del frontend y abre `Backend/Paquetes/Presentacion/PanelAdmin/Vistas/14. Acceso administrativo.html` (por ejemplo, `[http://localhost:5500/Backend/Paquetes/Presentacion/PanelAdmin/Vistas/14.%20Acceso%20administrativo.html](http://localhost:5500/Backend/Paquetes/Presentacion/PanelAdmin/Vistas/14.%20Acceso%20administrativo.html)`). Introduce el nombre de usuario `RoyeryAngel` y la contraseña configurada. El formulario utiliza el endpoint compartido `POST /api/auth/login`; el frontend solo redirige si la respuesta indica `rol: admin`. El middleware del backend vuelve a cargar de forma independiente al usuario desde MongoDB para `/api/admin/*`, y las visitas directas a la consola validan `/api/auth/me` antes de mostrar la página. Las credenciales habituales de clientes, arquitectos y constructoras no permiten acceder a las rutas administrativas.
 
-Administrators cannot be disabled through the user status endpoint, protecting the administrative account. The former `POST /api/auth/admin/setup` endpoint and `ADMIN_SECRET` bootstrap flow have been removed.
+Los administradores no pueden deshabilitarse mediante el endpoint de estado de usuario, lo que protege la cuenta administrativa. Se han eliminado el antiguo endpoint `POST /api/auth/admin/setup` y el flujo de configuración inicial mediante `ADMIN_SECRET`.
 
-`GET /api/admin/overview`, `/users`, `/role-requests`, `/projects`, `/orders`, `/reviews`, `/services`, `/quotes`, `/payments`, and `/audit` are administrator-only. Approvals and rejections, review assignment, and account status changes are recorded in `adminAudit`. User list responses omit password hashes and tokens.
+Los endpoints `GET /api/admin/overview`, `/users`, `/role-requests`, `/projects`, `/orders`, `/reviews`, `/services`, `/quotes`, `/payments` y `/audit` son exclusivos para administradores. Las aprobaciones y los rechazos, la asignación de revisiones y los cambios de estado de las cuentas se registran en `adminAudit`. Las respuestas de las listas de usuarios omiten los hashes de contraseñas y los tokens.
 
-## Client project management
+## Gestión de proyectos del cliente
 
-- `PATCH /api/projects/:id` updates a client's draft project after validating its name, owner-owned terrain, positive COP budget, 1–6 whole bedrooms, and 1–6 whole bathrooms. Input changes mark a saved analysis stale until the next analysis; selected proposals and review, quote, or order activity prevent editing.
-- `DELETE /api/projects/:id` removes only a draft with no linked analysis, proposal, review, observation, quote, or order. Otherwise it returns `409` and the client can use `PATCH /api/projects/:id/archive` to preserve the project and its related records.
-- `DELETE /api/terrains/:id` removes an owner-owned terrain only when it has no active projects. Closed and archived projects do not block removal; active project names are returned with `409`.
-- Bathroom counts are numeric values in the project document and API response; for example, `2` remains `2` from the client form through MongoDB and project reads.
+- `PATCH /api/projects/:id` actualiza un proyecto en borrador del cliente después de validar su nombre, un terreno perteneciente al propietario, un presupuesto positivo en COP, entre 1 y 6 habitaciones enteras y entre 1 y 6 baños enteros. Los cambios en los datos de entrada marcan como desactualizado el análisis guardado hasta que se realice un nuevo análisis. La selección de propuestas y la existencia de actividad de revisión, cotización o pedido impiden la edición.
+- `DELETE /api/projects/:id` elimina únicamente un proyecto en borrador que no tenga análisis, propuesta, revisión, observación, cotización o pedido asociado. De lo contrario, devuelve `409`, y el cliente puede utilizar `PATCH /api/projects/:id/archive` para conservar el proyecto y sus registros relacionados.
+- `DELETE /api/terrains/:id` elimina un terreno perteneciente al propietario únicamente cuando no tiene proyectos activos. Los proyectos cerrados y archivados no impiden la eliminación; los nombres de los proyectos activos se devuelven junto con el código `409`.
+- La cantidad de baños se representa mediante valores numéricos en el documento del proyecto y en la respuesta de la API; por ejemplo, `2` sigue siendo `2` desde el formulario del cliente hasta MongoDB y las consultas de proyectos.
 
-### Trusted legacy role assignments
+### Asignaciones confiables de roles heredados
 
-For accounts authorized outside the approval flow, an administrator obtains that user's MongoDB `_id` and configures a server-only `ROLE_ASSIGNMENTS` entry:
+Para las cuentas autorizadas fuera del flujo de aprobación, un administrador obtiene el `_id` del usuario en MongoDB y configura una entrada exclusiva del servidor en `ROLE_ASSIGNMENTS`:
 
 ```text
 ROLE_ASSIGNMENTS=<existing-user-object-id>=arquitecto;<another-user-object-id>=constructora
 ```
 
-Each ID must identify an existing document in `vimod.users`. Accepted roles are `arquitecto`, `constructora`, and `admin`. The server applies assignments after authenticating the JWT and loading the user from MongoDB. This does not rewrite user documents. Restart the backend after changing an assignment. Never expose administrative environment values to the browser.
+Cada ID debe identificar un documento existente en `vimod.users`. Los roles admitidos son `arquitecto`, `constructora` y `admin`. El servidor aplica las asignaciones después de autenticar el JWT y cargar al usuario desde MongoDB. Este proceso no modifica los documentos de los usuarios. Reinicia el backend después de cambiar una asignación. Nunca expongas al navegador los valores de las variables de entorno administrativas.
 
-To inspect an existing account ID using an authorized MongoDB shell:
+Para consultar el ID de una cuenta existente mediante una consola de MongoDB autorizada:
 
 ```javascript
 use vimod
 db.users.find({ correo: "person@example.com" }, { _id: 1, nombre: 1, correo: 1, rol: 1 })
 ```
 
-## Checks
+## Verificaciones
 
-Run the static check with `npm.cmd run check`. Run integration tests with `npm.cmd test` while the dedicated MongoDB server is available on `127.0.0.1:27021`. Tests use a uniquely named `vimod_stage1_test_*` database and drop only that database after the run; they do not use or clear `vimod`.
+Ejecuta la comprobación estática con `npm.cmd run check`. Ejecuta las pruebas de integración con `npm.cmd test` mientras el servidor dedicado de MongoDB esté disponible en `127.0.0.1:27021`. Las pruebas utilizan una base de datos con un nombre único que sigue el patrón `vimod_stage1_test_*` y eliminan únicamente esa base de datos después de la ejecución; no utilizan ni vacían `vimod`.
 
-Stage 2 tests additionally use a uniquely named `vimod_stage2_test_*` database and drop only that test database after their run.
+Las pruebas de la etapa 2 también utilizan una base de datos con un nombre único que sigue el patrón `vimod_stage2_test_*` y eliminan únicamente esa base de datos de pruebas al finalizar.
 
-Stage 3 tests use a uniquely named `vimod_stage3_test_*` database. They exercise CORS, public account roles, configured administrator provisioning and authentication, approval decisions, HU-08 to HU-12 authorization/persistence, quote/order idempotency, and rejection of unverified payment confirmations. They drop only their isolated test database.
+Las pruebas de la etapa 3 utilizan una base de datos con un nombre único que sigue el patrón `vimod_stage3_test_*`. Comprueban CORS, los roles de las cuentas públicas, la creación y autenticación del administrador configurado, las decisiones de aprobación, la autorización y persistencia de HU-08 a HU-12, la idempotencia de las cotizaciones y los pedidos, y el rechazo de confirmaciones de pago no verificadas. Solo eliminan su base de datos de pruebas aislada.
 
-Stage 5 Stripe tests use a uniquely named `vimod_stage5_stripe_test_*` database and a mocked Stripe client. They do not call Stripe or use the `vimod` database.
+Las pruebas de Stripe de la etapa 5 utilizan una base de datos con un nombre único que sigue el patrón `vimod_stage5_stripe_test_*` y un cliente de Stripe simulado. No realizan llamadas a Stripe ni utilizan la base de datos `vimod`.
 
-## Persistent project workflows and payment readiness
+## Flujos de trabajo persistentes del proyecto y preparación de pagos
 
-- `POST /api/projects/:id/select-proposal` and `GET /api/projects/:id/selected-proposal` save and retrieve an owner-checked selection in the MongoDB project document.
-- `POST /api/projects/:id/reviews`, `GET /api/projects/:id/reviews`, `GET /api/architect/reviews`, and `POST /api/reviews/:id/observations` implement assigned reviews with duplicate prevention and owner/architect authorization. Review assignment is available to administrators through `PATCH /api/admin/reviews/:id/assign`.
-- `GET /api/services` lists active published services. Authorized contractors manage their own records through `/api/contractor/services`.
-- Clients create and query quotes under `/api/projects/:id/quotes`; contractors query and respond under `/api/contractor/quotes`.
-- Orders use a selected project proposal or a responded contractor quote, persist separately from payment status, and require an `Idempotency-Key`. `POST /api/orders/:id/payment-session` creates the configured payment session using the saved order amount. `GET /api/payments` returns the authenticated client's history. Client-supplied confirmation through the legacy `/confirm` route remains rejected.
+- `POST /api/projects/:id/select-proposal` y `GET /api/projects/:id/selected-proposal` guardan y recuperan una selección validada por propietario en el documento del proyecto de MongoDB.
+- `POST /api/projects/:id/reviews`, `GET /api/projects/:id/reviews`, `GET /api/architect/reviews` y `POST /api/reviews/:id/observations` implementan revisiones asignadas con prevención de duplicados y autorización basada en el propietario y el arquitecto. Los administradores pueden asignar revisiones mediante `PATCH /api/admin/reviews/:id/assign`.
+- `GET /api/services` devuelve los servicios publicados que están activos. Las constructoras autorizadas gestionan sus propios registros mediante `/api/contractor/services`.
+- Los clientes crean y consultan cotizaciones en `/api/projects/:id/quotes`; las constructoras las consultan y responden mediante `/api/contractor/quotes`.
+- Los pedidos utilizan una propuesta seleccionada del proyecto o una cotización respondida por una constructora. Se almacenan por separado del estado del pago y requieren una clave `Idempotency-Key`. `POST /api/orders/:id/payment-session` crea la sesión de pago configurada utilizando el importe guardado del pedido. `GET /api/payments` devuelve el historial del cliente autenticado. Las confirmaciones de pago enviadas por el cliente mediante la antigua ruta `/confirm` siguen siendo rechazadas.
 
-## Checkout and internal payment simulation
+## Proceso de pago y simulación interna de pagos
 
-The internal academic payment simulator remains the fallback. It displays the order, COP amount, simulated method, selected result, and a clear no-charge disclaimer; attempts are stored in the shared `payments` collection with `simulated: true`.
+El simulador de pagos académico interno sigue disponible como alternativa. Muestra el pedido, el importe en COP, el método simulado, el resultado seleccionado y una advertencia clara de que no se realiza ningún cobro. Los intentos se almacenan en la colección compartida `payments` con `simulated: true`.
 
-Set `PAYMENT_PROVIDER=stripe`, `STRIPE_SECRET_KEY` to a test key beginning with `sk_test_`, `COP_PER_USD` to a positive COP-per-USD exchange rate, and `FRONTEND_URL` to the frontend origin (for example, `http://localhost:5500`) to use Stripe Checkout. If Stripe is not selected or its key is missing, ViMod uses the internal simulator. A live key is rejected. Never expose or log the secret key.
+Configura `PAYMENT_PROVIDER=stripe`, `STRIPE_SECRET_KEY` con una clave de prueba que comience por `sk_test_`, `COP_PER_USD` con una tasa de cambio positiva de COP por USD y `FRONTEND_URL` con el origen del frontend (por ejemplo, `[http://localhost:5500](http://localhost:5500)`) para utilizar Stripe Checkout. Si Stripe no está seleccionado o falta su clave, ViMod utiliza el simulador interno. Las claves de producción se rechazan. Nunca expongas ni registres la clave secreta en los logs.
 
-The backend converts the stored COP total to USD cents using `round(amountCOP / COP_PER_USD * 100)`; no amount from the browser is used. Stripe payment records remain in `payments` and include the session ID, COP/USD amounts, exchange rate, provider, and status. `POST /api/payments/stripe/confirm` retrieves and verifies the Stripe session and its metadata before marking an order paid. `POST /api/orders/:id/payment-cancel` records an authenticated checkout cancellation. Test cards: `4242 4242 4242 4242` succeeds and `4000 0000 0000 0002` is declined. Never use live card data in test mode.
+El backend convierte el importe total almacenado en COP a centavos de USD mediante `round(amountCOP / COP_PER_USD * 100)`; no se utiliza ningún importe enviado desde el navegador. Los registros de pagos de Stripe permanecen en `payments` e incluyen el ID de la sesión, los importes en COP y USD, la tasa de cambio, el proveedor y el estado. `POST /api/payments/stripe/confirm` recupera y verifica la sesión de Stripe y sus metadatos antes de marcar un pedido como pagado. `POST /api/orders/:id/payment-cancel` registra una cancelación autenticada del proceso de pago. Tarjetas de prueba: `4242 4242 4242 4242` se aprueba y `4000 0000 0000 0002` se rechaza. Nunca utilices datos de tarjetas reales en el modo de prueba.
 
-When Stripe is not configured, supported simulator methods are `test_card`, `simulated_transfer`, and `test_balance`; results are `approved`, `declined`, `cancelled`, and `pending`. No card number, CVV, or real financial credential is accepted or stored by the simulator.
+Cuando Stripe no está configurado, los métodos admitidos por el simulador son `test_card`, `simulated_transfer` y `test_balance`; los resultados posibles son `approved`, `declined`, `cancelled` y `pending`. El simulador no acepta ni almacena números de tarjetas, códigos CVV ni credenciales financieras reales.
 
-## Preliminary analysis and academic proposal catalog
+## Análisis preliminar y catálogo académico de propuestas
 
-The project endpoints provide:
+Los endpoints de proyectos proporcionan:
 
-- `POST /api/projects/:id/analyze` and `GET /api/projects/:id/analysis`.
-- `POST /api/projects/:id/proposals` and `GET /api/projects/:id/proposals`.
-- `POST /api/projects/:id/proposals/regenerate` to explicitly recalculate the same deterministic generation.
-- `GET /api/projects/:id/proposals/:proposalId` for an owner-checked proposal and its stored estimate.
+- `POST /api/projects/:id/analyze` y `GET /api/projects/:id/analysis`.
+- `POST /api/projects/:id/proposals` y `GET /api/projects/:id/proposals`.
+- `POST /api/projects/:id/proposals/regenerate` para recalcular explícitamente la misma generación determinista.
+- `GET /api/projects/:id/proposals/:proposalId` para consultar una propuesta y su estimación almacenada, validando la propiedad del proyecto.
 
-All are protected by JWT, loaded user, and the `cliente` role; the service additionally queries the project and its terrain using the authenticated owner's ObjectId. Analysis is stored in `projectAnalyses`. Proposals are stored in `proposals`; each proposal embeds the estimate and its parameters, avoiding a second write that could diverge on the standalone MongoDB deployment.
+Todos están protegidos mediante JWT, usuario cargado y rol `cliente`; además, el servicio consulta el proyecto y su terreno utilizando el ObjectId del propietario autenticado. El análisis se almacena en `projectAnalyses`. Las propuestas se almacenan en `proposals`; cada propuesta incorpora la estimación y sus parámetros, lo que evita una segunda escritura que podría generar inconsistencias en el despliegue de MongoDB independiente.
 
-Initial academic assumptions are centralized in `src/config/modular-catalog.js`: equal-footprint modules are 6x4 m (24 m2), one common module is required, each bedroom module accommodates up to 2 bedrooms, and each wet-core module up to 2 bathrooms. Indicative COP costs are 45,000,000 per common module, 58,000,000 per bedroom module, and 72,000,000 per wet-core module (approximately COP 1.9–3.0 million/m2). These are academic assumptions, not market quotations. Annual energy assumptions are 900, 450, and 300 kWh/year respectively. Execution time is modeled as 10 setup days plus 4 sequential days per module. These values are estimates for coursework, not professional soil studies or guaranteed commercial quotes.
+Las suposiciones académicas iniciales están centralizadas en `src/config/modular-catalog.js`: los módulos tienen una huella uniforme de 6 × 4 m (24 m²), se requiere un módulo común, cada módulo de habitaciones admite hasta 2 habitaciones y cada módulo de núcleo húmedo admite hasta 2 baños. Los costos indicativos en COP son de 45.000.000 por módulo común, 58.000.000 por módulo de habitaciones y 72.000.000 por módulo de núcleo húmedo (aproximadamente entre 1,9 y 3,0 millones de COP por m²). Estos valores son supuestos académicos, no cotizaciones de mercado. Las estimaciones de consumo energético anual son de 900, 450 y 300 kWh/año, respectivamente. El tiempo de ejecución se calcula como 10 días de preparación más 4 días secuenciales por módulo. Estos valores son estimaciones para trabajos académicos, no estudios profesionales del suelo ni cotizaciones comerciales garantizadas.
 
-The proposal contains the modules required by the room/bath capacities. The layout is accepted only if rows and columns of 6x4 m modules (including rotated orientation) fit within the entered terrain dimensions. The catalog models rectangular module grids only; it does not currently support named typologies such as L-shaped or duplex distributions. Repeating generation with unchanged inputs upserts by project, input fingerprint, and option code; it does not create duplicates. A catalog-version change recalculates proposals using the new COP assumptions. Previously stored amounts are not converted.
+La propuesta contiene los módulos necesarios según la capacidad requerida de habitaciones y baños. La distribución solo se acepta si las filas y columnas de módulos de 6 × 4 m, incluida la orientación rotada, caben dentro de las dimensiones del terreno introducidas. El catálogo solo modela cuadrículas rectangulares de módulos; actualmente no admite tipologías con nombres específicos, como distribuciones en forma de L o dúplex. Si se repite la generación con datos de entrada sin cambios, se actualizan o insertan registros mediante el proyecto, la huella digital de los datos de entrada y el código de opción, sin crear duplicados. Un cambio en la versión del catálogo recalcula las propuestas utilizando los nuevos supuestos de costos en COP. Los importes almacenados anteriormente no se convierten.
 
-## Demo contractor accounts
+## Cuentas de demostración de constructoras
 
-The seed creates six approved contractor accounts and their sample services/materials. Each record is marked `demo: true` and the operation is idempotent. Run these commands from `Backend`; provide a password of at least eight characters through the hidden prompt. The password is hashed using the same bcrypt cost as registration and is never stored in source files:
+La carga inicial crea seis cuentas de constructoras aprobadas y sus servicios y materiales de ejemplo. Cada registro se marca con `demo: true` y la operación es idempotente. Ejecuta estos comandos desde `Backend`; proporciona una contraseña de al menos ocho caracteres mediante el indicador oculto. La contraseña se codifica mediante el mismo costo bcrypt utilizado durante el registro y nunca se almacena en archivos de código fuente:
 
 ```powershell
 $env:DEMO_MONGODB_DATABASE = "vimod_demo_20261025"
@@ -120,13 +120,13 @@ finally {
 }
 ```
 
-To remove only the accounts and publications created by this script, set the same `DEMO_MONGODB_DATABASE` and run `node scripts\seed-demo-constructoras.js --remove` from `Backend`. It does not delete records that are not marked as demo data from this seed.
+Para eliminar únicamente las cuentas y publicaciones creadas por este script, configura el mismo valor de `DEMO_MONGODB_DATABASE` y ejecuta `node scripts\seed-demo-constructoras.js --remove` desde `Backend`. No elimina registros que no estén marcados como datos de demostración creados por esta carga inicial.
 
-## Demo architects and client projects
+## Arquitectos de demostración y proyectos de clientes
 
-The isolated platform seed creates four approved architect profiles, one client account, and four draft projects with linked terrains. It uses a separate source marker (`vimod-demo-platform-v1`) and is idempotent. The script requires an explicit database name beginning with `vimod_demo_` or `vimod_stage`; it refuses to run against `vimod`.
+La carga inicial aislada de la plataforma crea cuatro perfiles de arquitectos aprobados, una cuenta de cliente y cuatro proyectos en borrador con sus terrenos asociados. Utiliza un marcador de origen independiente (`vimod-demo-platform-v1`) y es idempotente. El script requiere un nombre de base de datos explícito que comience por `vimod_demo_` o `vimod_stage`; se niega a ejecutarse contra `vimod`.
 
-From `Backend`, set a private password and isolated database before running it:
+Desde `Backend`, configura una contraseña privada y una base de datos aislada antes de ejecutarlo:
 
 ```powershell
 $env:DEMO_MONGODB_DATABASE = "vimod_demo_20261025"
@@ -145,4 +145,4 @@ finally {
 }
 ```
 
-Use the same database override when starting the backend for the demonstration. To remove only this seed, set `DEMO_MONGODB_DATABASE` again and run `node scripts\seed-demo-platform.js --remove`.
+Utiliza la misma configuración de base de datos al iniciar el backend para la demostración. Para eliminar únicamente los datos creados por esta carga inicial, vuelve a configurar `DEMO_MONGODB_DATABASE` y ejecuta `node scripts\seed-demo-platform.js --remove`.
