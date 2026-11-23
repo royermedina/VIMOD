@@ -1,0 +1,70 @@
+:root {
+  --vimod-primary: #4a7c59;
+  --vimod-surface: #faf6f0;
+  --vimod-surface-low: #f5f1ea;
+  --vimod-surface-high: #eae6de;
+  --vimod-surface-container-lowest: #ffffff;
+  --vimod-outline: #c4c8bc;
+  --vimod-outline-rgb: 196 200 188;
+  --vimod-on-surface: #2e3230;
+  --vimod-radius-card: 0.75rem;
+  --vimod-shadow-subtle: 0 1px 8px rgb(46 50 48 / 4%);
+}
+
+/* ViMod shared page foundation */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overscroll-behavior: none;
+}
+
+main > :first-child {
+  margin-top: 0 !important;
+}
+
+main > :last-child {
+  margin-bottom: 0 !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.vimod-card-image-frame-project {
+  height: 120px;
+}
+
+.vimod-card-image-frame-terrain {
+  width: 100%;
+  max-width: 220px;
+  height: 120px;
+}
+
+.vimod-card-image-frame-project img[data-card-image],
+.vimod-card-image-frame-terrain img[data-card-image] {
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 639px) {
+  .vimod-card-image-frame-terrain {
+    max-width: none;
+  }
+}
+
+.vimod-hidden {
+  display: none;
+}
+
+.vimod-icon-filled {
+  font-variation-settings: 'FILL' 1;
+}
+

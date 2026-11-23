@@ -1,0 +1,376 @@
+:root {
+  --architect-ink: #22372a;
+  --architect-muted: #68786d;
+  --architect-green: #356b48;
+  --architect-green-dark: #285a3b;
+  --architect-line: #e2e9e1;
+  --architect-paper: #fffefa;
+  --architect-wash: #f2f6f1;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 82% 0, rgba(214, 230, 211, 0.35), transparent 34rem),
+    #f5f6f2;
+  color: var(--architect-ink);
+}
+
+body > div > aside {
+  background: #f3f5f0;
+  border-color: var(--architect-line);
+  box-shadow: 8px 0 32px rgba(35, 57, 40, 0.035);
+}
+
+body > div > header {
+  background: rgba(255, 254, 250, 0.94);
+  border-bottom-color: var(--architect-line);
+  backdrop-filter: blur(14px);
+}
+
+main.w-full {
+  min-height: 100vh;
+  background: transparent;
+}
+
+main.w-full > section.mx-auto {
+  gap: 1.25rem;
+  max-width: 76rem;
+}
+
+main.w-full > section.mx-auto > header,
+main.w-full > section.mx-auto > section {
+  border: 1px solid var(--architect-line);
+  border-radius: 1.35rem;
+  background: var(--architect-paper);
+  box-shadow: 0 12px 34px rgba(36, 57, 41, 0.055);
+}
+
+main.w-full > section.mx-auto > header:first-child {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  background:
+    radial-gradient(ellipse at 94% 20%, rgba(196, 220, 193, 0.48), transparent 38%),
+    linear-gradient(115deg, #fffefa 8%, #f1f6ef 100%);
+}
+
+main.w-full > section.mx-auto > header:first-child::after {
+  position: absolute;
+  top: -3.2rem;
+  right: 3.5rem;
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid rgba(53, 107, 72, 0.11);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+main.w-full > section.mx-auto > header:first-child h1 {
+  max-width: 42rem;
+  color: var(--architect-ink);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  letter-spacing: -0.035em;
+}
+
+main.w-full > section.mx-auto > section {
+  padding: clamp(1.25rem, 2.8vw, 2rem);
+}
+
+main.w-full > section.mx-auto > section h2 {
+  color: var(--architect-ink);
+  letter-spacing: -0.02em;
+}
+
+#architect-rating-summary {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid #e8dfbf;
+  border-radius: 999px;
+  background: #fcf8e9;
+  padding: 0.45rem 0.8rem;
+  color: #806b2b;
+  font-size: 0.82rem;
+}
+
+#architect-rating-summary::before {
+  content: "★";
+  font-size: 1rem;
+}
+
+#architect-profile-form {
+  gap: 1.1rem;
+}
+
+#architect-profile-form label {
+  gap: 0.5rem;
+  color: #526357;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+#architect-profile-form input,
+#assigned-projects-list textarea,
+#assigned-projects-list select,
+#review-list textarea,
+#review-list select {
+  min-height: 3rem;
+  border: 1px solid #d5dfd5;
+  border-radius: 0.85rem;
+  background: #fbfcfa;
+  color: var(--architect-ink);
+  box-shadow: inset 0 1px 2px rgba(29, 48, 34, 0.025);
+  transition: border-color 150ms ease, box-shadow 150ms ease, background 150ms ease;
+}
+
+#architect-profile-form input {
+  padding: 0.7rem 0.85rem;
+}
+
+#architect-profile-form input:hover,
+#assigned-projects-list textarea:hover,
+#assigned-projects-list select:hover,
+#review-list textarea:hover,
+#review-list select:hover {
+  border-color: #9fb6a2;
+}
+
+#architect-profile-form input:focus,
+#assigned-projects-list textarea:focus,
+#assigned-projects-list select:focus,
+#review-list textarea:focus,
+#review-list select:focus {
+  border-color: var(--architect-green);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(53, 107, 72, 0.13);
+  outline: none;
+}
+
+#architect-profile-form button[type="submit"],
+#open-review-list button,
+#assigned-projects-list button {
+  min-height: 2.75rem;
+  border-radius: 0.85rem;
+  transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+}
+
+#architect-profile-form button[type="submit"] {
+  min-height: 3.1rem;
+  background: linear-gradient(135deg, var(--architect-green), #427a55);
+  box-shadow: 0 8px 18px rgba(53, 107, 72, 0.17);
+  font-size: 0.95rem;
+}
+
+#architect-profile-form button[type="submit"]:hover,
+#open-review-list button:hover,
+#assigned-projects-list button:hover {
+  box-shadow: 0 8px 20px rgba(43, 74, 51, 0.14);
+  transform: translateY(-1px);
+}
+
+#architect-profile-form button[type="submit"]:disabled {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none;
+}
+
+#architect-profile-status:empty {
+  display: none;
+}
+
+#architect-profile-status:not(:empty) {
+  width: fit-content;
+  border: 1px solid #cfe0d0;
+  border-radius: 0.8rem;
+  background: #eff7ee;
+  padding: 0.65rem 0.85rem;
+  color: #315d3b;
+}
+
+#architect-profile-status[data-state="error"] {
+  border-color: #edc9c4;
+  background: #fff3f1;
+  color: #8a3028;
+}
+
+#architect-profile-status[data-state="success"] {
+  border-color: #b7d5b9;
+  background: #eff8ef;
+  color: #285a35;
+}
+
+#open-review-count {
+  border: 1px solid #dce8da;
+  background: #eff6ed;
+  color: #356b48;
+  padding: 0.45rem 0.8rem;
+}
+
+#open-review-list article,
+#assigned-projects-list article,
+#review-list article,
+.architect-review-card {
+  border: 1px solid var(--architect-line);
+  border-radius: 1rem;
+  background: linear-gradient(145deg, #fffefa, #f8faf6);
+  padding: 1.1rem;
+  box-shadow: 0 5px 16px rgba(36, 57, 41, 0.035);
+  transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+#open-review-list article:hover,
+#assigned-projects-list article:hover,
+#review-list article:hover,
+.architect-review-card:hover {
+  border-color: #bdcfbd;
+  box-shadow: 0 12px 26px rgba(36, 57, 41, 0.08);
+  transform: translateY(-2px);
+}
+
+#open-review-list article h3,
+#assigned-projects-list article h3,
+#review-list article h3,
+.architect-review-card h3 {
+  font-family: "Literata", Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+#open-review-list article p,
+#assigned-projects-list article p,
+#review-list article p,
+.architect-review-card p {
+  line-height: 1.65;
+}
+
+#open-review-list button,
+#assigned-projects-list button.client-primary-action {
+  background: var(--architect-green);
+  padding: 0.65rem 1rem;
+}
+
+#open-review-list button:hover,
+#assigned-projects-list button.client-primary-action:hover {
+  background: var(--architect-green-dark);
+}
+
+#assigned-projects-list button.client-secondary-action {
+  border: 1px solid #e8c9c3;
+  border-radius: 0.85rem;
+  background: #fff6f4;
+  color: #873e34;
+}
+
+#assigned-projects-list textarea,
+#assigned-projects-list select,
+#review-list textarea,
+#review-list select {
+  margin-top: 0.4rem;
+  padding: 0.7rem 0.8rem;
+}
+
+#assigned-projects-list textarea {
+  min-height: 6rem;
+}
+
+.architect-stat-card {
+  display: flex;
+  min-height: 8rem;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid var(--architect-line);
+  border-radius: 1rem;
+  background: var(--architect-paper);
+  padding: 1.25rem;
+  color: var(--architect-muted);
+  box-shadow: 0 5px 16px rgba(36, 57, 41, 0.035);
+}
+
+.architect-stat-card strong {
+  color: var(--architect-green);
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.architect-review-card {
+  border: 1px solid var(--architect-line);
+  border-radius: 1rem;
+  background: linear-gradient(145deg, #fffefa, #f8faf6);
+  padding: 1.1rem;
+  box-shadow: 0 5px 16px rgba(36, 57, 41, 0.035);
+}
+
+#review-list details {
+  border-top: 1px solid var(--architect-line);
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+}
+
+#review-list summary {
+  cursor: pointer;
+  color: var(--architect-green);
+  font-weight: 700;
+}
+
+#review-list textarea {
+  min-height: 5rem;
+  padding: 0.7rem 0.8rem;
+}
+
+.review-tab-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--architect-line);
+  border-radius: 0.8rem;
+  background: var(--architect-paper);
+  padding: 0.65rem 0.9rem;
+  color: var(--architect-muted);
+  font-weight: 700;
+}
+
+.review-tab-button[aria-selected="true"] {
+  border-color: var(--architect-green);
+  background: var(--architect-green);
+  color: white;
+}
+
+.architect-profile-dialog {
+  width: min(48rem, calc(100% - 2rem));
+  max-height: calc(100vh - 2rem);
+  overflow: auto;
+  border: 1px solid var(--architect-line);
+  border-radius: 1.25rem;
+  background: var(--architect-paper);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  color: var(--architect-ink);
+  box-shadow: 0 24px 80px rgba(36, 57, 41, 0.2);
+}
+
+.architect-profile-dialog::backdrop {
+  background: rgba(25, 39, 29, 0.48);
+  backdrop-filter: blur(2px);
+}
+
+@media (max-width: 767px) {
+  main.w-full {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  main.w-full > section.mx-auto > section {
+    padding: 1.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

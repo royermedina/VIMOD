@@ -1,0 +1,246 @@
+<!doctype html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,300..900;1,6..12,300..900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="/Backend/Nucleo/Frontend/Scripts/resource-loader.js?v=13"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="../Estilos/panel-arquitecto.css?v=2" />
+    <title>Revisiones Técnicas · ViMod</title>
+  </head>
+  <body class="bg-surface font-body text-body-md text-on-surface">
+    <aside
+      class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-24 shadow-[0_1px_8px_rgba(74,124,89,0.06)] border-r border-outline-variant/30"
+    >
+      <div class="flex flex-col gap-space-24 px-space-20">
+        <div class="flex items-center gap-space-12 px-space-8">
+          <img
+            alt="ViMod Logo"
+            class="h-8 w-auto object-contain rounded-md"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFYc8oVliLjKP9104c_UcPcFl2Ja7N53zyJ4yfiCu7_Ai_tjdwySVd4X1udtM8vW82qiv0IRJ6yk_foA0oo5xlagKuRF2oGaug4YyrXJFxsTMLMBZLF_L6IDo3AUNRFj5O3yeBhwGnaI0KSQ6lbbdy3VajTlSmaCS16tpI7eKoU9htIc2lkxEyQsvpZCIju6s7ptfGrldthfAzqD9uHAP1LkH7nCQ5Q0v3qsIsHh6rg5AzVYUSnE7v5A"
+          />
+          <div class="flex flex-col">
+            <span
+              class="font-headline text-headline-sm text-on-surface font-bold leading-tight"
+              >ViMod</span
+            ><span
+              class="font-label text-label-technical text-primary uppercase font-bold tracking-wider"
+              >Ecosistema Modular</span
+            >
+          </div>
+        </div>
+        <div
+          class="bg-surface-container p-space-12 rounded-xl border border-outline-variant/40"
+        >
+          <span
+            class="font-label text-label-technical text-on-surface-variant uppercase tracking-wider block mb-space-4 font-bold"
+            >Rol en Sesión</span
+          >
+          <div class="flex items-center justify-between text-on-surface">
+            <span
+              class="font-label text-label-lg font-semibold flex items-center gap-space-8"
+              ><span class="w-2.5 h-2.5 rounded-full bg-primary"></span>Espacio
+              Unificado</span
+            ><span class="material-symbols-outlined text-primary text-sm"
+              >tune</span
+            >
+          </div>
+        </div>
+        <nav
+          class="flex flex-col gap-space-4"
+          data-active-classes="bg-primary text-on-primary font-semibold rounded-lg shadow-sm"
+        >
+          <div class="px-space-8 pt-space-8 pb-space-2">
+            <span
+              class="font-label text-label-technical uppercase tracking-wider text-secondary font-bold"
+              >Espacio Cliente</span
+            >
+          </div>
+          <a
+            class="flex items-center gap-space-12 px-space-12 py-space-8 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-medium"
+            data-path="mis-terrenos"
+            href="#"
+            ><span class="material-symbols-outlined text-xl">terrain</span
+            ><span class="font-label text-body-sm">Mis Terrenos</span></a
+          ><a
+            class="flex items-center gap-space-12 px-space-12 py-space-8 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-medium"
+            data-path="mis-proyectos"
+            href="#"
+            ><span class="material-symbols-outlined text-xl">cottage</span
+            ><span class="font-label text-body-sm">Mis Proyectos</span></a
+          ><a
+            class="flex items-center gap-space-12 px-space-12 py-space-8 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-medium"
+            data-path="constructoras"
+            href="#"
+            ><span class="material-symbols-outlined text-xl">engineering</span
+            ><span class="font-label text-body-sm">Constructoras</span></a
+          ><a
+            class="flex items-center gap-space-12 px-space-12 py-space-8 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-medium"
+            data-path="propuestas"
+            href="#"
+            ><span class="material-symbols-outlined text-xl">request_quote</span
+            ><span class="font-label text-body-sm"
+              >Propuestas Recibidas</span
+            ></a
+          >
+          <div class="px-space-8 pt-space-16 pb-space-2">
+            <span
+              class="font-label text-label-technical uppercase tracking-wider text-primary font-bold"
+              >Estudio Arquitectura</span
+            >
+          </div>
+          <a
+            class="flex items-center gap-space-12 px-space-12 py-space-8 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-medium"
+            data-path="proyectos-asignados"
+            href="#"
+            ><span class="material-symbols-outlined text-xl">architecture</span
+            ><span class="font-label text-body-sm">Proyectos Asignados</span></a
+          ><a
+            aria-current="page"
+            class="flex items-center gap-space-12 px-space-12 py-space-8 transition-all bg-primary text-on-primary font-semibold rounded-lg shadow-sm shadow-primary/20"
+            data-path="revisiones-tecnicas"
+            href="#"
+            ><span class="material-symbols-outlined text-xl">verified</span
+            ><span class="font-label text-body-sm font-semibold"
+              >Revisiones Técnicas</span
+            ></a
+          >
+          <div class="px-space-8 pt-space-16 pb-space-2">
+            <span
+              class="font-label text-label-technical uppercase tracking-wider text-tertiary font-bold"
+              >Fábrica y Constructora</span
+            >
+          </div>
+          <a
+            class="flex items-center gap-space-12 px-space-12 py-space-8 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-medium"
+            data-path="mis-servicios"
+            href="#"
+            ><span class="material-symbols-outlined text-xl"
+              >precision_manufacturing</span
+            ><span class="font-label text-body-sm">Mis Servicios</span></a
+          ><a
+            class="flex items-center gap-space-12 px-space-12 py-space-8 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-medium"
+            data-path="solicitudes-recibidas"
+            href="#"
+            ><span class="material-symbols-outlined text-xl">inbox</span
+            ><span class="font-label text-body-sm"
+              >Solicitudes Recibidas</span
+            ></a
+          >
+        </nav>
+      </div>
+      <div class="px-space-20 pt-space-16">
+        <div
+          class="bg-surface p-space-12 rounded-xl flex items-center gap-space-12 border border-outline-variant/30"
+        >
+          <img
+            alt="Profile"
+            class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx92Gwh8KiR5UncFJBA2sdeICczrLDgU08KFr9Ai0woqtegeLIKNNaxcsnqfwkQwN7OK7RdVs39OowrFYpddYm9TB6Q9MD0d35gUO14j7IjwXD4mF7_cqWtUpTdWjnoNT34tlZpFC6cJ72Ck02WePaANXdYW2RsPYhpJ9-EinDfJaa0xMnaqskMcGPlYzRHYI-GvtONoWnhnRHARbeWG_I51nbdlw-Y4mQU9sJZ_ZLNDfz4FdUYp-jGg"
+          />
+          <div class="flex flex-col min-w-0 flex-1">
+            <span
+              class="font-label text-label-lg text-on-surface truncate font-semibold"
+              data-profile-name
+              >Martín Soler</span
+            ><span
+              class="font-label text-label-technical text-primary uppercase font-bold"
+              >Cliente Verificado</span
+            >
+          </div>
+          <span
+            class="material-symbols-outlined text-on-surface-variant text-base"
+            >more_vert</span
+          >
+        </div>
+      </div>
+    </aside>
+    <div class="pl-72">
+      <header
+        class="fixed top-0 left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/30 z-40 flex items-center justify-between px-space-32"
+      >
+        <div class="flex items-center gap-space-16">
+          <label class="flex min-w-0 max-w-xl flex-1 items-center gap-space-8 rounded-lg border border-outline-variant/30 bg-surface-container-high px-space-12 py-space-8 text-on-surface-variant text-sm">
+            <span class="material-symbols-outlined text-base text-outline">search</span>
+            <span class="sr-only">Buscar revisiones técnicas</span>
+            <input id="review-search" type="search" class="min-w-0 flex-1 border-0 bg-transparent p-0 text-sm focus:ring-0" placeholder="Buscar revisiones por proyecto o cliente" />
+          </label>
+        </div>
+        <div class="flex items-center gap-space-16">
+          <div
+            class="flex items-center bg-surface-container-low px-space-12 py-space-8 rounded-lg gap-space-8 border border-outline-variant/20"
+          >
+            <span
+              class="font-label text-label-technical uppercase font-bold text-on-surface-variant"
+              >Vista Activa</span
+            ><span class="font-label text-label-lg font-semibold text-primary"
+              >Mi espacio</span
+            >
+          </div>
+          <button
+            class="relative p-space-8 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-full transition-colors"
+          >
+            <span class="material-symbols-outlined">notifications</span
+            ><span
+              class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary"
+            ></span></button
+          ><button
+            class="p-space-8 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-full transition-colors"
+          >
+            <span class="material-symbols-outlined">help_outline</span>
+          </button>
+          <div class="flex items-center gap-space-8 pl-space-8">
+            <img
+              alt="Profile"
+              class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx92Gwh8KiR5UncFJBA2sdeICczrLDgU08KFr9Ai0woqtegeLIKNNaxcsnqfwkQwN7OK7RdVs39OowrFYpddYm9TB6Q9MD0d35gUO14j7IjwXD4mF7_cqWtUpTdWjnoNT34tlZpFC6cJ72Ck02WePaANXdYW2RsPYhpJ9-EinDfJaa0xMnaqskMcGPlYzRHYI-GvtONoWnhnRHARbeWG_I51nbdlw-Y4mQU9sJZ_ZLNDfz4FdUYp-jGg"
+            />
+          </div>
+        </div>
+      </header>
+      <main class="w-full pt-20 px-space-32 pb-space-48 bg-surface">
+        <section class="mx-auto flex w-full max-w-7xl flex-col gap-space-20">
+          <header class="rounded-xl border border-outline-variant/30 bg-surface-container-lowest p-space-24">
+            <p class="font-label text-xs font-bold uppercase tracking-wider text-primary">Estudio de arquitectura</p>
+            <h1 class="mt-space-4 font-headline text-3xl font-bold text-on-surface">Revisiones Técnicas</h1>
+            <p class="mt-space-8 text-sm text-on-surface-variant">Gestiona las solicitudes y consulta el historial de dictámenes técnicos.</p>
+            <p id="architect-profile-status" class="mt-3 text-sm text-on-surface-variant" role="status" aria-live="polite"></p>
+            <p id="architect-rating-summary" class="text-sm font-semibold text-on-surface-variant">Calificación: cargando...</p>
+            <p id="review-load-error" class="mt-3 hidden text-sm text-error" role="alert"></p>
+          </header>
+          <section class="rounded-xl border border-outline-variant/30 bg-surface-container-lowest p-space-24">
+            <div class="flex flex-wrap gap-2" role="tablist" aria-label="Estado de revisiones">
+              <button type="button" role="tab" aria-selected="true" data-review-tab="open" class="review-tab-button">Abiertas <span data-review-count="open">0</span></button>
+              <button type="button" role="tab" aria-selected="false" data-review-tab="in_review" class="review-tab-button">En revisión <span data-review-count="in_review">0</span></button>
+              <button type="button" role="tab" aria-selected="false" data-review-tab="delivered" class="review-tab-button">Entregadas <span data-review-count="delivered">0</span></button>
+            </div>
+            <div id="review-list" class="mt-space-16 grid gap-space-12 md:grid-cols-2" role="tabpanel"></div>
+          </section>
+        </section>
+        <dialog id="architect-profile-dialog" class="architect-profile-dialog">
+          <div class="flex flex-col gap-4">
+            <header>
+              <h2 class="font-headline text-xl font-bold">Modificar perfil profesional</h2>
+              <p class="mt-1 text-sm text-on-surface-variant">Solo tú puedes editar tu perfil aprobado.</p>
+            </header>
+            <div id="architect-profile-form-modal"></div>
+            <div class="flex justify-end"><button type="button" data-profile-cancel class="client-secondary-action px-4 py-2 text-sm">Cancelar</button></div>
+          </div>
+        </dialog>
+      </main>
+    </div>
+    <script src="/Backend/Paquetes/Presentacion/PortalArquitecto/Scripts/architect-profile.js?v=2"></script>
+    <script src="/Backend/Paquetes/Presentacion/PortalArquitecto/Scripts/page-Revisiones-tecnicas.js?v=2"></script>
+  </body>
+</html>

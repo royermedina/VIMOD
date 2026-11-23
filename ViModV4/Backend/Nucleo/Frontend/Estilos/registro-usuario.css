@@ -1,0 +1,4 @@
+/* Page-specific CSS for 1._registro_de_usuario.html. */
+html[data-vimod-page="1._registro_de_usuario.html"] .rounded-xl {
+	border-radius: 1.5rem;
+}

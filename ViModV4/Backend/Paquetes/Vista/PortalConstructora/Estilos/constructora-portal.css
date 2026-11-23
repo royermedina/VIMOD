@@ -1,0 +1,562 @@
+:root {
+  --contractor-ink: #263a2d;
+  --contractor-muted: #68786d;
+  --contractor-green: #356b48;
+  --contractor-green-dark: #285a3b;
+  --contractor-border: #e1e9e0;
+  --contractor-paper: #fffefa;
+  --contractor-wash: #f1f5ef;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 86% 0, rgba(212, 229, 208, 0.34), transparent 36rem),
+    #f5f6f2;
+  color: var(--contractor-ink);
+}
+
+body > aside,
+body > div > aside {
+  background: #f1f4ef;
+  border-color: var(--contractor-border);
+  box-shadow: 8px 0 32px rgba(35, 57, 40, 0.04);
+}
+
+body > div > header {
+  background: rgba(255, 254, 250, 0.94);
+  border-color: var(--contractor-border);
+  box-shadow: 0 5px 24px rgba(35, 57, 40, 0.035);
+  backdrop-filter: blur(14px);
+}
+
+main.w-full {
+  min-height: 100vh;
+  background: transparent;
+}
+
+main .max-w-7xl {
+  max-width: 80rem;
+}
+
+main h1 {
+  color: var(--contractor-ink);
+  letter-spacing: -0.035em;
+}
+
+main h2,
+main h3,
+main h4 {
+  color: var(--contractor-ink);
+  letter-spacing: -0.02em;
+}
+
+html[data-vimod-page="12. constructora mis servicios.html"] main .max-w-7xl {
+  gap: 1.5rem;
+  padding-top: 1.75rem;
+}
+
+html[data-vimod-page="12. constructora mis servicios.html"] main .lg\:col-span-8 > .bg-surface-container-lowest {
+  border: 1px solid var(--contractor-border);
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(ellipse at top right, rgba(211, 231, 207, 0.25), transparent 34%),
+    var(--contractor-paper);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  box-shadow: 0 14px 36px rgba(36, 57, 41, 0.065);
+}
+
+html[data-vimod-page="12. constructora mis servicios.html"] main .lg\:col-span-8 {
+  min-width: 0;
+}
+
+.contractor-insights {
+  align-self: start;
+}
+
+.contractor-insights__visual,
+.contractor-insights__summary,
+.contractor-insights__tips {
+  border-color: var(--contractor-border);
+  background: var(--contractor-paper);
+  box-shadow: 0 10px 28px rgba(36, 57, 41, 0.055);
+}
+
+.contractor-insights__visual {
+  background:
+    radial-gradient(ellipse at 92% 8%, rgba(196, 221, 193, 0.55), transparent 40%),
+    linear-gradient(155deg, #fffefa, #f1f6ef);
+}
+
+.contractor-insights__illustration {
+  position: relative;
+  height: 10.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(75, 111, 79, 0.12);
+  border-radius: 1.15rem;
+  background:
+    linear-gradient(180deg, #e8f0e5 0%, #f6f7ed 68%, #e6ecdc 68%, #e6ecdc 100%);
+}
+
+.contractor-insights__illustration::before,
+.contractor-insights__illustration::after {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  pointer-events: none;
+}
+
+.contractor-insights__illustration::before {
+  right: 1.25rem;
+  bottom: 1.65rem;
+  left: 1.25rem;
+  height: 1px;
+  background: rgba(67, 102, 69, 0.25);
+}
+
+.contractor-insights__illustration::after {
+  right: 1.5rem;
+  bottom: 1.85rem;
+  left: 1.5rem;
+  height: 3.2rem;
+  border-bottom: 1px solid rgba(67, 102, 69, 0.22);
+  border-radius: 50%;
+}
+
+.contractor-insights__sun {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.8rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #e6ca82;
+  box-shadow: 0 0 28px rgba(230, 202, 130, 0.45);
+}
+
+.contractor-insights__ground {
+  position: absolute;
+  right: -1rem;
+  bottom: -3.1rem;
+  left: -1rem;
+  height: 5.2rem;
+  border: 1px solid rgba(88, 123, 80, 0.16);
+  border-radius: 50% 50% 0 0;
+  background: #dce8d5;
+}
+
+.contractor-module {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  border: 2px solid #6f9570;
+  background: linear-gradient(145deg, #fffefa, #eaf1e7);
+  box-shadow: 0 8px 18px rgba(47, 76, 48, 0.13);
+}
+
+.contractor-module::before {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  left: 0.55rem;
+  height: 0.3rem;
+  border-radius: 999px;
+  background: #9eba96;
+  content: "";
+}
+
+.contractor-module::after {
+  position: absolute;
+  bottom: 0.45rem;
+  left: 0.55rem;
+  width: 34%;
+  height: 1.2rem;
+  border: 1px solid #a1b89a;
+  border-radius: 0.2rem 0.2rem 0 0;
+  background: linear-gradient(90deg, #dce9d7 45%, #afc8a9 45%);
+  content: "";
+}
+
+.contractor-module--back {
+  top: 3rem;
+  left: 25%;
+  width: 34%;
+  height: 4.7rem;
+  transform: skewY(-6deg);
+}
+
+.contractor-module--front {
+  bottom: 2rem;
+  left: 17%;
+  width: 43%;
+  height: 3.3rem;
+}
+
+.contractor-module--side {
+  right: 17%;
+  bottom: 2rem;
+  width: 18%;
+  height: 3rem;
+  border-left: 0;
+  background: linear-gradient(135deg, #d8e6d3, #c0d5bb);
+  transform: skewY(-12deg);
+}
+
+.contractor-insights__link {
+  color: var(--contractor-green);
+  text-decoration: none;
+}
+
+.contractor-insights__link:hover {
+  color: var(--contractor-green-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contractor-insights__icon {
+  display: grid;
+  width: 2.8rem;
+  height: 2.8rem;
+  place-items: center;
+  border-radius: 0.9rem;
+  background: #e8f1e5;
+  color: var(--contractor-green);
+}
+
+.contractor-insights__metric {
+  border: 1px solid #e4ebe2;
+  border-radius: 0.9rem;
+  background: #fafbf8;
+  padding: 0.85rem;
+}
+
+.contractor-insights__tips li .material-symbols-outlined {
+  flex: 0 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .contractor-insights {
+    position: sticky;
+    top: 6rem;
+  }
+}
+
+#contractor-profile-heading {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+#contractorProfileForm {
+  gap: 1rem;
+}
+
+#contractorProfileForm label,
+#serviceForm label {
+  gap: 0.5rem;
+  color: #536458;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+#contractorProfileForm input,
+#contractorProfileForm textarea,
+#serviceForm input,
+#serviceForm textarea,
+#serviceForm select,
+#quote-form input,
+#quote-form textarea,
+#quote-form select,
+#offer-opportunities input,
+#quote-search {
+  border: 1px solid #d5dfd5;
+  border-radius: 0.8rem;
+  background-color: #fbfcfa;
+  color: var(--contractor-ink);
+  transition: border-color 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+}
+
+#contractorProfileForm input,
+#contractorProfileForm textarea,
+#serviceForm input,
+#serviceForm select,
+#quote-form input,
+#quote-form select,
+#offer-opportunities input {
+  min-height: 2.9rem;
+  padding: 0.65rem 0.8rem;
+}
+
+#contractorProfileForm textarea,
+#serviceForm textarea,
+#quote-form textarea {
+  padding: 0.75rem 0.85rem;
+}
+
+#contractorProfileForm input:hover,
+#contractorProfileForm textarea:hover,
+#serviceForm input:hover,
+#serviceForm textarea:hover,
+#serviceForm select:hover,
+#quote-form input:hover,
+#quote-form textarea:hover,
+#quote-form select:hover,
+#offer-opportunities input:hover {
+  border-color: #9fb6a2;
+}
+
+#contractorProfileForm input:focus,
+#contractorProfileForm textarea:focus,
+#serviceForm input:focus,
+#serviceForm textarea:focus,
+#serviceForm select:focus,
+#quote-form input:focus,
+#quote-form textarea:focus,
+#quote-form select:focus,
+#offer-opportunities input:focus,
+#quote-search:focus {
+  border-color: var(--contractor-green);
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(53, 107, 72, 0.13);
+  outline: none;
+}
+
+#save-profile,
+#btnPublish,
+#btnPreviewService,
+#quote-form button,
+#offer-opportunities button {
+  min-height: 2.75rem;
+  border-radius: 0.8rem;
+  transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+}
+
+#save-profile,
+#btnPublish,
+#submit-btn {
+  background: linear-gradient(135deg, var(--contractor-green), #427a55);
+  box-shadow: 0 7px 17px rgba(53, 107, 72, 0.17);
+}
+
+#save-profile:hover,
+#btnPublish:hover,
+#submit-btn:hover {
+  background: var(--contractor-green-dark);
+  box-shadow: 0 10px 22px rgba(43, 74, 51, 0.2);
+  transform: translateY(-1px);
+}
+
+#save-profile:disabled,
+#btnPublish:disabled,
+#quote-form button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none;
+}
+
+#profile-form-feedback:not(.hidden),
+#service-form-feedback:not(.hidden),
+#quote-form-error:not(.hidden),
+#submit-alert:not(.hidden) {
+  border: 1px solid #cfe0d0;
+  border-radius: 0.85rem;
+  background: #eff7ee;
+  padding: 0.75rem 0.9rem;
+  color: #315d3b;
+}
+
+#profile-form-feedback.text-error,
+#service-form-feedback.text-error,
+#quote-form-error:not(.hidden) {
+  border-color: #edc9c4;
+  background: #fff3f1;
+  color: #8a3028;
+}
+
+#services-count,
+#filter-count-todas,
+#filter-count-nuevas,
+#filter-count-respondidas {
+  border-radius: 999px;
+}
+
+#services-list > article {
+  border: 1px solid var(--contractor-border);
+  border-radius: 1.1rem;
+  background: linear-gradient(145deg, #fffefa, #f8faf6);
+  padding: 1.25rem;
+  box-shadow: 0 7px 22px rgba(36, 57, 41, 0.05);
+  transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+#services-list > article:hover {
+  border-color: #bdcfbd;
+  box-shadow: 0 14px 28px rgba(36, 57, 41, 0.09);
+  transform: translateY(-2px);
+}
+
+#services-list article button,
+#requests-list button {
+  border-radius: 0.75rem;
+  transition: background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+#services-list article button:hover,
+#requests-list > button:hover {
+  box-shadow: 0 5px 14px rgba(36, 57, 41, 0.1);
+  transform: translateY(-1px);
+}
+
+#services-list article [data-delete] {
+  border-color: #edc9c4;
+  background: #fff5f3;
+}
+
+#charCounterBadge {
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+}
+
+html[data-vimod-page="13. constructora solicitudes.html"] main > div > div.max-w-7xl {
+  gap: 1.25rem;
+  padding-top: 1.75rem;
+}
+
+html[data-vimod-page="13. constructora solicitudes.html"] main > div > div.max-w-7xl > div:first-child {
+  border: 1px solid var(--contractor-border);
+  border-radius: 1.35rem;
+  background:
+    radial-gradient(ellipse at 94% 16%, rgba(201, 224, 198, 0.42), transparent 37%),
+    linear-gradient(115deg, #fffefa, #f1f6ef);
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+#filter-group {
+  flex-wrap: wrap;
+  border: 1px solid #e6ebe3;
+  border-radius: 0.9rem;
+  background: #f3f6f1;
+}
+
+#filter-group .filter-btn {
+  min-height: 2.6rem;
+  border-radius: 0.7rem;
+}
+
+#filter-group .filter-btn.bg-primary {
+  background: var(--contractor-green);
+  box-shadow: 0 5px 12px rgba(53, 107, 72, 0.16);
+}
+
+#offer-opportunities,
+#requests-list > button,
+main .lg\:col-span-7 > div {
+  border-color: var(--contractor-border);
+  border-radius: 1.1rem;
+  box-shadow: 0 8px 24px rgba(36, 57, 41, 0.055);
+}
+
+#offer-opportunities {
+  background: linear-gradient(145deg, #eff6ed, #f9fbf7);
+  padding: 1.25rem;
+}
+
+#offer-projects-list article,
+#own-offers-list article {
+  border-color: #dce7dc;
+  border-radius: 0.9rem;
+  background: rgba(255, 254, 250, 0.92);
+  padding: 1rem;
+  box-shadow: 0 5px 15px rgba(36, 57, 41, 0.035);
+}
+
+#requests-list > button {
+  border-color: var(--contractor-border);
+  background: var(--contractor-paper);
+  padding: 1.25rem;
+  text-align: left;
+}
+
+#requests-list > button.ring-2 {
+  border-color: #8daf91;
+  background: #f4f8f2;
+  box-shadow: 0 0 0 3px rgba(53, 107, 72, 0.1);
+}
+
+html[data-vimod-page="13. constructora solicitudes.html"] main .lg\:col-span-7 > div {
+  border-radius: 1.25rem;
+  background: var(--contractor-paper);
+  padding: clamp(1.1rem, 2.5vw, 1.75rem);
+}
+
+html[data-vimod-page="13. constructora solicitudes.html"] main .lg\:col-span-7 > div > div.grid > div {
+  border-color: #e2e9e1;
+  border-radius: 0.9rem;
+  background: #f7f9f5;
+}
+
+#quote-form {
+  gap: 1.25rem;
+}
+
+#quote-items > [data-quote-item] {
+  border-color: #e0e8df;
+  border-radius: 0.9rem;
+  background: #fafbf8;
+  padding: 0.75rem;
+}
+
+#add-quote-item,
+#btn-save-draft {
+  border-radius: 0.75rem;
+}
+
+#submit-btn {
+  min-height: 3rem;
+  border-radius: 0.85rem;
+}
+
+@media (max-width: 767px) {
+  body > aside,
+  body > div > aside {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  body > div.pl-72 {
+    padding-left: 0;
+  }
+
+  body > div > header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  main.w-full {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  #filter-group {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  #filter-group .filter-btn {
+    padding-right: 0.6rem;
+    padding-left: 0.6rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
